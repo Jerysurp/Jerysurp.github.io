@@ -276,20 +276,6 @@ git config --global user.email &amp;quot;youremail&amp;quot;
             <description><![CDATA[  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://entropywhite.com/computer-science/web/HTML-CSS/%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</guid>
-            <title></title>
-            <link>https://entropywhite.com/computer-science/web/HTML-CSS/%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
-            <pubDate>Wed, 06 Apr 2022 12:24:38 +0800</pubDate>
-            <description><![CDATA[  ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://entropywhite.com/computer-science/web/HTML-CSS/%E8%A1%A8%E5%8D%95/</guid>
-            <title></title>
-            <link>https://entropywhite.com/computer-science/web/HTML-CSS/%E8%A1%A8%E5%8D%95/</link>
-            <pubDate>Wed, 06 Apr 2022 12:24:38 +0800</pubDate>
-            <description><![CDATA[  ]]></description>
-        </item>
-        <item>
             <guid isPermalink="true">https://entropywhite.com/computer-science/blog/theme-shoka-doc/%E4%B8%BB%E9%A2%98%E7%89%B9%E6%AE%8A%E5%8A%9F%E8%83%BD/</guid>
             <title>Step.4 主题特殊功能</title>
             <link>https://entropywhite.com/computer-science/blog/theme-shoka-doc/%E4%B8%BB%E9%A2%98%E7%89%B9%E6%AE%8A%E5%8A%9F%E8%83%BD/</link>
@@ -351,11 +337,11 @@ git config --global user.email &amp;quot;youremail&amp;quot;
           &lt;div class=&#34;info&#34;&gt;
           &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34;&gt;優萌初華&lt;/span&gt;
           &lt;p class=&#34;desc&#34;&gt;琉璃的医学 &amp; 编程笔记&lt;/p&gt;
-          &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; title=&#34;霜月琉璃&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34; data-background-image=&#34;//fastly.jsdelivr.net/gh/Jerysurp/Jerysurp.github.io@latest/images/avatar.jpg&#34;&gt;&lt;/span&gt;
+          &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; title=&#34;霜月琉璃&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34; data-background-image=&#34;//cdn.jsdelivr.net/gh/Jerysurp/Jerysurp.github.io@latest/images/avatar.jpg&#34;&gt;&lt;/span&gt;
           &lt;div class=&#34;info&#34;&gt;
           &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34;&gt;優萌初華&lt;/span&gt;
           &lt;p class=&#34;desc&#34;&gt;https://shoka.lostyu.me&lt;/p&gt;
-          &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; title=&#34;優萌初華&#34; style=&#34;--block-color:#9d5b8b;&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34; data-background-image=&#34;//fastly.jsdelivr.net/gh/Jerysurp/Jerysurp.github.io@latest/images/404.png&#34;&gt;&lt;/span&gt;
+          &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; title=&#34;優萌初華&#34; style=&#34;--block-color:#9d5b8b;&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34; data-background-image=&#34;//cdn.jsdelivr.net/gh/Jerysurp/Jerysurp.github.io@latest/images/404.png&#34;&gt;&lt;/span&gt;
           &lt;div class=&#34;info&#34;&gt;
           &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34;&gt;優萌初華&lt;/span&gt;
           &lt;p class=&#34;desc&#34;&gt;琉璃的医学 &amp; 编程笔记&lt;/p&gt;
@@ -693,7 +679,7 @@ H&lt;sub&gt;2&lt;/sub&gt;0&lt;br&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/details&gt;
 &lt;details class=&#34;success&#34;&gt;&lt;summary&gt;绿色&lt;/summary&gt;&lt;div&gt;
-&lt;p&gt;&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; title=&#34;優萌初華&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34; data-background-image=&#34;//fastly.jsdelivr.net/gh/Jerysurp/Jerysurp.github.io@latest/images/404.png&#34;&gt;&lt;/span&gt;
+&lt;p&gt;&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; title=&#34;優萌初華&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34; data-background-image=&#34;//cdn.jsdelivr.net/gh/Jerysurp/Jerysurp.github.io@latest/images/404.png&#34;&gt;&lt;/span&gt;
           &lt;div class=&#34;info&#34;&gt;
           &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34;&gt;優萌初華&lt;/span&gt;
           &lt;p class=&#34;desc&#34;&gt;https://shoka.lostyu.me&lt;/p&gt;
@@ -1383,25 +1369,115 @@ PS：jsDelivr 并不是实时更新，重新生成文件后需要耐心等待&lt
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://entropywhite.com/computer-science/web/HTML-CSS/CSS/</guid>
-            <title>CSS</title>
-            <link>https://entropywhite.com/computer-science/web/HTML-CSS/CSS/</link>
+            <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/DOM/</guid>
+            <title>JavaScript DOM</title>
+            <link>https://entropywhite.com/computer-science/web/JavaScript/DOM/</link>
             <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
             <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />
-            <category term="html-css" scheme="https://entropywhite.com/categories/computer-science/web/html-css/" />
+            <category term="JavaScript" scheme="https://entropywhite.com/categories/computer-science/web/JavaScript/" />
             <category term="教程" scheme="https://entropywhite.com/tags/%E6%95%99%E7%A8%8B/" />
-            <category term="CSS" scheme="https://entropywhite.com/tags/CSS/" />
+            <category term="JavaScript" scheme="https://entropywhite.com/tags/JavaScript/" />
             <pubDate>Thu, 13 Aug 2020 20:45:48 +0800</pubDate>
-            <description><![CDATA[ &lt;h3 id=&#34;class属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#class属性&#34;&gt;#&lt;/a&gt; class 属性&lt;/h3&gt;
-&lt;p&gt;在所有元素上任意使用 class 属性&lt;/p&gt;
-&lt;p&gt;在所有 html 标签上任意使用 class 属性&lt;/p&gt;
-&lt;p&gt;.class 名 为 class 名相同的元素定义样式&lt;/p&gt;
-&lt;p&gt;标签.class 名 为特定标签定义样式&lt;/p&gt;
-&lt;h3 id=&#34;id属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#id属性&#34;&gt;#&lt;/a&gt; id 属性&lt;/h3&gt;
-&lt;p&gt;id 属性给元素加上标识符&lt;/p&gt;
-&lt;p&gt;标签 id=&amp;quot;id 名&amp;quot;&lt;/p&gt;
-&lt;p&gt;#id 名 {} 为特定 id 属性的元素定义样式&lt;/p&gt;
-&lt;p&gt;可以利用 id 属性为包含在该特定元素里的其他元素定义样式&lt;/p&gt;
+            <description><![CDATA[ &lt;h1 id=&#34;dom&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dom&#34;&gt;#&lt;/a&gt; DOM&lt;/h1&gt;
+&lt;p&gt;WebAPIs 保护 BOM 和 DOM&lt;/p&gt;
+&lt;p&gt;Dom 是一套操作页面元素的 API，把 HTML 看作文档树，通过提供的 API 对树上的节点进行操作&lt;/p&gt;
+&lt;p&gt;DOM 工作模式：先加载文档静态内容，再动态刷新，动态不影响文档静态&lt;/p&gt;
+&lt;p&gt;对页面内容刷新却不在浏览器刷新页面&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;d&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#d&#34;&gt;#&lt;/a&gt; D&lt;/h3&gt;
+&lt;h6 id=&#34;document-文档对象&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#document-文档对象&#34;&gt;#&lt;/a&gt; Document 文档对象&lt;/h6&gt;
+&lt;p&gt;创建网页并加载到 web，网页文档转换为文档对象&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;o&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#o&#34;&gt;#&lt;/a&gt; O&lt;/h3&gt;
+&lt;h6 id=&#34;object-对象&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#object-对象&#34;&gt;#&lt;/a&gt; Object 对象&lt;/h6&gt;
+&lt;p&gt;用户定义对象 (user-defined object)	程序员自创的对象&lt;/p&gt;
+&lt;p&gt;内建对象 (native object)						内建在 js 里的对象，如 Array Math Date 等&lt;/p&gt;
+&lt;p&gt;宿主对象 (host object)							浏览器提供的对象  宿主对象中最基础的对象是 window 对象。document 对象是 window 对象的一个成员属性。document 对象的主要功能是处理页面内容。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;m&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#m&#34;&gt;#&lt;/a&gt; M&lt;/h3&gt;
+&lt;h6 id=&#34;model模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#model模型&#34;&gt;#&lt;/a&gt; Model 模型&lt;/h6&gt;
+&lt;p&gt;DOM 把一份文档表示为一棵家谱树，家谱树本身是一种模型，与家族树相比，节点树更准确&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;节点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#节点&#34;&gt;#&lt;/a&gt; 节点&lt;/h3&gt;
+&lt;p&gt;节点是网络术语，表示网络中的一个连接点。一个网络就是由一些节点构成的集合&lt;/p&gt;
+&lt;p&gt;DOM 也是如此，文档是由节点构成的集合，此时的节点是文档树上的树枝和树叶 (分支)&lt;/p&gt;
+&lt;h4 id=&#34;41元素节点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#41元素节点&#34;&gt;#&lt;/a&gt; 4.1 元素节点&lt;/h4&gt;
+&lt;p&gt;DOM 的原子是元素节点 (element node)&lt;/p&gt;
+&lt;h4 id=&#34;42文本节点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#42文本节点&#34;&gt;#&lt;/a&gt; 4.2 文本节点&lt;/h4&gt;
+&lt;p&gt;XHTML 文档里文本节点总被包含元素节点内部。但也非所有元素节点都包含在元素节点内部&lt;/p&gt;
+&lt;h4 id=&#34;43属性节点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#43属性节点&#34;&gt;#&lt;/a&gt; 4.3 属性节点&lt;/h4&gt;
+&lt;p&gt;属性节点用来对元素做出更具体描述&lt;/p&gt;
+&lt;p&gt;//&amp;lt;p title=&amp;quot;a&amp;quot;&amp;gt;hello world&amp;lt;/p&amp;gt;&lt;/p&gt;
+&lt;p&gt;title=&amp;quot;a&amp;quot; 是一个属性节点，可以被 css 调用&lt;/p&gt;
+&lt;p&gt;属性总被放在起始标签里，属性节点总被包含在元素节点内。并非所有元素包含属性，但所有属性被元素包含&lt;/p&gt;
+&lt;h2 id=&#34;dom属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dom属性&#34;&gt;#&lt;/a&gt; DOM 属性&lt;/h2&gt;
+&lt;h5 id=&#34;getelementbyid元素id&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#getelementbyid元素id&#34;&gt;#&lt;/a&gt; getElementById (元素 id)&lt;/h5&gt;
+&lt;p&gt;返回一个与那个有着给定 id 属性值的元素节点对应对象&lt;/p&gt;
+&lt;p&gt;只有一个参数：想获得的那个元素的 id 属性的值，id 值放在单引或双引中&lt;/p&gt;
+&lt;h5 id=&#34;getelementbytagname标签名&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#getelementbytagname标签名&#34;&gt;#&lt;/a&gt; getElementByTagName（标签名）&lt;/h5&gt;
+&lt;p&gt;返回一个对象数组，每个对象对应文档里给定标签一个元素&lt;/p&gt;
+&lt;p&gt;只有一个参数的函数，参数是标签名&lt;/p&gt;
+&lt;p&gt;允许把一个通配符（*）作为参数，意味着文档里每个元素都在这个函数所返回的数组里有有一席之地&lt;/p&gt;
+&lt;p&gt;alert (document.getElementByTagName (&amp;quot;*&amp;quot;).length) 查看文档总共有多少个元素节点&lt;/p&gt;
+&lt;h5 id=&#34;getelementbyclassname类名&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#getelementbyclassname类名&#34;&gt;#&lt;/a&gt; getElementByClassName（类名）&lt;/h5&gt;
+&lt;p&gt;接受一个参数，参数是类名&lt;/p&gt;
+&lt;p&gt;与 TagName 类似，是一个具有相同类名元素的数组&lt;/p&gt;
+&lt;h5 id=&#34;getattribute函数查询属性名字&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#getattribute函数查询属性名字&#34;&gt;#&lt;/a&gt; getAttribute 函数，查询属性名字&lt;/h5&gt;
+&lt;p&gt;不能被 document 对象调用，只能通过元素节点对象调用&lt;/p&gt;
+&lt;h5 id=&#34;setattribute函数对属性节点更改只应用元素节点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#setattribute函数对属性节点更改只应用元素节点&#34;&gt;#&lt;/a&gt; setAttribute 函数，对属性节点更改，只应用元素节点&lt;/h5&gt;
+&lt;p&gt;有两个参数：属性名和属性值&lt;/p&gt;
+&lt;p&gt;都只能与 TagName 方法合用，获取每个标签元素的 CSS 属性&lt;/p&gt;
+&lt;h5 id=&#34;addloadevent函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#addloadevent函数&#34;&gt;#&lt;/a&gt; addLoadEvent 函数&lt;/h5&gt;
+&lt;p&gt;只有一个参数：打算在页面加载完毕时执行的函数名&lt;/p&gt;
+&lt;h5 id=&#34;nodename&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nodename&#34;&gt;#&lt;/a&gt; nodeName&lt;/h5&gt;
+&lt;p&gt;总是返回一个大写字母的值&lt;/p&gt;
+&lt;h5 id=&#34;nodevalue&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nodevalue&#34;&gt;#&lt;/a&gt; nodeValue&lt;/h5&gt;
+&lt;p&gt;检索和设置文本节点的值&lt;/p&gt;
+&lt;h5 id=&#34;nodetype&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nodetype&#34;&gt;#&lt;/a&gt; nodeType&lt;/h5&gt;
+&lt;p&gt;共有 12 种可取值&lt;/p&gt;
+&lt;p&gt;元素节点属性值是 1&lt;/p&gt;
+&lt;p&gt;属性节点是 2&lt;/p&gt;
+&lt;p&gt;文本节点是 3&lt;/p&gt;
+&lt;h5 id=&#34;childnodes0&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#childnodes0&#34;&gt;#&lt;/a&gt; childNodes[0]&lt;/h5&gt;
+&lt;p&gt;获取任何一个元素的所有子元素，是一个包含这个元素全部子元素的数组，属性返回的是一个数组&lt;/p&gt;
+&lt;p&gt;数组包含说有类型节点&lt;/p&gt;
+&lt;h5 id=&#34;firstchild&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#firstchild&#34;&gt;#&lt;/a&gt; firstChild&lt;/h5&gt;
+&lt;p&gt;访问第一个 childNodes 数组第一个元素&lt;/p&gt;
+&lt;h5 id=&#34;lastchild&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lastchild&#34;&gt;#&lt;/a&gt; lastChild&lt;/h5&gt;
+&lt;p&gt;访问最后一个 childNodes 数组第一个元素&lt;/p&gt;
+&lt;h5 id=&#34;nextsibling&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nextsibling&#34;&gt;#&lt;/a&gt; nextSibling&lt;/h5&gt;
+&lt;p&gt;目标元素的下一个兄弟元素即目标元素的 nextSibling 属性&lt;/p&gt;
+&lt;h5 id=&#34;innerhtml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#innerhtml&#34;&gt;#&lt;/a&gt; innerHTML&lt;/h5&gt;
+&lt;p&gt;读，写某给定元素里的 HTML 内容&lt;/p&gt;
+&lt;h5 id=&#34;createelement&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#createelement&#34;&gt;#&lt;/a&gt; createElement&lt;/h5&gt;
+&lt;p&gt;创建新元素节点&lt;/p&gt;
+&lt;h5 id=&#34;appendchild&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#appendchild&#34;&gt;#&lt;/a&gt; appendChild&lt;/h5&gt;
+&lt;p&gt;把创建的新元素插入到某个文档的节点树里&lt;/p&gt;
+&lt;h5 id=&#34;createtextnode&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#createtextnode&#34;&gt;#&lt;/a&gt; createTextNode&lt;/h5&gt;
+&lt;p&gt;创建文本节点&lt;/p&gt;
+&lt;h5 id=&#34;insertbefore&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#insertbefore&#34;&gt;#&lt;/a&gt; insertBefore&lt;/h5&gt;
+&lt;p&gt;把一个新元素插入到一个现有元素的前面&lt;/p&gt;
+&lt;p&gt;父元素.insertBefore（新元素，插入哪个元素之前）&lt;/p&gt;
+&lt;p&gt;元素节点的父元素必须是另一个与元素节点&lt;/p&gt;
+&lt;h5 id=&#34;insertafter&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#insertafter&#34;&gt;#&lt;/a&gt; insertAfter&lt;/h5&gt;
+&lt;p&gt;参考脚本&lt;/p&gt;
+&lt;h3 id=&#34;检索和添加信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#检索和添加信息&#34;&gt;#&lt;/a&gt; 检索和添加信息&lt;/h3&gt;
+&lt;p&gt;对文档现有信息进行检索&lt;/p&gt;
+&lt;p&gt;getElementById&lt;/p&gt;
+&lt;p&gt;getElementByTagName&lt;/p&gt;
+&lt;p&gt;getAttribute&lt;/p&gt;
+&lt;p&gt;把信息添加到文档里去&lt;/p&gt;
+&lt;p&gt;createEletment&lt;/p&gt;
+&lt;p&gt;createTextNode&lt;/p&gt;
+&lt;p&gt;appendChild&lt;/p&gt;
+&lt;p&gt;insertBefore&lt;/p&gt;
+&lt;p&gt;setAttribute&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
  ]]></description>
         </item>
         <item>
@@ -2459,139 +2535,6 @@ const test = &#39;good&#39;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;修改内置对象的原型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#修改内置对象的原型&#34;&gt;#&lt;/a&gt; 修改内置对象的原型&lt;/h3&gt;
 &lt;p&gt;不要修改内置对象，如  &lt;code&gt;Object&lt;/code&gt;  和  &lt;code&gt;Array&lt;/code&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://entropywhite.com/computer-science/web/HTML-CSS/CSS-DOM/</guid>
-            <title>CSS DOM</title>
-            <link>https://entropywhite.com/computer-science/web/HTML-CSS/CSS-DOM/</link>
-            <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
-            <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />
-            <category term="html-css" scheme="https://entropywhite.com/categories/computer-science/web/html-css/" />
-            <category term="教程" scheme="https://entropywhite.com/tags/%E6%95%99%E7%A8%8B/" />
-            <category term="CSS" scheme="https://entropywhite.com/tags/CSS/" />
-            <pubDate>Thu, 13 Aug 2020 20:45:48 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;三位一体的网页&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三位一体的网页&#34;&gt;#&lt;/a&gt; 三位一体的网页&lt;/h2&gt;
-&lt;h4 id=&#34;结构层structural-layer&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#结构层structural-layer&#34;&gt;#&lt;/a&gt; 结构层 (structural layer)&lt;/h4&gt;
-&lt;p&gt;网页的结构层由 HTML 或 XHTML 之类的标记语言创建。标签 (tag) 对网页内容的语义含义做出描述。标签不包含任何关于内容如何显示的信息&lt;/p&gt;
-&lt;h4 id=&#34;表示层presentation-layer&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#表示层presentation-layer&#34;&gt;#&lt;/a&gt; 表示层 (presentation layer)&lt;/h4&gt;
-&lt;p&gt;由 CSS 完成。CSS 描述页面内容如何呈现&lt;/p&gt;
-&lt;h4 id=&#34;行为层behavior-layer&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#行为层behavior-layer&#34;&gt;#&lt;/a&gt; 行为层 (behavior layer)&lt;/h4&gt;
-&lt;p&gt;负责内容如何响应事件。这是 javascript 和 DOM 的领域&lt;/p&gt;
-&lt;h3 id=&#34;style属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#style属性&#34;&gt;#&lt;/a&gt; style 属性&lt;/h3&gt;
-&lt;p&gt;文档中每个元素都是一个对象，每个对象又有着各种各样的属性。有一些属性告诉我们元素在节点树上的位置信息。如 parentNode、nextSibling、previousSibling、childNodes、firstChild 和 lastChild 属性告诉我们文档中各节点之间关系信息&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/DOM/</guid>
-            <title>JavaScript DOM</title>
-            <link>https://entropywhite.com/computer-science/web/JavaScript/DOM/</link>
-            <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
-            <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />
-            <category term="JavaScript" scheme="https://entropywhite.com/categories/computer-science/web/JavaScript/" />
-            <category term="教程" scheme="https://entropywhite.com/tags/%E6%95%99%E7%A8%8B/" />
-            <category term="JavaScript" scheme="https://entropywhite.com/tags/JavaScript/" />
-            <pubDate>Thu, 13 Aug 2020 20:45:48 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;dom&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dom&#34;&gt;#&lt;/a&gt; DOM&lt;/h1&gt;
-&lt;p&gt;WebAPIs 保护 BOM 和 DOM&lt;/p&gt;
-&lt;p&gt;Dom 是一套操作页面元素的 API，把 HTML 看作文档树，通过提供的 API 对树上的节点进行操作&lt;/p&gt;
-&lt;p&gt;DOM 工作模式：先加载文档静态内容，再动态刷新，动态不影响文档静态&lt;/p&gt;
-&lt;p&gt;对页面内容刷新却不在浏览器刷新页面&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;h3 id=&#34;d&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#d&#34;&gt;#&lt;/a&gt; D&lt;/h3&gt;
-&lt;h6 id=&#34;document-文档对象&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#document-文档对象&#34;&gt;#&lt;/a&gt; Document 文档对象&lt;/h6&gt;
-&lt;p&gt;创建网页并加载到 web，网页文档转换为文档对象&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h3 id=&#34;o&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#o&#34;&gt;#&lt;/a&gt; O&lt;/h3&gt;
-&lt;h6 id=&#34;object-对象&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#object-对象&#34;&gt;#&lt;/a&gt; Object 对象&lt;/h6&gt;
-&lt;p&gt;用户定义对象 (user-defined object)	程序员自创的对象&lt;/p&gt;
-&lt;p&gt;内建对象 (native object)						内建在 js 里的对象，如 Array Math Date 等&lt;/p&gt;
-&lt;p&gt;宿主对象 (host object)							浏览器提供的对象  宿主对象中最基础的对象是 window 对象。document 对象是 window 对象的一个成员属性。document 对象的主要功能是处理页面内容。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h3 id=&#34;m&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#m&#34;&gt;#&lt;/a&gt; M&lt;/h3&gt;
-&lt;h6 id=&#34;model模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#model模型&#34;&gt;#&lt;/a&gt; Model 模型&lt;/h6&gt;
-&lt;p&gt;DOM 把一份文档表示为一棵家谱树，家谱树本身是一种模型，与家族树相比，节点树更准确&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;h3 id=&#34;节点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#节点&#34;&gt;#&lt;/a&gt; 节点&lt;/h3&gt;
-&lt;p&gt;节点是网络术语，表示网络中的一个连接点。一个网络就是由一些节点构成的集合&lt;/p&gt;
-&lt;p&gt;DOM 也是如此，文档是由节点构成的集合，此时的节点是文档树上的树枝和树叶 (分支)&lt;/p&gt;
-&lt;h4 id=&#34;41元素节点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#41元素节点&#34;&gt;#&lt;/a&gt; 4.1 元素节点&lt;/h4&gt;
-&lt;p&gt;DOM 的原子是元素节点 (element node)&lt;/p&gt;
-&lt;h4 id=&#34;42文本节点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#42文本节点&#34;&gt;#&lt;/a&gt; 4.2 文本节点&lt;/h4&gt;
-&lt;p&gt;XHTML 文档里文本节点总被包含元素节点内部。但也非所有元素节点都包含在元素节点内部&lt;/p&gt;
-&lt;h4 id=&#34;43属性节点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#43属性节点&#34;&gt;#&lt;/a&gt; 4.3 属性节点&lt;/h4&gt;
-&lt;p&gt;属性节点用来对元素做出更具体描述&lt;/p&gt;
-&lt;p&gt;//&amp;lt;p title=&amp;quot;a&amp;quot;&amp;gt;hello world&amp;lt;/p&amp;gt;&lt;/p&gt;
-&lt;p&gt;title=&amp;quot;a&amp;quot; 是一个属性节点，可以被 css 调用&lt;/p&gt;
-&lt;p&gt;属性总被放在起始标签里，属性节点总被包含在元素节点内。并非所有元素包含属性，但所有属性被元素包含&lt;/p&gt;
-&lt;h2 id=&#34;dom属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#dom属性&#34;&gt;#&lt;/a&gt; DOM 属性&lt;/h2&gt;
-&lt;h5 id=&#34;getelementbyid元素id&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#getelementbyid元素id&#34;&gt;#&lt;/a&gt; getElementById (元素 id)&lt;/h5&gt;
-&lt;p&gt;返回一个与那个有着给定 id 属性值的元素节点对应对象&lt;/p&gt;
-&lt;p&gt;只有一个参数：想获得的那个元素的 id 属性的值，id 值放在单引或双引中&lt;/p&gt;
-&lt;h5 id=&#34;getelementbytagname标签名&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#getelementbytagname标签名&#34;&gt;#&lt;/a&gt; getElementByTagName（标签名）&lt;/h5&gt;
-&lt;p&gt;返回一个对象数组，每个对象对应文档里给定标签一个元素&lt;/p&gt;
-&lt;p&gt;只有一个参数的函数，参数是标签名&lt;/p&gt;
-&lt;p&gt;允许把一个通配符（*）作为参数，意味着文档里每个元素都在这个函数所返回的数组里有有一席之地&lt;/p&gt;
-&lt;p&gt;alert (document.getElementByTagName (&amp;quot;*&amp;quot;).length) 查看文档总共有多少个元素节点&lt;/p&gt;
-&lt;h5 id=&#34;getelementbyclassname类名&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#getelementbyclassname类名&#34;&gt;#&lt;/a&gt; getElementByClassName（类名）&lt;/h5&gt;
-&lt;p&gt;接受一个参数，参数是类名&lt;/p&gt;
-&lt;p&gt;与 TagName 类似，是一个具有相同类名元素的数组&lt;/p&gt;
-&lt;h5 id=&#34;getattribute函数查询属性名字&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#getattribute函数查询属性名字&#34;&gt;#&lt;/a&gt; getAttribute 函数，查询属性名字&lt;/h5&gt;
-&lt;p&gt;不能被 document 对象调用，只能通过元素节点对象调用&lt;/p&gt;
-&lt;h5 id=&#34;setattribute函数对属性节点更改只应用元素节点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#setattribute函数对属性节点更改只应用元素节点&#34;&gt;#&lt;/a&gt; setAttribute 函数，对属性节点更改，只应用元素节点&lt;/h5&gt;
-&lt;p&gt;有两个参数：属性名和属性值&lt;/p&gt;
-&lt;p&gt;都只能与 TagName 方法合用，获取每个标签元素的 CSS 属性&lt;/p&gt;
-&lt;h5 id=&#34;addloadevent函数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#addloadevent函数&#34;&gt;#&lt;/a&gt; addLoadEvent 函数&lt;/h5&gt;
-&lt;p&gt;只有一个参数：打算在页面加载完毕时执行的函数名&lt;/p&gt;
-&lt;h5 id=&#34;nodename&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nodename&#34;&gt;#&lt;/a&gt; nodeName&lt;/h5&gt;
-&lt;p&gt;总是返回一个大写字母的值&lt;/p&gt;
-&lt;h5 id=&#34;nodevalue&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nodevalue&#34;&gt;#&lt;/a&gt; nodeValue&lt;/h5&gt;
-&lt;p&gt;检索和设置文本节点的值&lt;/p&gt;
-&lt;h5 id=&#34;nodetype&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nodetype&#34;&gt;#&lt;/a&gt; nodeType&lt;/h5&gt;
-&lt;p&gt;共有 12 种可取值&lt;/p&gt;
-&lt;p&gt;元素节点属性值是 1&lt;/p&gt;
-&lt;p&gt;属性节点是 2&lt;/p&gt;
-&lt;p&gt;文本节点是 3&lt;/p&gt;
-&lt;h5 id=&#34;childnodes0&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#childnodes0&#34;&gt;#&lt;/a&gt; childNodes[0]&lt;/h5&gt;
-&lt;p&gt;获取任何一个元素的所有子元素，是一个包含这个元素全部子元素的数组，属性返回的是一个数组&lt;/p&gt;
-&lt;p&gt;数组包含说有类型节点&lt;/p&gt;
-&lt;h5 id=&#34;firstchild&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#firstchild&#34;&gt;#&lt;/a&gt; firstChild&lt;/h5&gt;
-&lt;p&gt;访问第一个 childNodes 数组第一个元素&lt;/p&gt;
-&lt;h5 id=&#34;lastchild&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lastchild&#34;&gt;#&lt;/a&gt; lastChild&lt;/h5&gt;
-&lt;p&gt;访问最后一个 childNodes 数组第一个元素&lt;/p&gt;
-&lt;h5 id=&#34;nextsibling&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nextsibling&#34;&gt;#&lt;/a&gt; nextSibling&lt;/h5&gt;
-&lt;p&gt;目标元素的下一个兄弟元素即目标元素的 nextSibling 属性&lt;/p&gt;
-&lt;h5 id=&#34;innerhtml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#innerhtml&#34;&gt;#&lt;/a&gt; innerHTML&lt;/h5&gt;
-&lt;p&gt;读，写某给定元素里的 HTML 内容&lt;/p&gt;
-&lt;h5 id=&#34;createelement&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#createelement&#34;&gt;#&lt;/a&gt; createElement&lt;/h5&gt;
-&lt;p&gt;创建新元素节点&lt;/p&gt;
-&lt;h5 id=&#34;appendchild&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#appendchild&#34;&gt;#&lt;/a&gt; appendChild&lt;/h5&gt;
-&lt;p&gt;把创建的新元素插入到某个文档的节点树里&lt;/p&gt;
-&lt;h5 id=&#34;createtextnode&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#createtextnode&#34;&gt;#&lt;/a&gt; createTextNode&lt;/h5&gt;
-&lt;p&gt;创建文本节点&lt;/p&gt;
-&lt;h5 id=&#34;insertbefore&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#insertbefore&#34;&gt;#&lt;/a&gt; insertBefore&lt;/h5&gt;
-&lt;p&gt;把一个新元素插入到一个现有元素的前面&lt;/p&gt;
-&lt;p&gt;父元素.insertBefore（新元素，插入哪个元素之前）&lt;/p&gt;
-&lt;p&gt;元素节点的父元素必须是另一个与元素节点&lt;/p&gt;
-&lt;h5 id=&#34;insertafter&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#insertafter&#34;&gt;#&lt;/a&gt; insertAfter&lt;/h5&gt;
-&lt;p&gt;参考脚本&lt;/p&gt;
-&lt;h3 id=&#34;检索和添加信息&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#检索和添加信息&#34;&gt;#&lt;/a&gt; 检索和添加信息&lt;/h3&gt;
-&lt;p&gt;对文档现有信息进行检索&lt;/p&gt;
-&lt;p&gt;getElementById&lt;/p&gt;
-&lt;p&gt;getElementByTagName&lt;/p&gt;
-&lt;p&gt;getAttribute&lt;/p&gt;
-&lt;p&gt;把信息添加到文档里去&lt;/p&gt;
-&lt;p&gt;createEletment&lt;/p&gt;
-&lt;p&gt;createTextNode&lt;/p&gt;
-&lt;p&gt;appendChild&lt;/p&gt;
-&lt;p&gt;insertBefore&lt;/p&gt;
-&lt;p&gt;setAttribute&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
  ]]></description>
         </item>
         <item>
