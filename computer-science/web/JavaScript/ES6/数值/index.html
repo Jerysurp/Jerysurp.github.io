@@ -1,0 +1,239 @@
+<!-- build time:Mon Jun 27 2022 22:39:36 GMT+0800 (中国标准时间) --><!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="baidu-site-verification" content="code-NAUyjdjtWe"><meta name="theme-color" content="#FFF"><link rel="apple-touch-icon" sizes="180x180" href="//cdn.jsdelivr.net/gh/Jerysurp/Jerysurp.github.io@latest/images/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="32x32" href="//cdn.jsdelivr.net/gh/Jerysurp/Jerysurp.github.io@latest/images/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="alternate" type="application/rss+xml" title="熵白之痕" href="https://entropywhite.com/rss.xml"><link rel="alternate" type="application/atom+xml" title="熵白之痕" href="https://entropywhite.com/atom.xml"><link rel="alternate" type="application/json" title="熵白之痕" href="https://entropywhite.com/feed.json"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/Jerysurp/Jerysurp.github.io@latest/css/app.css?v=0.2.5"><link rel="canonical" href="https://entropywhite.com/computer-science/web/JavaScript/ES6/%E6%95%B0%E5%80%BC/"><title>| Entropy White = 熵白之痕 = 以前进为目标吧</title><meta name="generator" content="Hexo 5.4.1"></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline"></h1><div class="meta"><span class="item" title="创建时间：2022-05-26 10:43:04"><span class="icon"><i class="ic i-calendar"></i> </span><span class="text">发表于</span> <time itemprop="dateCreated datePublished" datetime="2022-05-26T10:43:04+08:00">2022-05-26</time> </span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i> </span><span class="text">本文字数</span> <span>6.1k</span> <span class="text">字</span> </span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i> </span><span class="text">阅读时长</span> <span>6 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span> <span class="line"></span> <span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">Entropy White</a></li></ul><ul class="right"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div id="imgs" class="pjax"><ul><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexe4oykj20zk0m87ji.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciub8ja1j20zk0m81ky.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclgrvbd6j20zk0m8qv5.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclga70tsj20zk0m84mr.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciuv0socj20zk0m8qes.jpg"></li><li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclj9410cj20zk0m8h12.jpg"></li></ul></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"/><use xlink:href="#gentle-wave" x="48" y="3"/><use xlink:href="#gentle-wave" x="48" y="5"/><use xlink:href="#gentle-wave" x="48" y="7"/></g></svg></div><main><div class="inner"><div id="main" class="pjax"><div class="article wrap"><div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i> <span><a href="/">首页</a></span></div><article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://entropywhite.com/computer-science/web/JavaScript/ES6/%E6%95%B0%E5%80%BC/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="//cdn.jsdelivr.net/gh/Jerysurp/Jerysurp.github.io@latest/images/cat.jpg"><meta itemprop="name" content="EntropyWhite"><meta itemprop="description" content="以前进为目标吧, 欢迎来到熵白的博客"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="熵白之痕"></span><div class="body md" itemprop="articleBody"><h2 id="数值的表示"><a class="anchor" href="#数值的表示">#</a> 数值的表示</h2><p>二进制表示法新写法：前缀 0b 或 0B 。</p><pre><code>console.log(0b11 === 3); // true
+console.log(0B11 === 3); // true
+</code></pre><p>八进制表示法新写法：前缀 0o 或 0O 。</p><pre><code>console.log(0o11 === 9); // true
+console.log(0O11 === 9); // true
+</code></pre><h3 id="常量"><a class="anchor" href="#常量">#</a> 常量</h3><pre><code>Number.EPSILON
+</code></pre><p>Number.EPSILON 属性表示 1 与大于 1 的最小浮点数之间的差。</p><p>它的值接近于 2.2204460492503130808472633361816E-16，或者 2-52。</p><p>测试数值是否在误差范围内:</p><pre><code>0.1 + 0.2 === 0.3; // false
+// 在误差范围内即视为相等
+equal = (Math.abs(0.1 - 0.3 + 0.2) &lt; Number.EPSILON); // true
+</code></pre><h3 id="属性特性"><a class="anchor" href="#属性特性">#</a> 属性特性</h3><pre><code>writable：false
+enumerable：false
+configurable：false
+</code></pre><h3 id="最大最小安全整数"><a class="anchor" href="#最大最小安全整数">#</a> 最大 / 最小安全整数</h3><p><strong>安全整数</strong></p><p>安全整数表示在 JavaScript 中能够精确表示的整数，安全整数的范围在 2 的 -53 次方到 2 的 53 次方之间（不包括两个端点），超过这个范围的整数无法精确表示。</p><p><strong>最大安全整数</strong></p><p>安全整数范围的上限，即 2 的 53 次方减 1 。</p><pre><code>Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; // true
+Number.MAX_SAFE_INTEGER === Number.MAX_SAFE_INTEGER + 1;     // false
+Number.MAX_SAFE_INTEGER - 1 === Number.MAX_SAFE_INTEGER - 2; // false
+</code></pre><p><strong>最小安全整数</strong></p><p>安全整数范围的下限，即 2 的 53 次方减 1 的负数。</p><pre><code>Number.MIN_SAFE_INTEGER + 1 === Number.MIN_SAFE_INTEGER + 2; // false
+Number.MIN_SAFE_INTEGER === Number.MIN_SAFE_INTEGER - 1;     // false
+Number.MIN_SAFE_INTEGER - 1 === Number.MIN_SAFE_INTEGER - 2; // true
+</code></pre><p><strong>属性特性</strong></p><pre><code>writable：false
+enumerable：false
+configurable：false
+</code></pre><h3 id="方法"><a class="anchor" href="#方法">#</a> 方法</h3><p><strong>Number 对象新方法</strong></p><pre><code>Number.isFinite()
+</code></pre><p>用于检查一个数值是否为有限的（ finite ），即不是 Infinity</p><pre><code>console.log( Number.isFinite(1));   // true
+console.log( Number.isFinite(0.1)); // true
+ 
+// NaN 不是有限的
+console.log( Number.isFinite(NaN)); // false
+ 
+console.log( Number.isFinite(Infinity));  // false
+console.log( Number.isFinite(-Infinity)); // false
+ 
+// Number.isFinate 没有隐式的 Number() 类型转换，所有非数值都返回 false
+console.log( Number.isFinite('foo')); // false
+console.log( Number.isFinite('15'));  // false
+console.log( Number.isFinite(true));  // false
+Number.isNaN()
+用于检查一个值是否为 NaN 。
+console.log(Number.isNaN(NaN));      // true
+console.log(Number.isNaN('true'/0)); // true
+ 
+// 在全局的 isNaN() 中，以下皆返回 true，因为在判断前会将非数值向数值转换
+// 而 Number.isNaN() 不存在隐式的 Number() 类型转换，非 NaN 全部返回 false
+Number.isNaN(&quot;NaN&quot;);      // false
+Number.isNaN(undefined);  // false
+Number.isNaN(&#123;&#125;);         // false
+Number.isNaN(&quot;true&quot;);     // false
+</code></pre><p><strong>从全局移植到 Number 对象的方法</strong></p><p>逐步减少全局方法，用于全局变量的模块化。</p><p>方法的行为没有发生改变。</p><pre><code>Number.parseInt()
+</code></pre><p>用于将给定字符串转化为指定进制的整数</p><pre><code>// 不指定进制时默认为 10 进制
+Number.parseInt('12.34'); // 12
+Number.parseInt(12.34);   // 12
+ 
+// 指定进制
+Number.parseInt('0011',2); // 3
+ 
+// 与全局的 parseInt() 函数是同一个函数
+Number.parseInt === parseInt; // true
+Number.parseFloat()
+用于把一个字符串解析成浮点数。
+Number.parseFloat('123.45')    // 123.45
+Number.parseFloat('123.45abc') // 123.45
+ 
+// 无法被解析成浮点数，则返回 NaN
+Number.parseFloat('abc') // NaN
+ 
+// 与全局的 parseFloat() 方法是同一个方法
+Number.parseFloat === parseFloat // true
+Number.isInteger()
+用于判断给定的参数是否为整数。
+Number.isInteger(value)
+Number.isInteger(0); // true
+// JavaScript 内部，整数和浮点数采用的是同样的储存方法,因此 1 与 1.0 被视为相同的值
+Number.isInteger(1);   // true
+Number.isInteger(1.0); // true
+ 
+Number.isInteger(1.1);     // false
+Number.isInteger(Math.PI); // false
+ 
+// NaN 和正负 Infinity 不是整数
+Number.isInteger(NaN);       // false
+Number.isInteger(Infinity);  // false
+Number.isInteger(-Infinity); // false
+ 
+Number.isInteger(&quot;10&quot;);  // false
+Number.isInteger(true);  // false
+Number.isInteger(false); // false
+Number.isInteger([1]);   // false
+ 
+// 数值的精度超过 53 个二进制位时，由于第 54 位及后面的位被丢弃，会产生误判
+Number.isInteger(1.0000000000000001) // true
+ 
+// 一个数值的绝对值小于 Number.MIN_VALUE（5E-324），即小于 JavaScript 能够分辨
+// 的最小值，会被自动转为 0，也会产生误判
+Number.isInteger(5E-324); // false
+Number.isInteger(5E-325); // true
+Number.isSafeInteger()
+用于判断数值是否在安全范围内。
+Number.isSafeInteger(Number.MIN_SAFE_INTEGER - 1); // false
+Number.isSafeInteger(Number.MAX_SAFE_INTEGER + 1); // false
+</code></pre><h2 id="math-对象的扩展"><a class="anchor" href="#math-对象的扩展">#</a> Math 对象的扩展</h2><p>ES6 在 Math 对象上新增了 17 个数学相关的静态方法，这些方法只能在 Math 中调用。</p><p><strong>普通计算</strong></p><pre><code>Math.cbrt
+</code></pre><p>用于计算一个数的立方根。</p><pre><code>Math.cbrt(1);  // 1
+Math.cbrt(0);  // 0
+Math.cbrt(-1); // -1
+// 会对非数值进行转换
+Math.cbrt('1'); // 1
+ 
+// 非数值且无法转换为数值时返回 NaN
+Math.cbrt('hhh'); // NaN
+</code></pre><pre><code>Math.imul
+</code></pre><p>两个数以 32 位带符号整数形式相乘的结果，返回的也是一个 32 位的带符号整数。</p><pre><code>// 大多数情况下，结果与 a * b 相同 
+Math.imul(1, 2);   // 2
+ 
+// 用于正确返回大数乘法结果中的低位数值
+Math.imul(0x7fffffff, 0x7fffffff); // 1
+</code></pre><pre><code>Math.hypot
+</code></pre><p>用于计算所有参数的平方和的平方根。</p><pre><code>Math.hypot(3, 4); // 5
+ 
+// 非数值会先被转换为数值后进行计算
+Math.hypot(1, 2, '3'); // 3.741657386773941
+Math.hypot(true);      // 1
+Math.hypot(false);     // 0
+ 
+// 空值会被转换为 0
+Math.hypot();   // 0
+Math.hypot([]); // 0
+ 
+// 参数为 Infinity 或 -Infinity 返回 Infinity
+Math.hypot(Infinity); // Infinity
+Math.hypot(-Infinity); // Infinity
+ 
+// 参数中存在无法转换为数值的参数时返回 NaN
+Math.hypot(NaN);         // NaN
+Math.hypot(3, 4, 'foo'); // NaN
+Math.hypot(&#123;&#125;);          // NaN
+</code></pre><pre><code>Math.clz32
+</code></pre><p>用于返回数字的 32 位无符号整数形式的前导 0 的个数。</p><pre><code>Math.clz32(0); // 32
+Math.clz32(1); // 31
+Math.clz32(0b01000000000100000000000000000000); // 1
+ 
+// 当参数为小数时，只考虑整数部分
+Math.clz32(0.5); // 32
+ 
+// 对于空值或非数值，会转化为数值再进行计算
+Math.clz32('1');       // 31
+Math.clz32();          // 32
+Math.clz32([]);        // 32
+Math.clz32(&#123;&#125;);        // 32
+Math.clz32(NaN);       // 32
+Math.clz32(Infinity);  // 32
+Math.clz32(-Infinity); // 32
+Math.clz32(undefined); // 32
+Math.clz32('hhh');     // 32
+</code></pre><h3 id="数字处理"><a class="anchor" href="#数字处理">#</a> 数字处理</h3><pre><code>Math.trunc
+</code></pre><p>用于返回数字的整数部分。</p><pre><code>Math.trunc(12.3); // 12
+Math.trunc(12);   // 12
+ 
+// 整数部分为 0 时也会判断符号
+Math.trunc(-0.5); // -0
+Math.trunc(0.5);  // 0
+ 
+// Math.trunc 会将非数值转为数值再进行处理
+Math.trunc(&quot;12.3&quot;); // 12
+ 
+// 空值或无法转化为数值时时返回 NaN
+Math.trunc();           // NaN
+Math.trunc(NaN);        // NaN
+Math.trunc(&quot;hhh&quot;);      // NaN
+Math.trunc(&quot;123.2hhh&quot;); // NaN
+</code></pre><pre><code>Math.fround
+</code></pre><p>用于获取数字的 32 位单精度浮点数形式。</p><pre><code>// 对于 2 的 24 次方取负至 2 的 24 次方之间的整数（不含两个端点），返回结果与参数本身一致
+Math.fround(-(2**24)+1);  // -16777215
+Math.fround(2 ** 24 - 1); // 16777215
+ 
+// 用于将 64 位双精度浮点数转为 32 位单精度浮点数
+Math.fround(1.234) // 1.125
+// 当小数的精度超过 24 个二进制位，会丢失精度
+Math.fround(0.3); // 0.30000001192092896
+// 参数为 NaN 或 Infinity 时返回本身
+Math.fround(NaN)      // NaN
+Math.fround(Infinity) // Infinity
+ 
+// 参数为其他非数值类型时会将参数进行转换 
+Math.fround('5');  // 5
+Math.fround(true); // 1
+Math.fround(null); // 0
+Math.fround([]);   // 0
+Math.fround(&#123;&#125;);   // NaN
+</code></pre><h3 id="判断"><a class="anchor" href="#判断">#</a> 判断</h3><pre><code>Math.sign
+</code></pre><p>判断数字的符号（正、负、0）。</p><pre><code>Math.sign(1);  // 1
+Math.sign(-1); // -1
+ 
+// 参数为 0 时，不同符号的返回不同
+Math.sign(0);  // 0
+Math.sign(-0); // -0
+ 
+// 判断前会对非数值进行转换
+Math.sign('1');  // 1
+Math.sign('-1'); // -1  
+ 
+// 参数为非数值（无法转换为数值）时返回 NaN
+Math.sign(NaN);   // NaN 
+Math.sign('hhh'); // NaN
+</code></pre><h3 id="对数方法"><a class="anchor" href="#对数方法">#</a> 对数方法</h3><pre><code>Math.expm1()
+</code></pre><p>用于计算 e 的 x 次方减 1 的结果，即 Math.exp (x) - 1 。</p><pre><code>Math.expm1(1);  // 1.718281828459045
+Math.expm1(0);  // 0
+Math.expm1(-1); // -0.6321205588285577
+// 会对非数值进行转换
+Math.expm1('0'); //0
+ 
+// 参数不为数值且无法转换为数值时返回 NaN
+Math.expm1(NaN); // NaN
+</code></pre><pre><code>Math.log1p(x)
+</code></pre><p>用于计算 1 + x 的自然对数，即 Math.log (1 + x) 。</p><pre><code>Math.log1p(1);  // 0.6931471805599453
+Math.log1p(0);  // 0
+Math.log1p(-1); // -Infinity
+ 
+// 参数小于 -1 时返回 NaN
+Math.log1p(-2); // NaN
+</code></pre><pre><code>Math.log10(x)
+</code></pre><p>用于计算以 10 为底的 x 的对数。</p><pre><code>Math.log10(1);   // 0
+// 计算前对非数值进行转换
+Math.log10('1'); // 0
+// 参数为0时返回 -Infinity
+Math.log10(0);   // -Infinity
+// 参数小于0或参数不为数值（且无法转换为数值）时返回 NaN
+Math.log10(-1);  // NaN
+</code></pre><pre><code>Math.log2()
+</code></pre><p>用于计算 2 为底的 x 的对数。</p><pre><code>Math.log2(1);   // 0
+// 计算前对非数值进行转换
+Math.log2('1'); // 0
+// 参数为0时返回 -Infinity
+Math.log2(0);   // -Infinity
+// 参数小于0或参数不为数值（且无法转换为数值）时返回 NaN
+Math.log2(-1);  // NaN
+</code></pre><h3 id="双曲函数方法"><a class="anchor" href="#双曲函数方法">#</a> 双曲函数方法</h3><ul><li>Math.sinh (x): 用于计算双曲正弦。</li><li>Math.cosh (x): 用于计算双曲余弦。</li><li>Math.tanh (x): 用于计算双曲正切。</li><li>Math.asinh (x): 用于计算反双曲正弦。</li><li>Math.acosh (x): 用于计算反双曲余弦。</li><li>Math.atanh (x): 用于计算反双曲正切。</li></ul><h3 id="指数运算符"><a class="anchor" href="#指数运算符">#</a> 指数运算符</h3><pre><code>1 ** 2; // 1
+// 右结合，从右至左计算
+2 ** 2 ** 3; // 256
+// **=
+let exam = 2;
+exam ** = 2; // 4
+</code></pre></div><footer><div class="meta"><span class="item"><span class="icon"><i class="ic i-calendar-check"></i> </span><span class="text">更新于</span> <time title="修改时间：2022-05-31 23:05:47" itemprop="dateModified" datetime="2022-05-31T23:05:47+08:00">2022-05-31</time> </span><span id="computer-science/web/JavaScript/ES6/数值/" class="item leancloud_visitors" data-flag-title="" title="阅读次数"><span class="icon"><i class="ic i-eye"></i> </span><span class="text">阅读次数</span> <span class="leancloud-visitors-count"></span> <span class="text">次</span></span></div><div id="copyright"><ul><li class="author"><strong>本文作者： </strong>EntropyWhite <i class="ic i-at"><em>@</em></i>熵白之痕</li><li class="link"><strong>本文链接：</strong> <a href="https://entropywhite.com/computer-science/web/JavaScript/ES6/%E6%95%B0%E5%80%BC/">https://entropywhite.com/computer-science/web/JavaScript/ES6/数值/</a></li><li class="license"><strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/computer-science/web/JavaScript/ES6/%E5%AD%97%E7%AC%A6%E4%B8%B2/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gicliwyw55j20zk0m8hdt.jpg" title="未命名"><span class="type">上一篇</span> <span class="category"><i class="ic i-flag"></i></span><h3>未命名</h3></a></div><div class="item right"><a href="/computer-science/web/JavaScript/ES6/%E5%AF%B9%E8%B1%A1/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipevo9j1jj20zk0m8e81.jpg" title="未命名"><span class="type">下一篇</span> <span class="category"><i class="ic i-flag"></i></span><h3>未命名</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E7%9A%84%E8%A1%A8%E7%A4%BA"><span class="toc-number">1.</span> <span class="toc-text">数值的表示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F"><span class="toc-number">1.1.</span> <span class="toc-text">常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E7%89%B9%E6%80%A7"><span class="toc-number">1.2.</span> <span class="toc-text">属性特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E6%9C%80%E5%B0%8F%E5%AE%89%E5%85%A8%E6%95%B4%E6%95%B0"><span class="toc-number">1.3.</span> <span class="toc-text">最大 &#x2F; 最小安全整数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-number">1.4.</span> <span class="toc-text">方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#math-%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%89%A9%E5%B1%95"><span class="toc-number">2.</span> <span class="toc-text">Math 对象的扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E5%A4%84%E7%90%86"><span class="toc-number">2.1.</span> <span class="toc-text">数字处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A4%E6%96%AD"><span class="toc-number">2.2.</span> <span class="toc-text">判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%95%B0%E6%96%B9%E6%B3%95"><span class="toc-number">2.3.</span> <span class="toc-text">对数方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E6%9B%B2%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95"><span class="toc-number">2.4.</span> <span class="toc-text">双曲函数方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">2.5.</span> <span class="toc-text">指数运算符</span></a></li></ol></li></ol></div><div class="related panel pjax" data-title="系列文章"></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="image" itemprop="image" alt="EntropyWhite" data-src="//cdn.jsdelivr.net/gh/Jerysurp/Jerysurp.github.io@latest/images/cat.jpg"><p class="name" itemprop="name">EntropyWhite</p><div class="description" itemprop="description">欢迎来到熵白的博客</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">74</span> <span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">5</span> <span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">4</span> <span class="name">标签</span></a></div></nav><div class="social"><span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0plcnlzdXJw" title="https:&#x2F;&#x2F;github.com&#x2F;Jerysurp"><i class="ic i-github"></i></span> <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span> <span class="exturl item bilibili" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTEzMTAwNDY/c3BtX2lkX2Zyb209MzMzLjEwMDcuMC4w" title="https:&#x2F;&#x2F;space.bilibili.com&#x2F;51310046?spm_id_from&#x3D;333.1007.0.0"><i class="ic i-bilibili"></i></span></div><ul class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item"><a href="/about/" rel="section"><i class="ic i-user"></i>关于</a></li><li class="item dropdown"><a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li><li class="item"><a href="/friends/" rel="section"><i class="ic i-heart"></i>友達</a></li><li class="item"><a href="/links/" rel="section"><i class="ic i-magic"></i>链接</a></li></ul></div></div></div><ul id="quick"><li class="prev pjax"><a href="/computer-science/web/JavaScript/ES6/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/computer-science/web/JavaScript/ES6/%E5%AF%B9%E8%B1%A1/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"></div><span><a href="/computer-science/web/JavaScript/js%E6%93%8D%E4%BD%9Cdom/DOM/" title="未命名">未命名</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/computer-science/web/JavaScript/ES6/Class%E7%B1%BB/" title="未命名">未命名</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/computer-science/web/css/CSS%E8%A7%84%E8%8C%83/CSS%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%B8%B8%E7%94%A8%E7%A7%81%E6%9C%89%E5%B1%9E%E6%80%A7/" title="未命名">未命名</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/computer-science/web/JavaScript/jQuery/%E9%80%89%E6%8B%A9%E5%99%A8/" title="未命名">未命名</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/blog/" title="分类于 hexo博客">hexo博客</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/blog/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a></div><span><a href="/computer-science/blog/theme-shoka-doc/%E4%BE%9D%E8%B5%96%E6%8F%92%E4%BB%B6/" title="Step.1 依赖插件">Step.1 依赖插件</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/blog/" title="分类于 hexo博客">hexo博客</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/blog/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a></div><span><a href="/computer-science/blog/theme-shoka-doc/%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" title="Step.2 基本配置">Step.2 基本配置</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/computer-science/web/JavaScript/ES6/Generator%E5%87%BD%E6%95%B0/" title="未命名">未命名</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/computer-science/web/JavaScript/ES6/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/" title="未命名">未命名</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/computer-science/web/JavaScript/ES6/%E5%AF%B9%E8%B1%A1/" title="未命名">未命名</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/computer-science/web/%E4%BA%92%E8%81%94%E7%BD%91/SSL%E3%80%81TLS/" title="未命名">未命名</a></span></li></ul></div><div><h2>最新评论</h2><ul class="leancloud-recent-comment"></ul></div></div><div class="status"><div class="copyright">&copy; <span itemprop="copyrightYear">2022</span> <span class="with-love"><i class="ic i-sakura rotate"></i> </span><span class="author" itemprop="copyrightHolder">EntropyWhite @ Entropy White</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i> </span><span title="站点总字数">213k 字</span> <span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="ic i-coffee"></i> </span><span title="站点阅读时长">3:14</span></div><div class="powered-by">基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></div></div></div></footer></div><script data-config type="text/javascript">var LOCAL={path:"computer-science/web/JavaScript/ES6/数值/",favicon:{show:"（●´3｀●）やれやれだぜ",hide:"(´Д｀)大変だ！"},search:{placeholder:"文章搜索",empty:"关于 「 ${query} 」，什么也没搜到",stats:"${time} ms 内找到 ${hits} 条结果"},valine:!0,fancybox:!0,copyright:'复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',ignores:[function(e){return e.includes("#")},function(e){return new RegExp(LOCAL.path+"$").test(e)}]}</script><script src="https://cdn.polyfill.io/v2/polyfill.js"></script><script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script><script src="//cdn.jsdelivr.net/gh/Jerysurp/Jerysurp.github.io@latest/js/app.js?v=0.2.5"></script></body></html><!-- rebuild by hrmmi -->

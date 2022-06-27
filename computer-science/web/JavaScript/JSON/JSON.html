@@ -1,0 +1,95 @@
+<p>JavaScript Object Notation（对象表示法）</p>
+<p>JSON 是轻量级的存储和交换文本信息的语法，类似 XML</p>
+<p>JSON 比 XML 更小、更高、具有自我描述性，更易解析</p>
+<p>JSON 独立于语言：JSON 使用 Javascript 语法来描述数据对象，但是 JSON 仍然独立于语言和平台。JSON 解析器和 JSON 库支持许多不同的编程语言。 目前非常多的动态（PHP，JSP，.NET）编程语言都支持 JSON。</p>
+<h3 id="json与xml相同之处"><a class="anchor" href="#json与xml相同之处">#</a> JSON 与 XML 相同之处</h3>
+<p>JSON 是纯文本</p>
+<p>JSON 和 XML 数据都是 “自我描述”，易于理解</p>
+<p>JSON 和 XML 数据都有层级结构</p>
+<p>JSON 和 XML 数据可以被大多数编程语言使用</p>
+<p>JSON 可通过 JS 进行解析</p>
+<p>JSON 数据可使用 AJAX 进行传输</p>
+<h3 id="与xml不同之处"><a class="anchor" href="#与xml不同之处">#</a> 与 XML 不同之处</h3>
+<p>没有结束标签</p>
+<p>更短，读写速度快</p>
+<p>读写速度更快</p>
+<p>使用内建的 JS eval () 方法解析</p>
+<p>使用数组</p>
+<p>不使用保留字</p>
+<p>XML 需要使用 XML 解析器解析，JSON 可直接使用 JS 函数来解析</p>
+<p>JSON.parse ()	将 JSON 字符串转换 JS 对象</p>
+<p>JSON.stringify ()	将 JS 值转为 JSON 字符串</p>
+<h3 id="json语法规则"><a class="anchor" href="#json语法规则">#</a> JSON 语法规则</h3>
+<p>JSON 语法是 JS 对象表示语法的子类</p>
+<p>数据在名称 / 值对中</p>
+<p>数据由逗号分隔</p>
+<p>大括号 {} 保存对象</p>
+<p>中括号 [] 保存数组，数组可以包含多个对象</p>
+<h3 id="json名称值对"><a class="anchor" href="#json名称值对">#</a> JSON 名称 / 值对</h3>
+<p>JSON 数据书写格式是</p>
+<pre><code>key : value
+&quot;name&quot; : &quot;熵白之痕&quot;
+</code></pre>
+<h3 id="json值"><a class="anchor" href="#json值">#</a> JSON 值</h3>
+<p>数字（整数或浮点）</p>
+<pre><code>{&quot;age&quot;:30}
+</code></pre>
+<p>字符串（双引号中）</p>
+<p>逻辑值（true 或 false）</p>
+<p>对象（大括号中）</p>
+<pre><code>{key1 : value1,key2 : value2, ……}
+{&quot;name&quot;:&quot;熵白之痕&quot;}
+</code></pre>
+<p>数组（中括号中）</p>
+<pre><code>{
+	&quot;sites&quot;:[
+		{ key1 : value1-1 , key2 : value1-2 },
+		{ &quot;name&quot; : &quot;熵白之痕&quot; , &quot;url&quot; : &quot;www.entropywhite.com&quot; },
+	]
+}
+</code></pre>
+<p>JSON null</p>
+<pre><code>{&quot;runoob&quot;:null}
+</code></pre>
+<p>JSON 布尔值</p>
+<pre><code>{&quot;flag&quot;:true/flase}
+</code></pre>
+<p>JSON 文件</p>
+<p>文件类型是.json</p>
+<p>文本的 MIME 类型是 application/json</p>
+<h1 id="jsonparse"><a class="anchor" href="#jsonparse">#</a> JSON.parse()</h1>
+<p>JSON 通常用于与服务端交换数据。</p>
+<p>在接收服务器数据时一般是字符串。</p>
+<p>我们可以使用 JSON.parse () 方法将数据转换为 JavaScript 对象。</p>
+<h3 id="语法"><a class="anchor" href="#语法">#</a> 语法</h3>
+<pre><code>JSON.parse(text[, reviver])
+</code></pre>
+<p><strong>参数说明：</strong></p>
+<ul>
+<li>**text:** 必需， 一个有效的 JSON 字符串。</li>
+<li><strong>reviver:</strong> 可选，一个转换结果的函数， 将为对象的每个成员调用此函数。</li>
+</ul>
+<h1 id="jsonstringify"><a class="anchor" href="#jsonstringify">#</a> JSON.stringify()</h1>
+<p>JSON 通常用于与服务端交换数据。</p>
+<p>在向服务器发送数据时一般是字符串。</p>
+<p>我们可以使用 JSON.stringify () 方法将 JavaScript 对象转换为字符串。</p>
+<h3 id="语法-2"><a class="anchor" href="#语法-2">#</a> 语法</h3>
+<pre><code>JSON.stringify(value[, replacer[, space]])
+</code></pre>
+<p><strong>参数说明：</strong></p>
+<ul>
+<li>
+<p>value:</p>
+<p>必需， 要转换的 JavaScript 值（通常为对象或数组）。</p>
+</li>
+<li>
+<p>replacer:</p>
+<p>可选。用于转换结果的函数或数组。</p>
+<p>如果 replacer 为函数，则 JSON.stringify 将调用该函数，并传入每个成员的键和值。使用返回值而不是原始值。如果此函数返回 undefined，则排除成员。根对象的键是一个空字符串：&quot;&quot;。</p>
+<p>如果 replacer 是一个数组，则仅转换该数组中具有键值的成员。成员的转换顺序与键在数组中的顺序一样。当 value 参数也为数组时，将忽略 replacer 数组。</p>
+</li>
+<li>
+<p>space:</p>
+<p>可选，文本添加缩进、空格和换行符，如果 space 是一个数字，则返回值文本在每个级别缩进指定数目的空格，如果 space 大于 10，则文本缩进 10 个空格。space 也可以使用非数字，如：\t。</p>
+</li>
+</ul>
