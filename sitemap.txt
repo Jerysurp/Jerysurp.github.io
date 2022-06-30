@@ -133,12 +133,12 @@ https://entropywhite.com/tags/Hexo/
 https://entropywhite.com/tags/%E6%95%99%E7%A8%8B/
 https://entropywhite.com/tags/HTML/
 https://entropywhite.com/tags/AJAX/
+https://entropywhite.com/tags/ES6/
 https://entropywhite.com/tags/JavaScript/
 https://entropywhite.com/tags/JSON/
-https://entropywhite.com/tags/ES6/
 https://entropywhite.com/tags/jQuery/
-https://entropywhite.com/tags/CSS/
 https://entropywhite.com/tags/DOM/
+https://entropywhite.com/tags/CSS/
 https://entropywhite.com/categories/computer-science/
 https://entropywhite.com/categories/computer-science/blog/
 https://entropywhite.com/categories/computer-science/blog/Theme-Shoka-Documentation/
