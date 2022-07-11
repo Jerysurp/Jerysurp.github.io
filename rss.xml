@@ -10,12 +10,36 @@
         </author>
         <description>欢迎来到熵白的博客</description>
         <language>zh-CN</language>
-        <pubDate>Thu, 30 Jun 2022 22:25:00 +0800</pubDate>
-        <lastBuildDate>Thu, 30 Jun 2022 22:25:00 +0800</lastBuildDate>
+        <pubDate>Mon, 11 Jul 2022 16:05:00 +0800</pubDate>
+        <lastBuildDate>Mon, 11 Jul 2022 16:05:00 +0800</lastBuildDate>
         <category term="web" />
         <category term="前端" />
         <category term="markdown" />
         <category term="hexo" />
+        <item>
+            <guid isPermalink="true">https://entropywhite.com/computer-science/blog/Create%20Blog/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Coding/</guid>
+            <title>博客部署到Coding</title>
+            <link>https://entropywhite.com/computer-science/blog/Create%20Blog/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Coding/</link>
+            <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
+            <category term="hexo博客" scheme="https://entropywhite.com/categories/computer-science/blog/" />
+            <category term="Theme Shoka Documentation" scheme="https://entropywhite.com/categories/computer-science/blog/Theme-Shoka-Documentation/" />
+            <category term="Hexo" scheme="https://entropywhite.com/tags/Hexo/" />
+            <category term="教程" scheme="https://entropywhite.com/tags/%E6%95%99%E7%A8%8B/" />
+            <pubDate>Mon, 11 Jul 2022 16:05:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;hexo博客部署到coding&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hexo博客部署到coding&#34;&gt;#&lt;/a&gt; Hexo 博客部署到 Coding&lt;/h1&gt;
+&lt;h1 id=&#34;前情提要&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前情提要&#34;&gt;#&lt;/a&gt; 前情提要&lt;/h1&gt;
+&lt;p&gt;Coding 现在不支持像 github 那样当个远程仓库用了（至少找不到 Page），只能当个存放代码的仓库，本教程是为了 Hexo 博客部署在 github 上无法被搜索引擎收录，但 Coding 可以，于是尝试将代码也存放一份在 Coding 里&lt;/p&gt;
+&lt;h2 id=&#34;1创建项目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1创建项目&#34;&gt;#&lt;/a&gt; 1. 创建项目&lt;/h2&gt;
+&lt;p&gt;进入 [Coding](&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jb2RpbmcubmV0Lw==&#34;&gt;CODING - 一站式软件研发管理平台&lt;/span&gt;) 官网，点击右上角登录 / 注册，如果你有腾讯云账号可以使用腾讯云账号登录&lt;/p&gt;
+&lt;p&gt;这是登录进去后的画面&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/43.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;点击左侧侧边栏的项目，点击右上角的&lt;strong&gt;创建项目&lt;/strong&gt;，进入选择项目模板，选择左边的&lt;strong&gt;全功能 DevOps 项目&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/44.png&#34; alt&gt;&lt;/p&gt;
+&lt;p&gt;项目名称最好和你 github 上的仓库名一样，项目描述可写可不写，点击完成创建&lt;/p&gt;
+&lt;p&gt;完成创建后会进入项目内部&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/45.png&#34; alt&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/ES6/Symbol/</guid>
             <title>Symbol</title>
@@ -2026,6 +2050,340 @@ f`&amp;lt;p&amp;gt;Hi, $&amp;#123;name&amp;#125;.I would like send you some mess
  ]]></description>
         </item>
         <item>
+            <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/ES6/%E6%95%B0%E5%80%BC/</guid>
+            <title>ES6数值</title>
+            <link>https://entropywhite.com/computer-science/web/JavaScript/ES6/%E6%95%B0%E5%80%BC/</link>
+            <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
+            <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />
+            <category term="JavaScript" scheme="https://entropywhite.com/categories/computer-science/web/JavaScript/" />
+            <category term="ES6" scheme="https://entropywhite.com/tags/ES6/" />
+            <pubDate>Thu, 30 Jun 2022 21:37:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;数值的表示&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数值的表示&#34;&gt;#&lt;/a&gt; 数值的表示&lt;/h2&gt;
+&lt;p&gt;二进制表示法新写法：前缀 0b 或 0B 。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;console.log(0b11 === 3); // true
+console.log(0B11 === 3); // true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;八进制表示法新写法：前缀 0o 或 0O 。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;console.log(0o11 === 9); // true
+console.log(0O11 === 9); // true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;常量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常量&#34;&gt;#&lt;/a&gt; 常量&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Number.EPSILON
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Number.EPSILON 属性表示 1 与大于 1 的最小浮点数之间的差。&lt;/p&gt;
+&lt;p&gt;它的值接近于 2.2204460492503130808472633361816E-16，或者 2-52。&lt;/p&gt;
+&lt;p&gt;测试数值是否在误差范围内:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;0.1 + 0.2 === 0.3; // false
+// 在误差范围内即视为相等
+equal = (Math.abs(0.1 - 0.3 + 0.2) &amp;lt; Number.EPSILON); // true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;属性特性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#属性特性&#34;&gt;#&lt;/a&gt; 属性特性&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;writable：false
+enumerable：false
+configurable：false
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;最大最小安全整数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#最大最小安全整数&#34;&gt;#&lt;/a&gt; 最大 / 最小安全整数&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;安全整数&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;安全整数表示在 JavaScript 中能够精确表示的整数，安全整数的范围在 2 的 -53 次方到 2 的 53 次方之间（不包括两个端点），超过这个范围的整数无法精确表示。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最大安全整数&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;安全整数范围的上限，即 2 的 53 次方减 1 。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; // true
+Number.MAX_SAFE_INTEGER === Number.MAX_SAFE_INTEGER + 1;     // false
+Number.MAX_SAFE_INTEGER - 1 === Number.MAX_SAFE_INTEGER - 2; // false
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;最小安全整数&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;安全整数范围的下限，即 2 的 53 次方减 1 的负数。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Number.MIN_SAFE_INTEGER + 1 === Number.MIN_SAFE_INTEGER + 2; // false
+Number.MIN_SAFE_INTEGER === Number.MIN_SAFE_INTEGER - 1;     // false
+Number.MIN_SAFE_INTEGER - 1 === Number.MIN_SAFE_INTEGER - 2; // true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;属性特性&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;writable：false
+enumerable：false
+configurable：false
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#方法&#34;&gt;#&lt;/a&gt; 方法&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Number 对象新方法&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Number.isFinite()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;用于检查一个数值是否为有限的（ finite ），即不是 Infinity&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;console.log( Number.isFinite(1));   // true
+console.log( Number.isFinite(0.1)); // true
+ 
+// NaN 不是有限的
+console.log( Number.isFinite(NaN)); // false
+ 
+console.log( Number.isFinite(Infinity));  // false
+console.log( Number.isFinite(-Infinity)); // false
+ 
+// Number.isFinate 没有隐式的 Number() 类型转换，所有非数值都返回 false
+console.log( Number.isFinite(&#39;foo&#39;)); // false
+console.log( Number.isFinite(&#39;15&#39;));  // false
+console.log( Number.isFinite(true));  // false
+Number.isNaN()
+用于检查一个值是否为 NaN 。
+console.log(Number.isNaN(NaN));      // true
+console.log(Number.isNaN(&#39;true&#39;/0)); // true
+ 
+// 在全局的 isNaN() 中，以下皆返回 true，因为在判断前会将非数值向数值转换
+// 而 Number.isNaN() 不存在隐式的 Number() 类型转换，非 NaN 全部返回 false
+Number.isNaN(&amp;quot;NaN&amp;quot;);      // false
+Number.isNaN(undefined);  // false
+Number.isNaN(&amp;#123;&amp;#125;);         // false
+Number.isNaN(&amp;quot;true&amp;quot;);     // false
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;从全局移植到 Number 对象的方法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;逐步减少全局方法，用于全局变量的模块化。&lt;/p&gt;
+&lt;p&gt;方法的行为没有发生改变。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Number.parseInt()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;用于将给定字符串转化为指定进制的整数&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 不指定进制时默认为 10 进制
+Number.parseInt(&#39;12.34&#39;); // 12
+Number.parseInt(12.34);   // 12
+ 
+// 指定进制
+Number.parseInt(&#39;0011&#39;,2); // 3
+ 
+// 与全局的 parseInt() 函数是同一个函数
+Number.parseInt === parseInt; // true
+Number.parseFloat()
+用于把一个字符串解析成浮点数。
+Number.parseFloat(&#39;123.45&#39;)    // 123.45
+Number.parseFloat(&#39;123.45abc&#39;) // 123.45
+ 
+// 无法被解析成浮点数，则返回 NaN
+Number.parseFloat(&#39;abc&#39;) // NaN
+ 
+// 与全局的 parseFloat() 方法是同一个方法
+Number.parseFloat === parseFloat // true
+Number.isInteger()
+用于判断给定的参数是否为整数。
+Number.isInteger(value)
+Number.isInteger(0); // true
+// JavaScript 内部，整数和浮点数采用的是同样的储存方法,因此 1 与 1.0 被视为相同的值
+Number.isInteger(1);   // true
+Number.isInteger(1.0); // true
+ 
+Number.isInteger(1.1);     // false
+Number.isInteger(Math.PI); // false
+ 
+// NaN 和正负 Infinity 不是整数
+Number.isInteger(NaN);       // false
+Number.isInteger(Infinity);  // false
+Number.isInteger(-Infinity); // false
+ 
+Number.isInteger(&amp;quot;10&amp;quot;);  // false
+Number.isInteger(true);  // false
+Number.isInteger(false); // false
+Number.isInteger([1]);   // false
+ 
+// 数值的精度超过 53 个二进制位时，由于第 54 位及后面的位被丢弃，会产生误判
+Number.isInteger(1.0000000000000001) // true
+ 
+// 一个数值的绝对值小于 Number.MIN_VALUE（5E-324），即小于 JavaScript 能够分辨
+// 的最小值，会被自动转为 0，也会产生误判
+Number.isInteger(5E-324); // false
+Number.isInteger(5E-325); // true
+Number.isSafeInteger()
+用于判断数值是否在安全范围内。
+Number.isSafeInteger(Number.MIN_SAFE_INTEGER - 1); // false
+Number.isSafeInteger(Number.MAX_SAFE_INTEGER + 1); // false
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;math-对象的扩展&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#math-对象的扩展&#34;&gt;#&lt;/a&gt; Math 对象的扩展&lt;/h2&gt;
+&lt;p&gt;ES6 在 Math 对象上新增了 17 个数学相关的静态方法，这些方法只能在 Math 中调用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;普通计算&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Math.cbrt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;用于计算一个数的立方根。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Math.cbrt(1);  // 1
+Math.cbrt(0);  // 0
+Math.cbrt(-1); // -1
+// 会对非数值进行转换
+Math.cbrt(&#39;1&#39;); // 1
+ 
+// 非数值且无法转换为数值时返回 NaN
+Math.cbrt(&#39;hhh&#39;); // NaN
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Math.imul
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;两个数以 32 位带符号整数形式相乘的结果，返回的也是一个 32 位的带符号整数。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 大多数情况下，结果与 a * b 相同 
+Math.imul(1, 2);   // 2
+ 
+// 用于正确返回大数乘法结果中的低位数值
+Math.imul(0x7fffffff, 0x7fffffff); // 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Math.hypot
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;用于计算所有参数的平方和的平方根。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Math.hypot(3, 4); // 5
+ 
+// 非数值会先被转换为数值后进行计算
+Math.hypot(1, 2, &#39;3&#39;); // 3.741657386773941
+Math.hypot(true);      // 1
+Math.hypot(false);     // 0
+ 
+// 空值会被转换为 0
+Math.hypot();   // 0
+Math.hypot([]); // 0
+ 
+// 参数为 Infinity 或 -Infinity 返回 Infinity
+Math.hypot(Infinity); // Infinity
+Math.hypot(-Infinity); // Infinity
+ 
+// 参数中存在无法转换为数值的参数时返回 NaN
+Math.hypot(NaN);         // NaN
+Math.hypot(3, 4, &#39;foo&#39;); // NaN
+Math.hypot(&amp;#123;&amp;#125;);          // NaN
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Math.clz32
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;用于返回数字的 32 位无符号整数形式的前导 0 的个数。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Math.clz32(0); // 32
+Math.clz32(1); // 31
+Math.clz32(0b01000000000100000000000000000000); // 1
+ 
+// 当参数为小数时，只考虑整数部分
+Math.clz32(0.5); // 32
+ 
+// 对于空值或非数值，会转化为数值再进行计算
+Math.clz32(&#39;1&#39;);       // 31
+Math.clz32();          // 32
+Math.clz32([]);        // 32
+Math.clz32(&amp;#123;&amp;#125;);        // 32
+Math.clz32(NaN);       // 32
+Math.clz32(Infinity);  // 32
+Math.clz32(-Infinity); // 32
+Math.clz32(undefined); // 32
+Math.clz32(&#39;hhh&#39;);     // 32
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;数字处理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数字处理&#34;&gt;#&lt;/a&gt; 数字处理&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Math.trunc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;用于返回数字的整数部分。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Math.trunc(12.3); // 12
+Math.trunc(12);   // 12
+ 
+// 整数部分为 0 时也会判断符号
+Math.trunc(-0.5); // -0
+Math.trunc(0.5);  // 0
+ 
+// Math.trunc 会将非数值转为数值再进行处理
+Math.trunc(&amp;quot;12.3&amp;quot;); // 12
+ 
+// 空值或无法转化为数值时时返回 NaN
+Math.trunc();           // NaN
+Math.trunc(NaN);        // NaN
+Math.trunc(&amp;quot;hhh&amp;quot;);      // NaN
+Math.trunc(&amp;quot;123.2hhh&amp;quot;); // NaN
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Math.fround
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;用于获取数字的 32 位单精度浮点数形式。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 对于 2 的 24 次方取负至 2 的 24 次方之间的整数（不含两个端点），返回结果与参数本身一致
+Math.fround(-(2**24)+1);  // -16777215
+Math.fround(2 ** 24 - 1); // 16777215
+ 
+// 用于将 64 位双精度浮点数转为 32 位单精度浮点数
+Math.fround(1.234) // 1.125
+// 当小数的精度超过 24 个二进制位，会丢失精度
+Math.fround(0.3); // 0.30000001192092896
+// 参数为 NaN 或 Infinity 时返回本身
+Math.fround(NaN)      // NaN
+Math.fround(Infinity) // Infinity
+ 
+// 参数为其他非数值类型时会将参数进行转换 
+Math.fround(&#39;5&#39;);  // 5
+Math.fround(true); // 1
+Math.fround(null); // 0
+Math.fround([]);   // 0
+Math.fround(&amp;#123;&amp;#125;);   // NaN
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;判断&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#判断&#34;&gt;#&lt;/a&gt; 判断&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Math.sign
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;判断数字的符号（正、负、0）。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Math.sign(1);  // 1
+Math.sign(-1); // -1
+ 
+// 参数为 0 时，不同符号的返回不同
+Math.sign(0);  // 0
+Math.sign(-0); // -0
+ 
+// 判断前会对非数值进行转换
+Math.sign(&#39;1&#39;);  // 1
+Math.sign(&#39;-1&#39;); // -1  
+ 
+// 参数为非数值（无法转换为数值）时返回 NaN
+Math.sign(NaN);   // NaN 
+Math.sign(&#39;hhh&#39;); // NaN
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;对数方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#对数方法&#34;&gt;#&lt;/a&gt; 对数方法&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Math.expm1()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;用于计算 e 的 x 次方减 1 的结果，即 Math.exp (x) - 1 。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Math.expm1(1);  // 1.718281828459045
+Math.expm1(0);  // 0
+Math.expm1(-1); // -0.6321205588285577
+// 会对非数值进行转换
+Math.expm1(&#39;0&#39;); //0
+ 
+// 参数不为数值且无法转换为数值时返回 NaN
+Math.expm1(NaN); // NaN
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Math.log1p(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;用于计算 1 + x 的自然对数，即 Math.log (1 + x) 。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Math.log1p(1);  // 0.6931471805599453
+Math.log1p(0);  // 0
+Math.log1p(-1); // -Infinity
+ 
+// 参数小于 -1 时返回 NaN
+Math.log1p(-2); // NaN
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Math.log10(x)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;用于计算以 10 为底的 x 的对数。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Math.log10(1);   // 0
+// 计算前对非数值进行转换
+Math.log10(&#39;1&#39;); // 0
+// 参数为0时返回 -Infinity
+Math.log10(0);   // -Infinity
+// 参数小于0或参数不为数值（且无法转换为数值）时返回 NaN
+Math.log10(-1);  // NaN
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Math.log2()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;用于计算 2 为底的 x 的对数。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Math.log2(1);   // 0
+// 计算前对非数值进行转换
+Math.log2(&#39;1&#39;); // 0
+// 参数为0时返回 -Infinity
+Math.log2(0);   // -Infinity
+// 参数小于0或参数不为数值（且无法转换为数值）时返回 NaN
+Math.log2(-1);  // NaN
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;双曲函数方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#双曲函数方法&#34;&gt;#&lt;/a&gt; 双曲函数方法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Math.sinh (x): 用于计算双曲正弦。&lt;/li&gt;
+&lt;li&gt;Math.cosh (x): 用于计算双曲余弦。&lt;/li&gt;
+&lt;li&gt;Math.tanh (x): 用于计算双曲正切。&lt;/li&gt;
+&lt;li&gt;Math.asinh (x): 用于计算反双曲正弦。&lt;/li&gt;
+&lt;li&gt;Math.acosh (x): 用于计算反双曲余弦。&lt;/li&gt;
+&lt;li&gt;Math.atanh (x): 用于计算反双曲正切。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;指数运算符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#指数运算符&#34;&gt;#&lt;/a&gt; 指数运算符&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;1 ** 2; // 1
+// 右结合，从右至左计算
+2 ** 2 ** 3; // 256
+// **=
+let exam = 2;
+exam ** = 2; // 4
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+        <item>
             <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/ES6/%E6%95%B0%E7%BB%84/</guid>
             <title>ES6数组</title>
             <link>https://entropywhite.com/computer-science/web/JavaScript/ES6/%E6%95%B0%E7%BB%84/</link>
@@ -2361,415 +2719,6 @@ console.log(arr3); [1, undefined, 3]
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/ES6/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/</guid>
-            <title>ES6解构赋值</title>
-            <link>https://entropywhite.com/computer-science/web/JavaScript/ES6/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/</link>
-            <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
-            <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />
-            <category term="JavaScript" scheme="https://entropywhite.com/categories/computer-science/web/JavaScript/" />
-            <category term="ES6" scheme="https://entropywhite.com/tags/ES6/" />
-            <pubDate>Thu, 30 Jun 2022 21:37:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;概述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#概述&#34;&gt;#&lt;/a&gt; 概述&lt;/h2&gt;
-&lt;p&gt;解构赋值是对赋值运算符的扩展。&lt;/p&gt;
-&lt;p&gt;他是一种针对数组或者对象进行模式匹配，然后对其中的变量进行赋值。&lt;/p&gt;
-&lt;p&gt;在代码书写上简洁且易读，语义更加清晰明了；也方便了复杂对象中数据字段获取。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;解构模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解构模型&#34;&gt;#&lt;/a&gt; 解构模型&lt;/h2&gt;
-&lt;p&gt;在解构中，有下面两部分参与：&lt;/p&gt;
-&lt;p&gt;解构的源，解构赋值表达式的右边部分。解构的目标，解构赋值表达式的左边部分。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;数组模型的解构array&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数组模型的解构array&#34;&gt;#&lt;/a&gt; 数组模型的解构（Array）&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;基本&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;let [a, b, c] = [1, 2, 3]; // a = 1 // b = 2 // c = 3
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;可嵌套&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;let [a, [[b], c]] = [1, [[2], 3]]; // a = 1 // b = 2 // c = 3
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;可忽略&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;let [a, , b] = [1, 2, 3]; // a = 1 // b = 3
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;不完全解构&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;let [a = 1, b] = []; // a = 1, b = undefined
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;剩余运算符&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;let [a, ...b] = [1, 2, 3]; //a = 1 //b = [2, 3]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;字符串等&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;在数组的解构中，解构的目标若为可遍历对象，皆可进行解构赋值。可遍历对象即实现 Iterator 接口的数据。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;let [a, b, c, d, e] = &#39;hello&#39;; // a = &#39;h&#39; // b = &#39;e&#39; // c = &#39;l&#39; // d = &#39;l&#39; // e = &#39;o&#39;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;解构默认值&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;let [a = 2] = [undefined]; // a = 2
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;当解构模式有匹配结果，且匹配结果是 undefined 时，会触发默认值作为返回结果。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;let [a = 3, b = a] = [];     // a = 3, b = 3 
-let [a = 3, b = a] = [1];    // a = 1, b = 1 
-let [a = 3, b = a] = [1, 2]; // a = 1, b = 2
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;a 与 b 匹配结果为 undefined ，触发默认值：&lt;strong&gt;a = 3; b = a =3&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;a 正常解构赋值，匹配结果：a = 1，b 匹配结果 undefined ，触发默认值：&lt;strong&gt;b = a =1&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;a 与 b 正常解构赋值，匹配结果：&lt;strong&gt;a = 1，b = 2&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;对象模型的解构object&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#对象模型的解构object&#34;&gt;#&lt;/a&gt; 对象模型的解构（Object）&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;基本&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;let &amp;#123; foo, bar &amp;#125; = &amp;#123; foo: &#39;aaa&#39;, bar: &#39;bbb&#39; &amp;#125;; // foo = &#39;aaa&#39; // bar = &#39;bbb&#39;  let &amp;#123; baz : foo &amp;#125; = &amp;#123; baz : &#39;ddd&#39; &amp;#125;; // foo = &#39;ddd&#39;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;可嵌套可忽略&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;let obj = &amp;#123;p: [&#39;hello&#39;, &amp;#123;y: &#39;world&#39;&amp;#125;] &amp;#125;; 
-let &amp;#123;p: [x, &amp;#123; y &amp;#125;] &amp;#125; = obj; // x = &#39;hello&#39; // y = &#39;world&#39; 
-let obj = &amp;#123;p: [&#39;hello&#39;, &amp;#123;y: &#39;world&#39;&amp;#125;] &amp;#125;; 
-let &amp;#123;p: [x, &amp;#123;  &amp;#125;] &amp;#125; = obj; // x = &#39;hello&#39;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;不完全解构&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;let obj = &amp;#123;p: [&amp;#123;y: &#39;world&#39;&amp;#125;] &amp;#125;; 
-let &amp;#123;p: [&amp;#123; y &amp;#125;, x ] &amp;#125; = obj; // x = undefined // y = &#39;world&#39;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;剩余运算符&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;let &amp;#123;a, b, ...rest&amp;#125; = &amp;#123;a: 10, b: 20, c: 30, d: 40&amp;#125;; // a = 10 // b = 20 // rest = &amp;#123;c: 30, d: 40&amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;解构默认值&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;let &amp;#123;a = 10, b = 5&amp;#125; = &amp;#123;a: 3&amp;#125;; // a = 3; b = 5; 
-let &amp;#123;a: aa = 10, b: bb = 5&amp;#125; = &amp;#123;a: 3&amp;#125;; // aa = 3; bb = 5;
-&lt;/code&gt;&lt;/pre&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/ES6/%E6%95%B0%E5%80%BC/</guid>
-            <title>ES6数值</title>
-            <link>https://entropywhite.com/computer-science/web/JavaScript/ES6/%E6%95%B0%E5%80%BC/</link>
-            <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
-            <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />
-            <category term="JavaScript" scheme="https://entropywhite.com/categories/computer-science/web/JavaScript/" />
-            <category term="ES6" scheme="https://entropywhite.com/tags/ES6/" />
-            <pubDate>Thu, 30 Jun 2022 21:37:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;数值的表示&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数值的表示&#34;&gt;#&lt;/a&gt; 数值的表示&lt;/h2&gt;
-&lt;p&gt;二进制表示法新写法：前缀 0b 或 0B 。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;console.log(0b11 === 3); // true
-console.log(0B11 === 3); // true
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;八进制表示法新写法：前缀 0o 或 0O 。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;console.log(0o11 === 9); // true
-console.log(0O11 === 9); // true
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;常量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常量&#34;&gt;#&lt;/a&gt; 常量&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;Number.EPSILON
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Number.EPSILON 属性表示 1 与大于 1 的最小浮点数之间的差。&lt;/p&gt;
-&lt;p&gt;它的值接近于 2.2204460492503130808472633361816E-16，或者 2-52。&lt;/p&gt;
-&lt;p&gt;测试数值是否在误差范围内:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;0.1 + 0.2 === 0.3; // false
-// 在误差范围内即视为相等
-equal = (Math.abs(0.1 - 0.3 + 0.2) &amp;lt; Number.EPSILON); // true
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;属性特性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#属性特性&#34;&gt;#&lt;/a&gt; 属性特性&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;writable：false
-enumerable：false
-configurable：false
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;最大最小安全整数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#最大最小安全整数&#34;&gt;#&lt;/a&gt; 最大 / 最小安全整数&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;安全整数&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;安全整数表示在 JavaScript 中能够精确表示的整数，安全整数的范围在 2 的 -53 次方到 2 的 53 次方之间（不包括两个端点），超过这个范围的整数无法精确表示。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;最大安全整数&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;安全整数范围的上限，即 2 的 53 次方减 1 。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2; // true
-Number.MAX_SAFE_INTEGER === Number.MAX_SAFE_INTEGER + 1;     // false
-Number.MAX_SAFE_INTEGER - 1 === Number.MAX_SAFE_INTEGER - 2; // false
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;最小安全整数&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;安全整数范围的下限，即 2 的 53 次方减 1 的负数。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Number.MIN_SAFE_INTEGER + 1 === Number.MIN_SAFE_INTEGER + 2; // false
-Number.MIN_SAFE_INTEGER === Number.MIN_SAFE_INTEGER - 1;     // false
-Number.MIN_SAFE_INTEGER - 1 === Number.MIN_SAFE_INTEGER - 2; // true
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;属性特性&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;writable：false
-enumerable：false
-configurable：false
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#方法&#34;&gt;#&lt;/a&gt; 方法&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Number 对象新方法&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Number.isFinite()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;用于检查一个数值是否为有限的（ finite ），即不是 Infinity&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;console.log( Number.isFinite(1));   // true
-console.log( Number.isFinite(0.1)); // true
- 
-// NaN 不是有限的
-console.log( Number.isFinite(NaN)); // false
- 
-console.log( Number.isFinite(Infinity));  // false
-console.log( Number.isFinite(-Infinity)); // false
- 
-// Number.isFinate 没有隐式的 Number() 类型转换，所有非数值都返回 false
-console.log( Number.isFinite(&#39;foo&#39;)); // false
-console.log( Number.isFinite(&#39;15&#39;));  // false
-console.log( Number.isFinite(true));  // false
-Number.isNaN()
-用于检查一个值是否为 NaN 。
-console.log(Number.isNaN(NaN));      // true
-console.log(Number.isNaN(&#39;true&#39;/0)); // true
- 
-// 在全局的 isNaN() 中，以下皆返回 true，因为在判断前会将非数值向数值转换
-// 而 Number.isNaN() 不存在隐式的 Number() 类型转换，非 NaN 全部返回 false
-Number.isNaN(&amp;quot;NaN&amp;quot;);      // false
-Number.isNaN(undefined);  // false
-Number.isNaN(&amp;#123;&amp;#125;);         // false
-Number.isNaN(&amp;quot;true&amp;quot;);     // false
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;从全局移植到 Number 对象的方法&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;逐步减少全局方法，用于全局变量的模块化。&lt;/p&gt;
-&lt;p&gt;方法的行为没有发生改变。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Number.parseInt()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;用于将给定字符串转化为指定进制的整数&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;// 不指定进制时默认为 10 进制
-Number.parseInt(&#39;12.34&#39;); // 12
-Number.parseInt(12.34);   // 12
- 
-// 指定进制
-Number.parseInt(&#39;0011&#39;,2); // 3
- 
-// 与全局的 parseInt() 函数是同一个函数
-Number.parseInt === parseInt; // true
-Number.parseFloat()
-用于把一个字符串解析成浮点数。
-Number.parseFloat(&#39;123.45&#39;)    // 123.45
-Number.parseFloat(&#39;123.45abc&#39;) // 123.45
- 
-// 无法被解析成浮点数，则返回 NaN
-Number.parseFloat(&#39;abc&#39;) // NaN
- 
-// 与全局的 parseFloat() 方法是同一个方法
-Number.parseFloat === parseFloat // true
-Number.isInteger()
-用于判断给定的参数是否为整数。
-Number.isInteger(value)
-Number.isInteger(0); // true
-// JavaScript 内部，整数和浮点数采用的是同样的储存方法,因此 1 与 1.0 被视为相同的值
-Number.isInteger(1);   // true
-Number.isInteger(1.0); // true
- 
-Number.isInteger(1.1);     // false
-Number.isInteger(Math.PI); // false
- 
-// NaN 和正负 Infinity 不是整数
-Number.isInteger(NaN);       // false
-Number.isInteger(Infinity);  // false
-Number.isInteger(-Infinity); // false
- 
-Number.isInteger(&amp;quot;10&amp;quot;);  // false
-Number.isInteger(true);  // false
-Number.isInteger(false); // false
-Number.isInteger([1]);   // false
- 
-// 数值的精度超过 53 个二进制位时，由于第 54 位及后面的位被丢弃，会产生误判
-Number.isInteger(1.0000000000000001) // true
- 
-// 一个数值的绝对值小于 Number.MIN_VALUE（5E-324），即小于 JavaScript 能够分辨
-// 的最小值，会被自动转为 0，也会产生误判
-Number.isInteger(5E-324); // false
-Number.isInteger(5E-325); // true
-Number.isSafeInteger()
-用于判断数值是否在安全范围内。
-Number.isSafeInteger(Number.MIN_SAFE_INTEGER - 1); // false
-Number.isSafeInteger(Number.MAX_SAFE_INTEGER + 1); // false
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;math-对象的扩展&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#math-对象的扩展&#34;&gt;#&lt;/a&gt; Math 对象的扩展&lt;/h2&gt;
-&lt;p&gt;ES6 在 Math 对象上新增了 17 个数学相关的静态方法，这些方法只能在 Math 中调用。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;普通计算&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Math.cbrt
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;用于计算一个数的立方根。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Math.cbrt(1);  // 1
-Math.cbrt(0);  // 0
-Math.cbrt(-1); // -1
-// 会对非数值进行转换
-Math.cbrt(&#39;1&#39;); // 1
- 
-// 非数值且无法转换为数值时返回 NaN
-Math.cbrt(&#39;hhh&#39;); // NaN
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Math.imul
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;两个数以 32 位带符号整数形式相乘的结果，返回的也是一个 32 位的带符号整数。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;// 大多数情况下，结果与 a * b 相同 
-Math.imul(1, 2);   // 2
- 
-// 用于正确返回大数乘法结果中的低位数值
-Math.imul(0x7fffffff, 0x7fffffff); // 1
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Math.hypot
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;用于计算所有参数的平方和的平方根。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Math.hypot(3, 4); // 5
- 
-// 非数值会先被转换为数值后进行计算
-Math.hypot(1, 2, &#39;3&#39;); // 3.741657386773941
-Math.hypot(true);      // 1
-Math.hypot(false);     // 0
- 
-// 空值会被转换为 0
-Math.hypot();   // 0
-Math.hypot([]); // 0
- 
-// 参数为 Infinity 或 -Infinity 返回 Infinity
-Math.hypot(Infinity); // Infinity
-Math.hypot(-Infinity); // Infinity
- 
-// 参数中存在无法转换为数值的参数时返回 NaN
-Math.hypot(NaN);         // NaN
-Math.hypot(3, 4, &#39;foo&#39;); // NaN
-Math.hypot(&amp;#123;&amp;#125;);          // NaN
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Math.clz32
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;用于返回数字的 32 位无符号整数形式的前导 0 的个数。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Math.clz32(0); // 32
-Math.clz32(1); // 31
-Math.clz32(0b01000000000100000000000000000000); // 1
- 
-// 当参数为小数时，只考虑整数部分
-Math.clz32(0.5); // 32
- 
-// 对于空值或非数值，会转化为数值再进行计算
-Math.clz32(&#39;1&#39;);       // 31
-Math.clz32();          // 32
-Math.clz32([]);        // 32
-Math.clz32(&amp;#123;&amp;#125;);        // 32
-Math.clz32(NaN);       // 32
-Math.clz32(Infinity);  // 32
-Math.clz32(-Infinity); // 32
-Math.clz32(undefined); // 32
-Math.clz32(&#39;hhh&#39;);     // 32
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;数字处理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数字处理&#34;&gt;#&lt;/a&gt; 数字处理&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;Math.trunc
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;用于返回数字的整数部分。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Math.trunc(12.3); // 12
-Math.trunc(12);   // 12
- 
-// 整数部分为 0 时也会判断符号
-Math.trunc(-0.5); // -0
-Math.trunc(0.5);  // 0
- 
-// Math.trunc 会将非数值转为数值再进行处理
-Math.trunc(&amp;quot;12.3&amp;quot;); // 12
- 
-// 空值或无法转化为数值时时返回 NaN
-Math.trunc();           // NaN
-Math.trunc(NaN);        // NaN
-Math.trunc(&amp;quot;hhh&amp;quot;);      // NaN
-Math.trunc(&amp;quot;123.2hhh&amp;quot;); // NaN
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Math.fround
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;用于获取数字的 32 位单精度浮点数形式。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;// 对于 2 的 24 次方取负至 2 的 24 次方之间的整数（不含两个端点），返回结果与参数本身一致
-Math.fround(-(2**24)+1);  // -16777215
-Math.fround(2 ** 24 - 1); // 16777215
- 
-// 用于将 64 位双精度浮点数转为 32 位单精度浮点数
-Math.fround(1.234) // 1.125
-// 当小数的精度超过 24 个二进制位，会丢失精度
-Math.fround(0.3); // 0.30000001192092896
-// 参数为 NaN 或 Infinity 时返回本身
-Math.fround(NaN)      // NaN
-Math.fround(Infinity) // Infinity
- 
-// 参数为其他非数值类型时会将参数进行转换 
-Math.fround(&#39;5&#39;);  // 5
-Math.fround(true); // 1
-Math.fround(null); // 0
-Math.fround([]);   // 0
-Math.fround(&amp;#123;&amp;#125;);   // NaN
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;判断&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#判断&#34;&gt;#&lt;/a&gt; 判断&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;Math.sign
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;判断数字的符号（正、负、0）。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Math.sign(1);  // 1
-Math.sign(-1); // -1
- 
-// 参数为 0 时，不同符号的返回不同
-Math.sign(0);  // 0
-Math.sign(-0); // -0
- 
-// 判断前会对非数值进行转换
-Math.sign(&#39;1&#39;);  // 1
-Math.sign(&#39;-1&#39;); // -1  
- 
-// 参数为非数值（无法转换为数值）时返回 NaN
-Math.sign(NaN);   // NaN 
-Math.sign(&#39;hhh&#39;); // NaN
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;对数方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#对数方法&#34;&gt;#&lt;/a&gt; 对数方法&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;Math.expm1()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;用于计算 e 的 x 次方减 1 的结果，即 Math.exp (x) - 1 。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Math.expm1(1);  // 1.718281828459045
-Math.expm1(0);  // 0
-Math.expm1(-1); // -0.6321205588285577
-// 会对非数值进行转换
-Math.expm1(&#39;0&#39;); //0
- 
-// 参数不为数值且无法转换为数值时返回 NaN
-Math.expm1(NaN); // NaN
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Math.log1p(x)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;用于计算 1 + x 的自然对数，即 Math.log (1 + x) 。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Math.log1p(1);  // 0.6931471805599453
-Math.log1p(0);  // 0
-Math.log1p(-1); // -Infinity
- 
-// 参数小于 -1 时返回 NaN
-Math.log1p(-2); // NaN
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Math.log10(x)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;用于计算以 10 为底的 x 的对数。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Math.log10(1);   // 0
-// 计算前对非数值进行转换
-Math.log10(&#39;1&#39;); // 0
-// 参数为0时返回 -Infinity
-Math.log10(0);   // -Infinity
-// 参数小于0或参数不为数值（且无法转换为数值）时返回 NaN
-Math.log10(-1);  // NaN
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Math.log2()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;用于计算 2 为底的 x 的对数。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Math.log2(1);   // 0
-// 计算前对非数值进行转换
-Math.log2(&#39;1&#39;); // 0
-// 参数为0时返回 -Infinity
-Math.log2(0);   // -Infinity
-// 参数小于0或参数不为数值（且无法转换为数值）时返回 NaN
-Math.log2(-1);  // NaN
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;双曲函数方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#双曲函数方法&#34;&gt;#&lt;/a&gt; 双曲函数方法&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Math.sinh (x): 用于计算双曲正弦。&lt;/li&gt;
-&lt;li&gt;Math.cosh (x): 用于计算双曲余弦。&lt;/li&gt;
-&lt;li&gt;Math.tanh (x): 用于计算双曲正切。&lt;/li&gt;
-&lt;li&gt;Math.asinh (x): 用于计算反双曲正弦。&lt;/li&gt;
-&lt;li&gt;Math.acosh (x): 用于计算反双曲余弦。&lt;/li&gt;
-&lt;li&gt;Math.atanh (x): 用于计算反双曲正切。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;指数运算符&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#指数运算符&#34;&gt;#&lt;/a&gt; 指数运算符&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;1 ** 2; // 1
-// 右结合，从右至左计算
-2 ** 2 ** 3; // 256
-// **=
-let exam = 2;
-exam ** = 2; // 4
-&lt;/code&gt;&lt;/pre&gt;
- ]]></description>
-        </item>
-        <item>
             <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/ES6/%E6%A8%A1%E5%9D%97/</guid>
             <title>ES6模块</title>
             <link>https://entropywhite.com/computer-science/web/JavaScript/ES6/%E6%A8%A1%E5%9D%97/</link>
@@ -2919,40 +2868,78 @@ import b from &amp;quot;./xxx.js&amp;quot;; // 不需要加&amp;#123;&amp;#125;�
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/AJAX/XHR%E5%93%8D%E5%BA%94/</guid>
-            <title>XHR响应</title>
-            <link>https://entropywhite.com/computer-science/web/JavaScript/AJAX/XHR%E5%93%8D%E5%BA%94/</link>
+            <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/ES6/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/</guid>
+            <title>ES6解构赋值</title>
+            <link>https://entropywhite.com/computer-science/web/JavaScript/ES6/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/</link>
             <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
             <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />
             <category term="JavaScript" scheme="https://entropywhite.com/categories/computer-science/web/JavaScript/" />
-            <category term="AJAX" scheme="https://entropywhite.com/tags/AJAX/" />
-            <pubDate>Thu, 30 Jun 2022 21:36:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;ajax-服务器-响应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ajax-服务器-响应&#34;&gt;#&lt;/a&gt; AJAX - 服务器 响应&lt;/h1&gt;
+            <category term="ES6" scheme="https://entropywhite.com/tags/ES6/" />
+            <pubDate>Thu, 30 Jun 2022 21:37:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;概述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#概述&#34;&gt;#&lt;/a&gt; 概述&lt;/h2&gt;
+&lt;p&gt;解构赋值是对赋值运算符的扩展。&lt;/p&gt;
+&lt;p&gt;他是一种针对数组或者对象进行模式匹配，然后对其中的变量进行赋值。&lt;/p&gt;
+&lt;p&gt;在代码书写上简洁且易读，语义更加清晰明了；也方便了复杂对象中数据字段获取。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;服务器响应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#服务器响应&#34;&gt;#&lt;/a&gt; 服务器响应&lt;/h2&gt;
-&lt;p&gt;如需获得来自服务器的响应，请使用 XMLHttpRequest 对象的 responseText 或 responseXML 属性。&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;属性&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;描述&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;responseText&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;获得字符串形式的响应数据。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;responseXML&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;获得 XML 形式的响应数据。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;responsetext-属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#responsetext-属性&#34;&gt;#&lt;/a&gt; responseText 属性&lt;/h2&gt;
-&lt;p&gt;如果来自服务器的响应并非 XML，请使用 responseText 属性。&lt;/p&gt;
-&lt;h2 id=&#34;responsexml-属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#responsexml-属性&#34;&gt;#&lt;/a&gt; responseXML 属性&lt;/h2&gt;
-&lt;p&gt;如果来自服务器的响应是 XML，而且需要作为 XML 对象进行解析，请使用 responseXML 属性：&lt;/p&gt;
+&lt;h2 id=&#34;解构模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解构模型&#34;&gt;#&lt;/a&gt; 解构模型&lt;/h2&gt;
+&lt;p&gt;在解构中，有下面两部分参与：&lt;/p&gt;
+&lt;p&gt;解构的源，解构赋值表达式的右边部分。解构的目标，解构赋值表达式的左边部分。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;数组模型的解构array&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#数组模型的解构array&#34;&gt;#&lt;/a&gt; 数组模型的解构（Array）&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;基本&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let [a, b, c] = [1, 2, 3]; // a = 1 // b = 2 // c = 3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;可嵌套&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let [a, [[b], c]] = [1, [[2], 3]]; // a = 1 // b = 2 // c = 3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;可忽略&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let [a, , b] = [1, 2, 3]; // a = 1 // b = 3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;不完全解构&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let [a = 1, b] = []; // a = 1, b = undefined
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;剩余运算符&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let [a, ...b] = [1, 2, 3]; //a = 1 //b = [2, 3]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;字符串等&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在数组的解构中，解构的目标若为可遍历对象，皆可进行解构赋值。可遍历对象即实现 Iterator 接口的数据。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let [a, b, c, d, e] = &#39;hello&#39;; // a = &#39;h&#39; // b = &#39;e&#39; // c = &#39;l&#39; // d = &#39;l&#39; // e = &#39;o&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;解构默认值&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let [a = 2] = [undefined]; // a = 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;当解构模式有匹配结果，且匹配结果是 undefined 时，会触发默认值作为返回结果。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let [a = 3, b = a] = [];     // a = 3, b = 3 
+let [a = 3, b = a] = [1];    // a = 1, b = 1 
+let [a = 3, b = a] = [1, 2]; // a = 1, b = 2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;a 与 b 匹配结果为 undefined ，触发默认值：&lt;strong&gt;a = 3; b = a =3&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;a 正常解构赋值，匹配结果：a = 1，b 匹配结果 undefined ，触发默认值：&lt;strong&gt;b = a =1&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;a 与 b 正常解构赋值，匹配结果：&lt;strong&gt;a = 1，b = 2&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;对象模型的解构object&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#对象模型的解构object&#34;&gt;#&lt;/a&gt; 对象模型的解构（Object）&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;基本&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let &amp;#123; foo, bar &amp;#125; = &amp;#123; foo: &#39;aaa&#39;, bar: &#39;bbb&#39; &amp;#125;; // foo = &#39;aaa&#39; // bar = &#39;bbb&#39;  let &amp;#123; baz : foo &amp;#125; = &amp;#123; baz : &#39;ddd&#39; &amp;#125;; // foo = &#39;ddd&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;可嵌套可忽略&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let obj = &amp;#123;p: [&#39;hello&#39;, &amp;#123;y: &#39;world&#39;&amp;#125;] &amp;#125;; 
+let &amp;#123;p: [x, &amp;#123; y &amp;#125;] &amp;#125; = obj; // x = &#39;hello&#39; // y = &#39;world&#39; 
+let obj = &amp;#123;p: [&#39;hello&#39;, &amp;#123;y: &#39;world&#39;&amp;#125;] &amp;#125;; 
+let &amp;#123;p: [x, &amp;#123;  &amp;#125;] &amp;#125; = obj; // x = &#39;hello&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;不完全解构&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let obj = &amp;#123;p: [&amp;#123;y: &#39;world&#39;&amp;#125;] &amp;#125;; 
+let &amp;#123;p: [&amp;#123; y &amp;#125;, x ] &amp;#125; = obj; // x = undefined // y = &#39;world&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;剩余运算符&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let &amp;#123;a, b, ...rest&amp;#125; = &amp;#123;a: 10, b: 20, c: 30, d: 40&amp;#125;; // a = 10 // b = 20 // rest = &amp;#123;c: 30, d: 40&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;解构默认值&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;let &amp;#123;a = 10, b = 5&amp;#125; = &amp;#123;a: 3&amp;#125;; // a = 3; b = 5; 
+let &amp;#123;a: aa = 10, b: bb = 5&amp;#125; = &amp;#123;a: 3&amp;#125;; // aa = 3; bb = 5;
+&lt;/code&gt;&lt;/pre&gt;
  ]]></description>
         </item>
         <item>
@@ -3325,6 +3312,43 @@ NaN === NaN  //false
  ]]></description>
         </item>
         <item>
+            <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/AJAX/XHR%E5%93%8D%E5%BA%94/</guid>
+            <title>XHR响应</title>
+            <link>https://entropywhite.com/computer-science/web/JavaScript/AJAX/XHR%E5%93%8D%E5%BA%94/</link>
+            <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
+            <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />
+            <category term="JavaScript" scheme="https://entropywhite.com/categories/computer-science/web/JavaScript/" />
+            <category term="AJAX" scheme="https://entropywhite.com/tags/AJAX/" />
+            <pubDate>Thu, 30 Jun 2022 21:36:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;ajax-服务器-响应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ajax-服务器-响应&#34;&gt;#&lt;/a&gt; AJAX - 服务器 响应&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;服务器响应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#服务器响应&#34;&gt;#&lt;/a&gt; 服务器响应&lt;/h2&gt;
+&lt;p&gt;如需获得来自服务器的响应，请使用 XMLHttpRequest 对象的 responseText 或 responseXML 属性。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;属性&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;responseText&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;获得字符串形式的响应数据。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;responseXML&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;获得 XML 形式的响应数据。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;responsetext-属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#responsetext-属性&#34;&gt;#&lt;/a&gt; responseText 属性&lt;/h2&gt;
+&lt;p&gt;如果来自服务器的响应并非 XML，请使用 responseText 属性。&lt;/p&gt;
+&lt;h2 id=&#34;responsexml-属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#responsexml-属性&#34;&gt;#&lt;/a&gt; responseXML 属性&lt;/h2&gt;
+&lt;p&gt;如果来自服务器的响应是 XML，而且需要作为 XML 对象进行解析，请使用 responseXML 属性：&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
             <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/AJAX/XHR%E5%AF%B9%E8%B1%A1/</guid>
             <title>XHR对象</title>
             <link>https://entropywhite.com/computer-science/web/JavaScript/AJAX/XHR%E5%AF%B9%E8%B1%A1/</link>
@@ -3350,39 +3374,6 @@ NaN === NaN  //false
 &lt;pre&gt;&lt;code&gt;variable=new ActiveXObject(&amp;quot;Microsoft.XMLHTTP&amp;quot;);
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;为了应对所有的现代浏览器，包括 IE5 和 IE6，请检查浏览器是否支持 XMLHttpRequest 对象。如果支持，则创建 XMLHttpRequest 对象。如果不支持，则创建 ActiveXObject ：&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/AJAX/AJAX%E5%BC%82%E6%AD%A5/</guid>
-            <title>AJAX异步</title>
-            <link>https://entropywhite.com/computer-science/web/JavaScript/AJAX/AJAX%E5%BC%82%E6%AD%A5/</link>
-            <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
-            <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />
-            <category term="JavaScript" scheme="https://entropywhite.com/categories/computer-science/web/JavaScript/" />
-            <category term="AJAX" scheme="https://entropywhite.com/tags/AJAX/" />
-            <pubDate>Thu, 30 Jun 2022 21:34:00 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;全称：&lt;strong&gt;Asynchronous JavaScript And XML（异步 JavaScript 及 XML）&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Ajax 的作用：实现异步请求的技术&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;什么是同步请求？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;场景：页面上有一个 a 标签，用户点击 a 标签，浏览器发出一个请求，然后服务器给出一个响应。&lt;/p&gt;
-&lt;p&gt;(请求，其实是用户的操作，触发的)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;什么是异步（不同步）请求？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;场景：在用户注册的时候，用户首先输入用户名，接下来用户继续填写其他注册信息，与此同时，浏览器自动发送了一个请求，将用户输入的用户名发送给服务器，去校验是否可用.&lt;/p&gt;
-&lt;p&gt;(请求，是浏览器自己发送的，与用户没有关系)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;同步与异步区别的理解：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;1. 同步请求：之前我们写的注册案例，依次写用户名，密码，等等所有信息之后，手动按提交按钮，才会把浏览器上的数据传到服务器进行校验用户名是否重复，然后在浏览器上提示用户名是否重复的信息，这种方式一速度较慢，需要将全部信息写完之后刷新整个页面提交到服务器，如果没有通过验证还得重新填写信息再提交，比较浪费流量，二则是如果没有通过验证所有的信息都没有了还得重新填写，太麻烦&lt;/p&gt;
-&lt;p&gt;2. 异步请求：使用 ajax 的话，将用户名文本框绑定一个鼠标离焦事件，事件里用 ajax 提交用户名到服务器校验，这个验证是我们鼠标离开用户名文本框浏览器自动向服务器发出请求校验的，我们在填写别的信息时，服务器会将校验信息发送给浏览器提示是否重复信息，这样既省流量，又可以只修改用户名即可，最后验证通过才可以提交全部信息；&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;为什么需要异步请求，或者说那些功能必须使用异步请求技术来实现？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;在不刷新页面（使用 a 标签发送请求和使用 form 表单发送请求，这两种请求都会，刷新页面）的情况下，发送请求，接收响应，然后修改部分的页面，这样的需求需要异步请求实现&lt;/p&gt;
-&lt;p&gt;总结：在不使用 a 标签和 form 表单发送请求的情况下，使用异步请求&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;在这个需求中，发送请求应该谁来做？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;浏览器&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;让浏览器来帮助发送这个请求，那么程序员如何与浏览器沟通，让它帮助我们发送请求？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Javascript 技术&lt;/p&gt;
-&lt;p&gt;企业为什么特别喜欢使用 ajax?&lt;/p&gt;
-&lt;p&gt;钱。企业的网络通信费用，按流量计费，那么使用 ajax 它的数据量小，所以省钱&lt;/p&gt;
-&lt;p&gt;ajax 它的数据量小 —— 因为他不重新加载整个页面（加载部分）&lt;/p&gt;
-&lt;p&gt;Ajax 因为数据量小，响应速度快，用户体验好&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
