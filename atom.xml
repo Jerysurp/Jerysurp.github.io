@@ -849,6 +849,96 @@ p.then(null, function (s)&amp;#123;
         <updated>2022-06-30T14:21:00.000Z</updated>
     </entry>
     <entry>
+        <id>https://entropywhite.com/computer-science/web/JavaScript/ES6/Promise%E5%AF%B9%E8%B1%A1/</id>
+        <title>Promise对象</title>
+        <link rel="alternate" href="https://entropywhite.com/computer-science/web/JavaScript/ES6/Promise%E5%AF%B9%E8%B1%A1/"/>
+        <content type="html">&lt;h2 id=&#34;概述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#概述&#34;&gt;#&lt;/a&gt; 概述&lt;/h2&gt;
+&lt;p&gt;是异步编程的一种解决方案。&lt;/p&gt;
+&lt;p&gt;从语法上说，Promise 是一个对象，从它可以获取异步操作的消息。&lt;/p&gt;
+&lt;h2 id=&#34;promise-状态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#promise-状态&#34;&gt;#&lt;/a&gt; Promise 状态&lt;/h2&gt;
+&lt;h3 id=&#34;状态的特点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#状态的特点&#34;&gt;#&lt;/a&gt; 状态的特点&lt;/h3&gt;
+&lt;p&gt;Promise 异步操作有三种状态：pending（进行中）、fulfilled（已成功）和 rejected（已失败）。除了异步操作的结果，任何其他操作都无法改变这个状态。&lt;/p&gt;
+&lt;p&gt;Promise 对象只有：从 pending 变为 fulfilled 和从 pending 变为 rejected 的状态改变。只要处于 fulfilled 和 rejected ，状态就不会再变了即 resolved（已定型）。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const p1 = new Promise(function(resolve,reject)&amp;#123;
+    resolve(&#39;success1&#39;);
+    resolve(&#39;success2&#39;);
+&amp;#125;); 
+const p2 = new Promise(function(resolve,reject)&amp;#123;  
+    resolve(&#39;success3&#39;); 
+    reject(&#39;reject&#39;);
+&amp;#125;);
+p1.then(function(value)&amp;#123;  
+    console.log(value); // success1
+&amp;#125;);
+p2.then(function(value)&amp;#123; 
+    console.log(value); // success3
+&amp;#125;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;状态的缺点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#状态的缺点&#34;&gt;#&lt;/a&gt; 状态的缺点&lt;/h3&gt;
+&lt;p&gt;无法取消 Promise ，一旦新建它就会立即执行，无法中途取消。&lt;/p&gt;
+&lt;p&gt;如果不设置回调函数，Promise 内部抛出的错误，不会反应到外部。&lt;/p&gt;
+&lt;p&gt;当处于 pending 状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。&lt;/p&gt;
+&lt;h2 id=&#34;then-方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#then-方法&#34;&gt;#&lt;/a&gt; then 方法&lt;/h2&gt;
+&lt;p&gt;then 方法接收两个函数作为参数，第一个参数是 Promise 执行成功时的回调，第二个参数是 Promise 执行失败时的回调，两个函数只会有一个被调用。&lt;/p&gt;
+&lt;h3 id=&#34;then-方法的特点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#then-方法的特点&#34;&gt;#&lt;/a&gt; then 方法的特点&lt;/h3&gt;
+&lt;p&gt;在 JavaScript 事件队列的当前运行完成之前，回调函数永远不会被调用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const p = new Promise(function(resolve,reject)&amp;#123;
+  resolve(&#39;success&#39;);
+&amp;#125;);
+ 
+p.then(function(value)&amp;#123;
+  console.log(value);
+&amp;#125;);
+ 
+console.log(&#39;first&#39;);
+// first
+// success
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;通过 &lt;strong&gt;.then&lt;/strong&gt; 形式添加的回调函数，不论什么时候，都会被调用。&lt;/p&gt;
+&lt;p&gt;通过多次调用&lt;/p&gt;
+&lt;p&gt;.then&lt;/p&gt;
+&lt;p&gt;，可以添加多个回调函数，它们会按照插入顺序并且独立运行。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const p = new Promise(function(resolve,reject)&amp;#123;
+  resolve(1);
+&amp;#125;).then(function(value)&amp;#123; // 第一个then // 1
+  console.log(value);
+  return value * 2;
+&amp;#125;).then(function(value)&amp;#123; // 第二个then // 2
+  console.log(value);
+&amp;#125;).then(function(value)&amp;#123; // 第三个then // undefined
+  console.log(value);
+  return Promise.resolve(&#39;resolve&#39;); 
+&amp;#125;).then(function(value)&amp;#123; // 第四个then // resolve
+  console.log(value);
+  return Promise.reject(&#39;reject&#39;); 
+&amp;#125;).then(function(value)&amp;#123; // 第五个then //reject:reject
+  console.log(&#39;resolve:&#39; + value);
+&amp;#125;, function(err) &amp;#123;
+  console.log(&#39;reject:&#39; + err);
+&amp;#125;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;then 方法将返回一个 resolved 或 rejected 状态的 Promise 对象用于链式调用，且 Promise 对象的值就是这个返回值。&lt;/p&gt;
+&lt;h3 id=&#34;then-方法注意点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#then-方法注意点&#34;&gt;#&lt;/a&gt; then 方法注意点&lt;/h3&gt;
+&lt;p&gt;简便的 Promise 链式编程最好保持扁平化，不要嵌套 Promise。&lt;/p&gt;
+&lt;p&gt;注意总是返回或终止 Promise 链。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const p1 = new Promise(function(resolve,reject)&amp;#123;
+  resolve(1);
+&amp;#125;).then(function(result) &amp;#123;
+  p2(result).then(newResult =&amp;gt; p3(newResult));
+&amp;#125;).then(() =&amp;gt; p4());
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;创建新 Promise 但忘记返回它时，对应链条被打破，导致 p4 会与 p2 和 p3 同时进行。&lt;/p&gt;
+&lt;p&gt;大多数浏览器中不能终止的 Promise 链里的 rejection，建议后面都跟上 &lt;strong&gt;.catch(error =&amp;gt; console.log(error));&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;更多文章&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#更多文章&#34;&gt;#&lt;/a&gt; 更多文章&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;JS-Promise%E5%AF%B9%E8%B1%A1&#34;&gt;JS-Promise 对象&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
+        <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />
+        <category term="JavaScript" scheme="https://entropywhite.com/categories/computer-science/web/JavaScript/" />
+        <category term="ES6" scheme="https://entropywhite.com/tags/ES6/" />
+        <updated>2022-06-30T14:21:00.000Z</updated>
+    </entry>
+    <entry>
         <id>https://entropywhite.com/computer-science/web/JavaScript/ES6/Map%E4%B8%8ESet/</id>
         <title>Map与Set</title>
         <link rel="alternate" href="https://entropywhite.com/computer-science/web/JavaScript/ES6/Map%E4%B8%8ESet/"/>
@@ -1041,96 +1131,6 @@ var fArr = arr.filter(function(x)&amp;#123;    //使用filter过滤数组，并�
 var intersect = new Set(fArr);          //将fArr转换成set
 console.log(fArr);
 &lt;/code&gt;&lt;/pre&gt;
-</content>
-        <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
-        <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />
-        <category term="JavaScript" scheme="https://entropywhite.com/categories/computer-science/web/JavaScript/" />
-        <category term="ES6" scheme="https://entropywhite.com/tags/ES6/" />
-        <updated>2022-06-30T14:21:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://entropywhite.com/computer-science/web/JavaScript/ES6/Promise%E5%AF%B9%E8%B1%A1/</id>
-        <title>Promise对象</title>
-        <link rel="alternate" href="https://entropywhite.com/computer-science/web/JavaScript/ES6/Promise%E5%AF%B9%E8%B1%A1/"/>
-        <content type="html">&lt;h2 id=&#34;概述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#概述&#34;&gt;#&lt;/a&gt; 概述&lt;/h2&gt;
-&lt;p&gt;是异步编程的一种解决方案。&lt;/p&gt;
-&lt;p&gt;从语法上说，Promise 是一个对象，从它可以获取异步操作的消息。&lt;/p&gt;
-&lt;h2 id=&#34;promise-状态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#promise-状态&#34;&gt;#&lt;/a&gt; Promise 状态&lt;/h2&gt;
-&lt;h3 id=&#34;状态的特点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#状态的特点&#34;&gt;#&lt;/a&gt; 状态的特点&lt;/h3&gt;
-&lt;p&gt;Promise 异步操作有三种状态：pending（进行中）、fulfilled（已成功）和 rejected（已失败）。除了异步操作的结果，任何其他操作都无法改变这个状态。&lt;/p&gt;
-&lt;p&gt;Promise 对象只有：从 pending 变为 fulfilled 和从 pending 变为 rejected 的状态改变。只要处于 fulfilled 和 rejected ，状态就不会再变了即 resolved（已定型）。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;const p1 = new Promise(function(resolve,reject)&amp;#123;
-    resolve(&#39;success1&#39;);
-    resolve(&#39;success2&#39;);
-&amp;#125;); 
-const p2 = new Promise(function(resolve,reject)&amp;#123;  
-    resolve(&#39;success3&#39;); 
-    reject(&#39;reject&#39;);
-&amp;#125;);
-p1.then(function(value)&amp;#123;  
-    console.log(value); // success1
-&amp;#125;);
-p2.then(function(value)&amp;#123; 
-    console.log(value); // success3
-&amp;#125;);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;状态的缺点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#状态的缺点&#34;&gt;#&lt;/a&gt; 状态的缺点&lt;/h3&gt;
-&lt;p&gt;无法取消 Promise ，一旦新建它就会立即执行，无法中途取消。&lt;/p&gt;
-&lt;p&gt;如果不设置回调函数，Promise 内部抛出的错误，不会反应到外部。&lt;/p&gt;
-&lt;p&gt;当处于 pending 状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。&lt;/p&gt;
-&lt;h2 id=&#34;then-方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#then-方法&#34;&gt;#&lt;/a&gt; then 方法&lt;/h2&gt;
-&lt;p&gt;then 方法接收两个函数作为参数，第一个参数是 Promise 执行成功时的回调，第二个参数是 Promise 执行失败时的回调，两个函数只会有一个被调用。&lt;/p&gt;
-&lt;h3 id=&#34;then-方法的特点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#then-方法的特点&#34;&gt;#&lt;/a&gt; then 方法的特点&lt;/h3&gt;
-&lt;p&gt;在 JavaScript 事件队列的当前运行完成之前，回调函数永远不会被调用&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;const p = new Promise(function(resolve,reject)&amp;#123;
-  resolve(&#39;success&#39;);
-&amp;#125;);
- 
-p.then(function(value)&amp;#123;
-  console.log(value);
-&amp;#125;);
- 
-console.log(&#39;first&#39;);
-// first
-// success
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;通过 &lt;strong&gt;.then&lt;/strong&gt; 形式添加的回调函数，不论什么时候，都会被调用。&lt;/p&gt;
-&lt;p&gt;通过多次调用&lt;/p&gt;
-&lt;p&gt;.then&lt;/p&gt;
-&lt;p&gt;，可以添加多个回调函数，它们会按照插入顺序并且独立运行。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;const p = new Promise(function(resolve,reject)&amp;#123;
-  resolve(1);
-&amp;#125;).then(function(value)&amp;#123; // 第一个then // 1
-  console.log(value);
-  return value * 2;
-&amp;#125;).then(function(value)&amp;#123; // 第二个then // 2
-  console.log(value);
-&amp;#125;).then(function(value)&amp;#123; // 第三个then // undefined
-  console.log(value);
-  return Promise.resolve(&#39;resolve&#39;); 
-&amp;#125;).then(function(value)&amp;#123; // 第四个then // resolve
-  console.log(value);
-  return Promise.reject(&#39;reject&#39;); 
-&amp;#125;).then(function(value)&amp;#123; // 第五个then //reject:reject
-  console.log(&#39;resolve:&#39; + value);
-&amp;#125;, function(err) &amp;#123;
-  console.log(&#39;reject:&#39; + err);
-&amp;#125;);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;then 方法将返回一个 resolved 或 rejected 状态的 Promise 对象用于链式调用，且 Promise 对象的值就是这个返回值。&lt;/p&gt;
-&lt;h3 id=&#34;then-方法注意点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#then-方法注意点&#34;&gt;#&lt;/a&gt; then 方法注意点&lt;/h3&gt;
-&lt;p&gt;简便的 Promise 链式编程最好保持扁平化，不要嵌套 Promise。&lt;/p&gt;
-&lt;p&gt;注意总是返回或终止 Promise 链。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;const p1 = new Promise(function(resolve,reject)&amp;#123;
-  resolve(1);
-&amp;#125;).then(function(result) &amp;#123;
-  p2(result).then(newResult =&amp;gt; p3(newResult));
-&amp;#125;).then(() =&amp;gt; p4());
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;创建新 Promise 但忘记返回它时，对应链条被打破，导致 p4 会与 p2 和 p3 同时进行。&lt;/p&gt;
-&lt;p&gt;大多数浏览器中不能终止的 Promise 链里的 rejection，建议后面都跟上 &lt;strong&gt;.catch(error =&amp;gt; console.log(error));&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;更多文章&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#更多文章&#34;&gt;#&lt;/a&gt; 更多文章&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;JS-Promise%E5%AF%B9%E8%B1%A1&#34;&gt;JS-Promise 对象&lt;/a&gt;&lt;/p&gt;
 </content>
         <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
         <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />

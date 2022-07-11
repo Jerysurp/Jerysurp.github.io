@@ -1,33 +1,43 @@
-<hr>
-<p>title: Step.1 依赖插件<br>date: 2020&#x2F;08&#x2F;13 20:46:48<br>categories:</p>
+<hr />
+<p>title: Step.1 依赖插件<br />
+ date: 2020/08/13 20:46:48<br />
+categories:</p>
 <ul>
-<li>[计算机科学, hexo博客, Theme Shoka Documentation]<br>tags:</li>
+<li>[计算机科学，hexo 博客，Theme Shoka Documentation]<br />
+tags:</li>
 <li>Hexo</li>
-<li>教程<br>valine:<br>placeholder: “1. 提问前请先仔细阅读本文档⚡\n2. 页面显示问题💥，请提供控制台截图📸或者您的测试网址\n3. 其他任何报错💣，请提供详细描述和截图📸，祝食用愉快💪”</li>
+<li>教程<br />
+ valine:<br />
+placeholder: &quot;1. 提问前请先仔细阅读本文档⚡\n2. 页面显示问题💥，请提供控制台截图📸或者您的测试网址 \n3. 其他任何报错💣，请提供详细描述和截图📸，祝食用愉快💪&quot;</li>
 </ul>
-<hr>
-<p>:::primary<br><a href="/computer-science/note/theme-shoka-doc/">:rocket:快速开始</a> - <a href="/computer-science/note/theme-shoka-doc/dependents/"><strong>:love_letter:依赖插件</strong></a> - <a href="/computer-science/note/theme-shoka-doc/config/">:pushpin:基本配置</a> - <a href="/computer-science/note/theme-shoka-doc/display/">:rainbow:界面显示</a> - <a href="/computer-science/note/theme-shoka-doc/special/">:unicorn:特殊功能</a><br>:::</p>
-<p>:::warning<br>请务必将hexo-renderer-multi-markdown-it升级到最新版，目前为 0.1.5<br>:::</p>
-<p>Theme Shoka依赖以下Hexo插件</p>
+<hr />
+<div class="note primary">
+<p><a href="/computer-science/note/theme-shoka-doc/">🚀快速开始</a> - <a href="/computer-science/note/theme-shoka-doc/dependents/"><strong>💌依赖插件</strong></a> - <a href="/computer-science/note/theme-shoka-doc/config/">📌基本配置</a> - <a href="/computer-science/note/theme-shoka-doc/display/">🌈界面显示</a> - <a href="/computer-science/note/theme-shoka-doc/special/">🦄特殊功能</a></p>
+</div>
+<div class="note warning">
+<p>请务必将 hexo-renderer-multi-markdown-it 升级到最新版，目前为 0.1.5</p>
+</div>
+<p>Theme Shoka 依赖以下 Hexo 插件</p>
 <table>
 <thead>
 <tr>
 <th>插件名称</th>
-<th>npm地址</th>
+<th>npm 地址</th>
 <th>功能</th>
 <th>依赖程度</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>hexo-renderer-multi-markdown-it</td>
 <td><a href="https://www.npmjs.com/package/hexo-renderer-multi-markdown-it">链接</a></td>
-<td>md文件渲染器，压缩css&#x2F;js&#x2F;html</td>
+<td>md 文件渲染器，压缩 css/js/html</td>
 <td>必需</td>
 </tr>
 <tr>
 <td>hexo-autoprefixer</td>
 <td><a href="https://www.npmjs.com/package/hexo-autoprefixer">链接</a></td>
-<td>给生成的css文件们添加浏览器前缀</td>
+<td>给生成的 css 文件们添加浏览器前缀</td>
 <td>必需</td>
 </tr>
 <tr>
@@ -45,142 +55,45 @@
 <tr>
 <td>hexo-feed</td>
 <td><a href="https://www.npmjs.com/package/hexo-feed">链接</a></td>
-<td>生成Feed文件</td>
-<td>Feed文件没有</td>
+<td>生成 Feed 文件</td>
+<td>Feed 文件没有</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <blockquote>
-<p>没有正确安装以上插件的话，本主题会报错or无法正确显示or部分功能失效。<br><code>hexo-renderer-multi-markdown-it</code>请注意升级到最新版</p>
+<p>没有正确安装以上插件的话，本主题会报错 or 无法正确显示 or 部分功能失效。<br />
+ <code>hexo-renderer-multi-markdown-it</code>  请注意升级到最新版</p>
 </blockquote>
 <p>安装完以上插件后，修改站点配置文件，加入相关配置。</p>
-<h1 id="multi-markdown-it安装与配置"><a href="#multi-markdown-it安装与配置" class="headerlink" title="multi-markdown-it安装与配置"></a>multi-markdown-it安装与配置</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
-<li><p>安装前，记得务必卸载掉默认的<code>hexo-renderer-marked</code>，以及别的markdown文件渲染器。</p>
-<pre><code class="bash">npm un hexo-renderer-marked --save
-# 或者
-yarn remove hexo-renderer-marked
-</code></pre>
-</li>
-<li><p>安装</p>
-<pre><code class="bash">npm i hexo-renderer-multi-markdown-it --save
-# 或者
-yarn add hexo-renderer-multi-markdown-it
-</code></pre>
-</li>
-<li><p>如果安装缓慢，或者失败<br> 如报错</p>
-<pre><code class="bash">ERROR: Failed to download Chromium r515411! Set &quot;PUPPETEER_SKIP_CHROMIUM_DOWNLOAD&quot; env variable to skip download.
-</code></pre>
-<p> 因为有一步需要下载puppeteer里的Chromium内核，基于天朝内部网络现状，这一步能不能成功要靠科学和运气，所以为了避免安装失败，需要加上<code>--ignore-scripts</code>跳过Chromium内核的下载。</p>
-<pre><code class="bash">npm i hexo-renderer-multi-markdown-it --save --ignore-scripts
-# 或者
-yarn add hexo-renderer-multi-markdown-it --ignore-scripts
-</code></pre>
-<p> puppeteer主要是用来渲染mermaid流程图，只要文章中不使用mermaid就没有任何问题，如果要使用mermaid建议还是想办法完全安装。</p>
+<h1 id="multi-markdown-it安装与配置"><a class="anchor" href="#multi-markdown-it安装与配置">#</a> multi-markdown-it 安装与配置</h1>
+<h2 id="安装"><a class="anchor" href="#安装">#</a> 安装</h2>
+<ol>
+<li>
+<p>安装前，记得务必卸载掉默认的 <code>hexo-renderer-marked</code> ，以及别的 markdown 文件渲染器。</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">npm</span> un hexo-renderer-marked --save</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment"># 或者</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token function">yarn</span> remove hexo-renderer-marked</pre></td></tr></table></figure></li>
+<li>
+<p>安装</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">npm</span> i hexo-renderer-multi-markdown-it --save</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment"># 或者</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token function">yarn</span> <span class="token function">add</span> hexo-renderer-multi-markdown-it</pre></td></tr></table></figure></li>
+<li>
+<p>如果安装缓慢，或者失败<br />
+如报错</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>ERROR: Failed to download Chromium r515411<span class="token operator">!</span> Set <span class="token string">"PUPPETEER_SKIP_CHROMIUM_DOWNLOAD"</span> <span class="token function">env</span> variable to skip download.</pre></td></tr></table></figure><p>因为有一步需要下载 puppeteer 里的 Chromium 内核，基于天朝内部网络现状，这一步能不能成功要靠科学和运气，所以为了避免安装失败，需要加上 <code>--ignore-scripts</code>  跳过 Chromium 内核的下载。</p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">npm</span> i hexo-renderer-multi-markdown-it --save --ignore-scripts</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment"># 或者</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token function">yarn</span> <span class="token function">add</span> hexo-renderer-multi-markdown-it --ignore-scripts</pre></td></tr></table></figure><p>puppeteer 主要是用来渲染 mermaid 流程图，只要文章中不使用 mermaid 就没有任何问题，如果要使用 mermaid 建议还是想办法完全安装。</p>
 </li>
 </ol>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ol>
-<li><p>加入<code>markdown</code>配置，用来渲染md文件</p>
-<pre><code class="yml">markdown:
-  render: # 渲染器设置
- html: false # 过滤 HTML 标签
- xhtmlOut: true # 使用 &#39;/&#39; 来闭合单标签 （比如 &lt;br /&gt;）。
- breaks: true # 转换段落里的 &#39;\n&#39; 到 &lt;br&gt;。
- linkify: true # 将类似 URL 的文本自动转换为链接。
- typographer: 
- quotes: &#39;“”‘’&#39;
-  plugins: # markdown-it插件设置
- - plugin:
-     name: markdown-it-toc-and-anchor
-     enable: true
-     options: # 文章目录以及锚点应用的class名称，shoka主题必须设置成这样
-       tocClassName: &#39;toc&#39;
-       anchorClassName: &#39;anchor&#39;
- - plugin:
-     name: markdown-it-multimd-table
-     enable: true
-     options:
-       multiline: true
-       rowspan: true
-       headerless: true
- - plugin:
-     name: ./markdown-it-furigana
-     enable: true
-     options:
-       fallbackParens: &quot;()&quot;
- - plugin:
-     name: ./markdown-it-spoiler
-     enable: true
-     options:
-       title: &quot;你知道得太多了&quot;
-</code></pre>
-</li>
-<li><p>加入<code>minify</code>配置，压缩css&#x2F;js&#x2F;html</p>
-<pre><code class="yml">minify:
-  html:
- enable: true
- exclude: # 排除hexo-feed用到的模板文件
-   - &#39;**/json.ejs&#39;
-   - &#39;**/atom.ejs&#39;
-   - &#39;**/rss.ejs&#39;
-  css:
- enable: true
- exclude:
-   - &#39;**/*.min.css&#39;
-  js:
- enable: true
- mangle:
-   toplevel: true
- output:
- compress:
- exclude:
-   - &#39;**/*.min.js&#39;
-</code></pre>
-</li>
-<li><p>停用默认代码高亮功能，否则代码块的mac样式不能正常显示。<br>找到<code>highlight</code>和<code>prismjs</code>，把<code>enable</code>改成<code>false</code>。</p>
-</li>
+<h2 id="配置"><a class="anchor" href="#配置">#</a> 配置</h2>
+<ol>
+<li>加入 <code>markdown</code>  配置，用来渲染 md 文件</li>
 </ol>
-<pre><code class="yml">highlight:
-  enable: false
-
-prismjs:
-  enable: false
-</code></pre>
-<h1 id="autoprefixer配置建议"><a href="#autoprefixer配置建议" class="headerlink" title="autoprefixer配置建议"></a>autoprefixer配置建议</h1><pre><code class="yml">autoprefixer:
-  exclude:
-    - &#39;*.min.css&#39;
-</code></pre>
-<p>缺少这个插件，首页卡片翻转效果在部分浏览器中无法正确显示。</p>
-<h1 id="algolia配置建议"><a href="#algolia配置建议" class="headerlink" title="algolia配置建议"></a>algolia配置建议</h1><pre><code class="yml">algolia:
-  appId: #Your appId
-  apiKey: #Your apiKey
-  adminApiKey: #Your adminApiKey
-  chunkSize: 5000
-  indexName: #&quot;shoka&quot;
-  fields:
-    - title #必须配置
-    - path #必须配置
-    - categories #推荐配置
-    - content:strip:truncate,0,2000
-    - gallery
-    - photos
-    - tags
-</code></pre>
-<h1 id="feed配置建议"><a href="#feed配置建议" class="headerlink" title="feed配置建议"></a>feed配置建议</h1><pre><code class="yml">keywords: #站点关键词，用“,”分隔
-
-feed:
-    limit: 20
-    order_by: &quot;-date&quot;
-    tag_dir: false
-    category_dir: false
-    rss:
-        enable: true
-        template: &quot;themes/shoka/layout/_alternate/rss.ejs&quot;
-        output: &quot;rss.xml&quot;
-    atom:
-        enable: true
-        template: &quot;themes/shoka/layout/_alternate/atom.ejs&quot;
-        output: &quot;atom.xml&quot;
-    jsonFeed:
-        enable: true
-        template: &quot;themes/shoka/layout/_alternate/json.ejs&quot;
-        output: &quot;feed.json&quot;
-</code></pre>
+<figure class="highlight yml"><figcaption data-lang="YAML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token key atrule">markdown</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token key atrule">render</span><span class="token punctuation">:</span> <span class="token comment"># 渲染器设置</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token key atrule">html</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># 过滤 HTML 标签</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token key atrule">xhtmlOut</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 使用 '/' 来闭合单标签 （比如 &lt;br />）。</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token key atrule">breaks</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 转换段落里的 '\n' 到 &lt;br>。</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token key atrule">linkify</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 将类似 URL 的文本自动转换为链接。</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    <span class="token key atrule">typographer</span><span class="token punctuation">:</span> </pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token key atrule">quotes</span><span class="token punctuation">:</span> <span class="token string">'“”‘’'</span></pre></td></tr><tr><td data-num="9"></td><td><pre>  <span class="token key atrule">plugins</span><span class="token punctuation">:</span> <span class="token comment"># markdown-it 插件设置</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token punctuation">-</span> <span class="token key atrule">plugin</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="11"></td><td><pre>        <span class="token key atrule">name</span><span class="token punctuation">:</span> markdown<span class="token punctuation">-</span>it<span class="token punctuation">-</span>toc<span class="token punctuation">-</span>and<span class="token punctuation">-</span>anchor</pre></td></tr><tr><td data-num="12"></td><td><pre>        <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></pre></td></tr><tr><td data-num="13"></td><td><pre>        <span class="token key atrule">options</span><span class="token punctuation">:</span> <span class="token comment"># 文章目录以及锚点应用的 class 名称，shoka 主题必须设置成这样</span></pre></td></tr><tr><td data-num="14"></td><td><pre>          <span class="token key atrule">tocClassName</span><span class="token punctuation">:</span> <span class="token string">'toc'</span></pre></td></tr><tr><td data-num="15"></td><td><pre>          <span class="token key atrule">anchorClassName</span><span class="token punctuation">:</span> <span class="token string">'anchor'</span></pre></td></tr><tr><td data-num="16"></td><td><pre>    <span class="token punctuation">-</span> <span class="token key atrule">plugin</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="17"></td><td><pre>        <span class="token key atrule">name</span><span class="token punctuation">:</span> markdown<span class="token punctuation">-</span>it<span class="token punctuation">-</span>multimd<span class="token punctuation">-</span>table</pre></td></tr><tr><td data-num="18"></td><td><pre>        <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></pre></td></tr><tr><td data-num="19"></td><td><pre>        <span class="token key atrule">options</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="20"></td><td><pre>          <span class="token key atrule">multiline</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></pre></td></tr><tr><td data-num="21"></td><td><pre>          <span class="token key atrule">rowspan</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></pre></td></tr><tr><td data-num="22"></td><td><pre>          <span class="token key atrule">headerless</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></pre></td></tr><tr><td data-num="23"></td><td><pre>    <span class="token punctuation">-</span> <span class="token key atrule">plugin</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="24"></td><td><pre>        <span class="token key atrule">name</span><span class="token punctuation">:</span> ./markdown<span class="token punctuation">-</span>it<span class="token punctuation">-</span>furigana</pre></td></tr><tr><td data-num="25"></td><td><pre>        <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></pre></td></tr><tr><td data-num="26"></td><td><pre>        <span class="token key atrule">options</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="27"></td><td><pre>          <span class="token key atrule">fallbackParens</span><span class="token punctuation">:</span> <span class="token string">"()"</span></pre></td></tr><tr><td data-num="28"></td><td><pre>    <span class="token punctuation">-</span> <span class="token key atrule">plugin</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="29"></td><td><pre>        <span class="token key atrule">name</span><span class="token punctuation">:</span> ./markdown<span class="token punctuation">-</span>it<span class="token punctuation">-</span>spoiler</pre></td></tr><tr><td data-num="30"></td><td><pre>        <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></pre></td></tr><tr><td data-num="31"></td><td><pre>        <span class="token key atrule">options</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="32"></td><td><pre>          <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">"你知道得太多了"</span></pre></td></tr></table></figure><ol start="2">
+<li>加入 <code>minify</code>  配置，压缩 css/js/html</li>
+</ol>
+<figure class="highlight yml"><figcaption data-lang="YAML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token key atrule">minify</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token key atrule">html</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token key atrule">exclude</span><span class="token punctuation">:</span> <span class="token comment"># 排除 hexo-feed 用到的模板文件</span></pre></td></tr><tr><td data-num="5"></td><td><pre>      <span class="token punctuation">-</span> <span class="token string">'**/json.ejs'</span></pre></td></tr><tr><td data-num="6"></td><td><pre>      <span class="token punctuation">-</span> <span class="token string">'**/atom.ejs'</span></pre></td></tr><tr><td data-num="7"></td><td><pre>      <span class="token punctuation">-</span> <span class="token string">'**/rss.ejs'</span></pre></td></tr><tr><td data-num="8"></td><td><pre>  <span class="token key atrule">css</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token key atrule">exclude</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="11"></td><td><pre>      <span class="token punctuation">-</span> <span class="token string">'**/*.min.css'</span></pre></td></tr><tr><td data-num="12"></td><td><pre>  <span class="token key atrule">js</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></pre></td></tr><tr><td data-num="14"></td><td><pre>    <span class="token key atrule">mangle</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="15"></td><td><pre>      <span class="token key atrule">toplevel</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></pre></td></tr><tr><td data-num="16"></td><td><pre>    <span class="token key atrule">output</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="17"></td><td><pre>    <span class="token key atrule">compress</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="18"></td><td><pre>    <span class="token key atrule">exclude</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="19"></td><td><pre>      <span class="token punctuation">-</span> <span class="token string">'**/*.min.js'</span></pre></td></tr></table></figure><ol start="3">
+<li>停用默认代码高亮功能，否则代码块的 mac 样式不能正常显示。<br />
+找到 <code>highlight</code>  和 <code>prismjs</code> ，把 <code>enable</code>  改成 <code>false</code> 。</li>
+</ol>
+<figure class="highlight yml"><figcaption data-lang="YAML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token key atrule">highlight</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span></pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token key atrule">prismjs</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="5"></td><td><pre>  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">false</span></pre></td></tr></table></figure><h1 id="autoprefixer配置建议"><a class="anchor" href="#autoprefixer配置建议">#</a> autoprefixer 配置建议</h1>
+<figure class="highlight yml"><figcaption data-lang="YAML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token key atrule">autoprefixer</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token key atrule">exclude</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token punctuation">-</span> <span class="token string">'*.min.css'</span></pre></td></tr></table></figure><p>缺少这个插件，首页卡片翻转效果在部分浏览器中无法正确显示。</p>
+<h1 id="algolia配置建议"><a class="anchor" href="#algolia配置建议">#</a> algolia 配置建议</h1>
+<figure class="highlight yml"><figcaption data-lang="YAML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token key atrule">algolia</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token key atrule">appId</span><span class="token punctuation">:</span> <span class="token comment">#Your appId</span></pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token key atrule">apiKey</span><span class="token punctuation">:</span> <span class="token comment">#Your apiKey</span></pre></td></tr><tr><td data-num="4"></td><td><pre>  <span class="token key atrule">adminApiKey</span><span class="token punctuation">:</span> <span class="token comment">#Your adminApiKey</span></pre></td></tr><tr><td data-num="5"></td><td><pre>  <span class="token key atrule">chunkSize</span><span class="token punctuation">:</span> <span class="token number">5000</span></pre></td></tr><tr><td data-num="6"></td><td><pre>  <span class="token key atrule">indexName</span><span class="token punctuation">:</span> <span class="token comment">#"shoka"</span></pre></td></tr><tr><td data-num="7"></td><td><pre>  <span class="token key atrule">fields</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token punctuation">-</span> title <span class="token comment">#必须配置</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token punctuation">-</span> path <span class="token comment">#必须配置</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token punctuation">-</span> categories <span class="token comment">#推荐配置</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token punctuation">-</span> content<span class="token punctuation">:</span>strip<span class="token punctuation">:</span>truncate<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2000</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token punctuation">-</span> gallery</pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token punctuation">-</span> photos</pre></td></tr><tr><td data-num="14"></td><td><pre>    <span class="token punctuation">-</span> tags</pre></td></tr></table></figure><h1 id="feed配置建议"><a class="anchor" href="#feed配置建议">#</a> feed 配置建议</h1>
+<figure class="highlight yml"><figcaption data-lang="YAML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token key atrule">keywords</span><span class="token punctuation">:</span> <span class="token comment">#站点关键词，用 “,” 分隔</span></pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token key atrule">feed</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token key atrule">limit</span><span class="token punctuation">:</span> <span class="token number">20</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token key atrule">order_by</span><span class="token punctuation">:</span> <span class="token string">"-date"</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token key atrule">tag_dir</span><span class="token punctuation">:</span> <span class="token boolean important">false</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    <span class="token key atrule">category_dir</span><span class="token punctuation">:</span> <span class="token boolean important">false</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token key atrule">rss</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="9"></td><td><pre>        <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></pre></td></tr><tr><td data-num="10"></td><td><pre>        <span class="token key atrule">template</span><span class="token punctuation">:</span> <span class="token string">"themes/shoka/layout/_alternate/rss.ejs"</span></pre></td></tr><tr><td data-num="11"></td><td><pre>        <span class="token key atrule">output</span><span class="token punctuation">:</span> <span class="token string">"rss.xml"</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token key atrule">atom</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="13"></td><td><pre>        <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></pre></td></tr><tr><td data-num="14"></td><td><pre>        <span class="token key atrule">template</span><span class="token punctuation">:</span> <span class="token string">"themes/shoka/layout/_alternate/atom.ejs"</span></pre></td></tr><tr><td data-num="15"></td><td><pre>        <span class="token key atrule">output</span><span class="token punctuation">:</span> <span class="token string">"atom.xml"</span></pre></td></tr><tr><td data-num="16"></td><td><pre>    <span class="token key atrule">jsonFeed</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="17"></td><td><pre>        <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></pre></td></tr><tr><td data-num="18"></td><td><pre>        <span class="token key atrule">template</span><span class="token punctuation">:</span> <span class="token string">"themes/shoka/layout/_alternate/json.ejs"</span></pre></td></tr><tr><td data-num="19"></td><td><pre>        <span class="token key atrule">output</span><span class="token punctuation">:</span> <span class="token string">"feed.json"</span></pre></td></tr></table></figure>
