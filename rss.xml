@@ -852,6 +852,58 @@ p.then(null, function (s)&amp;#123;
  ]]></description>
         </item>
         <item>
+            <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/ES6/let%E5%92%8Cconst/</guid>
+            <title>let和const</title>
+            <link>https://entropywhite.com/computer-science/web/JavaScript/ES6/let%E5%92%8Cconst/</link>
+            <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
+            <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />
+            <category term="JavaScript" scheme="https://entropywhite.com/categories/computer-science/web/JavaScript/" />
+            <category term="ES6" scheme="https://entropywhite.com/tags/ES6/" />
+            <pubDate>Thu, 30 Jun 2022 22:21:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;ES2015 (ES6) 新增加了两个重要的 JavaScript 关键字: &lt;strong&gt;let&lt;/strong&gt; 和 &lt;strong&gt;const&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;let 声明的变量只在 let 命令所在的代码块内有效。&lt;/p&gt;
+&lt;p&gt;const 声明一个只读的常量，一旦声明，常量的值就不能改变。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;let-命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#let-命令&#34;&gt;#&lt;/a&gt; let 命令&lt;/h2&gt;
+&lt;p&gt;基本用法:&lt;/p&gt;
+&lt;p&gt;{let a = 0;  a   // 0} a   // 报错 ReferenceError: a is not defined&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;代码块内有效&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;let 是在代码块内有效，var 是在全局范围内有效:&lt;/p&gt;
+&lt;p&gt;{  let a = 0;  var b = 1; } a  // ReferenceError: a is not defined b  // 1&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不能重复声明&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;let 只能声明一次 var 可以声明多次:&lt;/p&gt;
+&lt;p&gt;let a = 1; let a = 2; var b = 3; var b = 4; a  // Identifier &#39;a&#39; has already been declared b  // 4&lt;/p&gt;
+&lt;p&gt;for 循环计数器很适合用 let&lt;/p&gt;
+&lt;p&gt;for (var i = 0; i &amp;lt; 10; i++) {  setTimeout (function (){    console.log (i);  }) } // 输出十个 10 for (let j = 0; j &amp;lt; 10; j++) {  setTimeout (function (){    console.log (j);  }) } // 输出 0123456789&lt;/p&gt;
+&lt;p&gt;变量 i 是用 var 声明的，在全局范围内有效，所以全局中只有一个变量 i, 每次循环时，setTimeout 定时器里面的 i 指的是全局变量 i ，而循环里的十个 setTimeout 是在循环结束后才执行，所以此时的 i 都是 10。&lt;/p&gt;
+&lt;p&gt;变量 j 是用 let 声明的，当前的 j 只在本轮循环中有效，每次循环的 j 其实都是一个新的变量，所以 setTimeout 定时器里面的 j 其实是不同的变量，即最后输出 12345。（若每次循环的变量 j 都是重新声明的，如何知道前一个循环的值？这是因为 JavaScript 引擎内部会记住前一个循环的值）。&lt;/p&gt;
+&lt;h3 id=&#34;不存在变量提升&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#不存在变量提升&#34;&gt;#&lt;/a&gt; 不存在变量提升&lt;/h3&gt;
+&lt;p&gt;let 不存在变量提升，var 会变量提升:&lt;/p&gt;
+&lt;p&gt;console.log(a);  //ReferenceError: a is not defined let a = &amp;quot;apple&amp;quot;;  console.log(b);  //undefined var b = &amp;quot;banana&amp;quot;;&lt;/p&gt;
+&lt;p&gt;变量 b 用 var 声明存在变量提升，所以当脚本开始运行的时候，b 已经存在了，但是还没有赋值，所以会输出 undefined。&lt;/p&gt;
+&lt;p&gt;变量 a 用 let 声明不存在变量提升，在声明变量 a 之前，a 不存在，所以会报错。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;const-命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#const-命令&#34;&gt;#&lt;/a&gt; const 命令&lt;/h2&gt;
+&lt;p&gt;const 声明一个只读变量，声明之后不允许改变。意味着，一旦声明必须初始化，否则会报错。&lt;/p&gt;
+&lt;p&gt;基本用法:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const PI = &amp;quot;3.1415926&amp;quot;;
+PI  // 3.1415926
+
+const MY_AGE;  // SyntaxError: Missing initializer in const declaration    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;暂时性死区:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var PI = &amp;quot;a&amp;quot;;
+if(true)&amp;#123;
+  console.log(PI);  // ReferenceError: PI is not defined
+  const PI = &amp;quot;3.1415926&amp;quot;;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;ES6 明确规定，代码块内如果存在 let 或者 const，代码块会对这些命令声明的变量从块的开始就形成一个封闭作用域。代码块内，在声明变量 PI 之前使用它会报错。&lt;/p&gt;
+&lt;h3 id=&#34;注意要点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注意要点&#34;&gt;#&lt;/a&gt; 注意要点&lt;/h3&gt;
+&lt;p&gt;const 如何做到变量在声明初始化之后不允许改变的？其实 const 其实保证的不是变量的值不变，而是保证变量指向的内存地址所保存的数据不允许改动。此时，你可能已经想到，简单类型和复合类型保存值的方式是不同的。是的，对于简单类型（数值 number、字符串 string 、布尔值 boolean）, 值就保存在变量指向的那个内存地址，因此 const 声明的简单类型变量等同于常量。而复杂类型（对象 object，数组 array，函数 function），变量指向的内存地址其实是保存了一个指向实际数据的指针，所以 const 只能保证指针是固定的，至于指针指向的数据结构变不变就无法控制了，所以使用 const 声明复杂类型对象时要慎重。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
             <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/ES6/Promise%E5%AF%B9%E8%B1%A1/</guid>
             <title>Promise对象</title>
             <link>https://entropywhite.com/computer-science/web/JavaScript/ES6/Promise%E5%AF%B9%E8%B1%A1/</link>
@@ -1142,55 +1194,176 @@ console.log(fArr);
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/ES6/let%E5%92%8Cconst/</guid>
-            <title>let和const</title>
-            <link>https://entropywhite.com/computer-science/web/JavaScript/ES6/let%E5%92%8Cconst/</link>
+            <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/ES6/Generator%E5%87%BD%E6%95%B0/</guid>
+            <title>Generator函数</title>
+            <link>https://entropywhite.com/computer-science/web/JavaScript/ES6/Generator%E5%87%BD%E6%95%B0/</link>
             <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
             <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />
             <category term="JavaScript" scheme="https://entropywhite.com/categories/computer-science/web/JavaScript/" />
             <category term="ES6" scheme="https://entropywhite.com/tags/ES6/" />
-            <pubDate>Thu, 30 Jun 2022 22:21:00 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;ES2015 (ES6) 新增加了两个重要的 JavaScript 关键字: &lt;strong&gt;let&lt;/strong&gt; 和 &lt;strong&gt;const&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;let 声明的变量只在 let 命令所在的代码块内有效。&lt;/p&gt;
-&lt;p&gt;const 声明一个只读的常量，一旦声明，常量的值就不能改变。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;let-命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#let-命令&#34;&gt;#&lt;/a&gt; let 命令&lt;/h2&gt;
-&lt;p&gt;基本用法:&lt;/p&gt;
-&lt;p&gt;{let a = 0;  a   // 0} a   // 报错 ReferenceError: a is not defined&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;代码块内有效&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;let 是在代码块内有效，var 是在全局范围内有效:&lt;/p&gt;
-&lt;p&gt;{  let a = 0;  var b = 1; } a  // ReferenceError: a is not defined b  // 1&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;不能重复声明&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;let 只能声明一次 var 可以声明多次:&lt;/p&gt;
-&lt;p&gt;let a = 1; let a = 2; var b = 3; var b = 4; a  // Identifier &#39;a&#39; has already been declared b  // 4&lt;/p&gt;
-&lt;p&gt;for 循环计数器很适合用 let&lt;/p&gt;
-&lt;p&gt;for (var i = 0; i &amp;lt; 10; i++) {  setTimeout (function (){    console.log (i);  }) } // 输出十个 10 for (let j = 0; j &amp;lt; 10; j++) {  setTimeout (function (){    console.log (j);  }) } // 输出 0123456789&lt;/p&gt;
-&lt;p&gt;变量 i 是用 var 声明的，在全局范围内有效，所以全局中只有一个变量 i, 每次循环时，setTimeout 定时器里面的 i 指的是全局变量 i ，而循环里的十个 setTimeout 是在循环结束后才执行，所以此时的 i 都是 10。&lt;/p&gt;
-&lt;p&gt;变量 j 是用 let 声明的，当前的 j 只在本轮循环中有效，每次循环的 j 其实都是一个新的变量，所以 setTimeout 定时器里面的 j 其实是不同的变量，即最后输出 12345。（若每次循环的变量 j 都是重新声明的，如何知道前一个循环的值？这是因为 JavaScript 引擎内部会记住前一个循环的值）。&lt;/p&gt;
-&lt;h3 id=&#34;不存在变量提升&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#不存在变量提升&#34;&gt;#&lt;/a&gt; 不存在变量提升&lt;/h3&gt;
-&lt;p&gt;let 不存在变量提升，var 会变量提升:&lt;/p&gt;
-&lt;p&gt;console.log(a);  //ReferenceError: a is not defined let a = &amp;quot;apple&amp;quot;;  console.log(b);  //undefined var b = &amp;quot;banana&amp;quot;;&lt;/p&gt;
-&lt;p&gt;变量 b 用 var 声明存在变量提升，所以当脚本开始运行的时候，b 已经存在了，但是还没有赋值，所以会输出 undefined。&lt;/p&gt;
-&lt;p&gt;变量 a 用 let 声明不存在变量提升，在声明变量 a 之前，a 不存在，所以会报错。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;const-命令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#const-命令&#34;&gt;#&lt;/a&gt; const 命令&lt;/h2&gt;
-&lt;p&gt;const 声明一个只读变量，声明之后不允许改变。意味着，一旦声明必须初始化，否则会报错。&lt;/p&gt;
-&lt;p&gt;基本用法:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;const PI = &amp;quot;3.1415926&amp;quot;;
-PI  // 3.1415926
-
-const MY_AGE;  // SyntaxError: Missing initializer in const declaration    
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;暂时性死区:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;var PI = &amp;quot;a&amp;quot;;
-if(true)&amp;#123;
-  console.log(PI);  // ReferenceError: PI is not defined
-  const PI = &amp;quot;3.1415926&amp;quot;;
+            <pubDate>Thu, 30 Jun 2022 22:20:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;ES6 新引入了 Generator 函数，可以通过 yield 关键字，把函数的执行流挂起，为改变执行流程提供了可能，从而为异步编程提供解决方案。 基本用法&lt;/p&gt;
+&lt;h3 id=&#34;generator-函数组成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#generator-函数组成&#34;&gt;#&lt;/a&gt; Generator 函数组成&lt;/h3&gt;
+&lt;p&gt;Generator 有两个区分于普通函数的部分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一是在 function 后面，函数名之前有个 * ；&lt;/li&gt;
+&lt;li&gt;函数内部有 yield 表达式。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中 * 用来表示函数为 Generator 函数，yield 用来定义函数内部的状态。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;function* func()&amp;#123;
+ console.log(&amp;quot;one&amp;quot;);
+ yield &#39;1&#39;;
+ console.log(&amp;quot;two&amp;quot;);
+ yield &#39;2&#39;; 
+ console.log(&amp;quot;three&amp;quot;);
+ return &#39;3&#39;;
 &amp;#125;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;ES6 明确规定，代码块内如果存在 let 或者 const，代码块会对这些命令声明的变量从块的开始就形成一个封闭作用域。代码块内，在声明变量 PI 之前使用它会报错。&lt;/p&gt;
-&lt;h3 id=&#34;注意要点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#注意要点&#34;&gt;#&lt;/a&gt; 注意要点&lt;/h3&gt;
-&lt;p&gt;const 如何做到变量在声明初始化之后不允许改变的？其实 const 其实保证的不是变量的值不变，而是保证变量指向的内存地址所保存的数据不允许改动。此时，你可能已经想到，简单类型和复合类型保存值的方式是不同的。是的，对于简单类型（数值 number、字符串 string 、布尔值 boolean）, 值就保存在变量指向的那个内存地址，因此 const 声明的简单类型变量等同于常量。而复杂类型（对象 object，数组 array，函数 function），变量指向的内存地址其实是保存了一个指向实际数据的指针，所以 const 只能保证指针是固定的，至于指针指向的数据结构变不变就无法控制了，所以使用 const 声明复杂类型对象时要慎重。&lt;/p&gt;
+&lt;h3 id=&#34;执行机制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#执行机制&#34;&gt;#&lt;/a&gt; 执行机制&lt;/h3&gt;
+&lt;p&gt;调用 Generator 函数和调用普通函数一样，在函数名后面加上 () 即可，但是 Generator 函数不会像普通函数一样立即执行，而是返回一个指向内部状态对象的指针，所以要调用遍历器对象 Iterator 的 next 方法，指针就会从函数头部或者上一次停下来的地方开始执行&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;f.next();
+// one
+// &amp;#123;value: &amp;quot;1&amp;quot;, done: false&amp;#125;
+ 
+f.next();
+// two
+// &amp;#123;value: &amp;quot;2&amp;quot;, done: false&amp;#125;
+ 
+f.next();
+// three
+// &amp;#123;value: &amp;quot;3&amp;quot;, done: true&amp;#125;
+ 
+f.next();
+// &amp;#123;value: undefined, done: true&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;第一次调用 next 方法时，从 Generator 函数的头部开始执行，先是打印了 one , 执行到 yield 就停下来，并将 yield 后边表达式的值 &#39;1&#39;，作为返回对象的 value 属性值，此时函数还没有执行完， 返回对象的 done 属性值是 false。&lt;/p&gt;
+&lt;p&gt;第二次调用 next 方法时，同上步 。&lt;/p&gt;
+&lt;p&gt;第三次调用 next 方法时，先是打印了 three ，然后执行了函数的返回操作，并将 return 后面的表达式的值，作为返回对象的 value 属性值，此时函数已经结束，多以 done 属性值为 true 。&lt;/p&gt;
+&lt;p&gt;第四次调用 next 方法时， 此时函数已经执行完了，所以返回 value 属性值是 undefined ，done 属性值是 true 。如果执行第三步时，没有 return 语句的话，就直接返回 {value: undefined, done: true}。&lt;/p&gt;
+&lt;h3 id=&#34;函数返回的遍历器对象的方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#函数返回的遍历器对象的方法&#34;&gt;#&lt;/a&gt; 函数返回的遍历器对象的方法&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;next 方法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一般情况下，next 方法不传入参数的时候，yield 表达式的返回值是 undefined 。当 next 传入参数的时候，该参数会作为上一步 yield 的返回值。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;function* sendParameter()&amp;#123;
+    console.log(&amp;quot;start&amp;quot;);
+    var x = yield &#39;2&#39;;
+    console.log(&amp;quot;one:&amp;quot; + x);
+    var y = yield &#39;3&#39;;
+    console.log(&amp;quot;two:&amp;quot; + y);
+    console.log(&amp;quot;total:&amp;quot; + (x + y));
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;next 不传参&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var sendp1 = sendParameter();
+sendp1.next();
+// start
+// &amp;#123;value: &amp;quot;2&amp;quot;, done: false&amp;#125;
+sendp1.next();
+// one:undefined
+// &amp;#123;value: &amp;quot;3&amp;quot;, done: false&amp;#125;
+sendp1.next();
+// two:undefined
+// total:NaN
+// &amp;#123;value: undefined, done: true&amp;#125;
+next传参
+var sendp2 = sendParameter();
+sendp2.next(10);
+// start
+// &amp;#123;value: &amp;quot;2&amp;quot;, done: false&amp;#125;
+sendp2.next(20);
+// one:20
+// &amp;#123;value: &amp;quot;3&amp;quot;, done: false&amp;#125;
+sendp2.next(30);
+// two:30
+// total:50
+// &amp;#123;value: undefined, done: true&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;除了使用 next ，还可以使用 for... of 循环遍历 Generator 函数生产的 Iterator 对象。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;return 方法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;return 方法返回给定值，并结束遍历 Generator 函数。&lt;/p&gt;
+&lt;p&gt;return 方法提供参数时，返回该参数；不提供参数时，返回 undefined 。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;function* foo()&amp;#123;
+    yield 1;
+    yield 2;
+    yield 3;
+&amp;#125;
+var f = foo();
+f.next();
+// &amp;#123;value: 1, done: false&amp;#125;
+f.return(&amp;quot;foo&amp;quot;);
+// &amp;#123;value: &amp;quot;foo&amp;quot;, done: true&amp;#125;
+f.next();
+// &amp;#123;value: undefined, done: true&amp;#125;
+throw 方法
+throw 方法可以再 Generator 函数体外面抛出异常，再函数体内部捕获。
+var g = function* () &amp;#123;
+  try &amp;#123;
+    yield;
+  &amp;#125; catch (e) &amp;#123;
+    console.log(&#39;catch inner&#39;, e);
+  &amp;#125;
+&amp;#125;;
+ 
+var i = g();
+i.next();
+ 
+try &amp;#123;
+  i.throw(&#39;a&#39;);
+  i.throw(&#39;b&#39;);
+&amp;#125; catch (e) &amp;#123;
+  console.log(&#39;catch outside&#39;, e);
+&amp;#125;
+// catch inner a
+// catch outside b
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;遍历器对象抛出了两个错误，第一个被 Generator 函数内部捕获，第二个因为函数体内部的 catch 函数已经执行过了，不会再捕获这个错误，所以这个错误就抛出 Generator 函数体，被函数体外的 catch 捕获。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;yield* 表达式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;yield* 表达式表示 yield 返回一个遍历器对象，用于在 Generator 函数内部，调用另一个 Generator 函数。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;function* callee() &amp;#123;
+    console.log(&#39;callee: &#39; + (yield));
+&amp;#125;
+function* caller() &amp;#123;
+    while (true) &amp;#123;
+        yield* callee();
+    &amp;#125;
+&amp;#125;
+const callerObj = caller();
+callerObj.next();
+// &amp;#123;value: undefined, done: false&amp;#125;
+callerObj.next(&amp;quot;a&amp;quot;);
+// callee: a
+// &amp;#123;value: undefined, done: false&amp;#125;
+callerObj.next(&amp;quot;b&amp;quot;);
+// callee: b
+// &amp;#123;value: undefined, done: false&amp;#125;
+ 
+// 等同于
+function* caller() &amp;#123;
+    while (true) &amp;#123;
+        for (var value of callee) &amp;#123;
+          yield value;
+        &amp;#125;
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;使用场景&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用场景&#34;&gt;#&lt;/a&gt; 使用场景&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;实现 Iterator&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;为不具备 Iterator 接口的对象提供遍历方法。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;function* objectEntries(obj) &amp;#123;
+    const propKeys = Reflect.ownKeys(obj);
+    for (const propKey of propKeys) &amp;#123;
+        yield [propKey, obj[propKey]];
+    &amp;#125;
+&amp;#125;
+ 
+const jane = &amp;#123; first: &#39;Jane&#39;, last: &#39;Doe&#39; &amp;#125;;
+for (const [key,value] of objectEntries(jane)) &amp;#123;
+    console.log(`$&amp;#123;key&amp;#125;: $&amp;#123;value&amp;#125;`);
+&amp;#125;
+// first: Jane
+// last: Doe
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Reflect.ownKeys () 返回对象所有的属性，不管属性是否可枚举，包括 Symbol。&lt;/p&gt;
+&lt;p&gt;jane 原生是不具备 Iterator 接口无法通过 for... of 遍历。这边用了 Generator 函数加上了 Iterator 接口，所以就可以遍历 jane 对象了。&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -1592,179 +1765,6 @@ class Child extends Father &amp;#123;
 // 解决方案
 Object.setPrototypeOf(Child.prototype, Father);
 &lt;/code&gt;&lt;/pre&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/ES6/Generator%E5%87%BD%E6%95%B0/</guid>
-            <title>Generator函数</title>
-            <link>https://entropywhite.com/computer-science/web/JavaScript/ES6/Generator%E5%87%BD%E6%95%B0/</link>
-            <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
-            <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />
-            <category term="JavaScript" scheme="https://entropywhite.com/categories/computer-science/web/JavaScript/" />
-            <category term="ES6" scheme="https://entropywhite.com/tags/ES6/" />
-            <pubDate>Thu, 30 Jun 2022 22:20:00 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;ES6 新引入了 Generator 函数，可以通过 yield 关键字，把函数的执行流挂起，为改变执行流程提供了可能，从而为异步编程提供解决方案。 基本用法&lt;/p&gt;
-&lt;h3 id=&#34;generator-函数组成&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#generator-函数组成&#34;&gt;#&lt;/a&gt; Generator 函数组成&lt;/h3&gt;
-&lt;p&gt;Generator 有两个区分于普通函数的部分：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;一是在 function 后面，函数名之前有个 * ；&lt;/li&gt;
-&lt;li&gt;函数内部有 yield 表达式。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;其中 * 用来表示函数为 Generator 函数，yield 用来定义函数内部的状态。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;function* func()&amp;#123;
- console.log(&amp;quot;one&amp;quot;);
- yield &#39;1&#39;;
- console.log(&amp;quot;two&amp;quot;);
- yield &#39;2&#39;; 
- console.log(&amp;quot;three&amp;quot;);
- return &#39;3&#39;;
-&amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;执行机制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#执行机制&#34;&gt;#&lt;/a&gt; 执行机制&lt;/h3&gt;
-&lt;p&gt;调用 Generator 函数和调用普通函数一样，在函数名后面加上 () 即可，但是 Generator 函数不会像普通函数一样立即执行，而是返回一个指向内部状态对象的指针，所以要调用遍历器对象 Iterator 的 next 方法，指针就会从函数头部或者上一次停下来的地方开始执行&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;f.next();
-// one
-// &amp;#123;value: &amp;quot;1&amp;quot;, done: false&amp;#125;
- 
-f.next();
-// two
-// &amp;#123;value: &amp;quot;2&amp;quot;, done: false&amp;#125;
- 
-f.next();
-// three
-// &amp;#123;value: &amp;quot;3&amp;quot;, done: true&amp;#125;
- 
-f.next();
-// &amp;#123;value: undefined, done: true&amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;第一次调用 next 方法时，从 Generator 函数的头部开始执行，先是打印了 one , 执行到 yield 就停下来，并将 yield 后边表达式的值 &#39;1&#39;，作为返回对象的 value 属性值，此时函数还没有执行完， 返回对象的 done 属性值是 false。&lt;/p&gt;
-&lt;p&gt;第二次调用 next 方法时，同上步 。&lt;/p&gt;
-&lt;p&gt;第三次调用 next 方法时，先是打印了 three ，然后执行了函数的返回操作，并将 return 后面的表达式的值，作为返回对象的 value 属性值，此时函数已经结束，多以 done 属性值为 true 。&lt;/p&gt;
-&lt;p&gt;第四次调用 next 方法时， 此时函数已经执行完了，所以返回 value 属性值是 undefined ，done 属性值是 true 。如果执行第三步时，没有 return 语句的话，就直接返回 {value: undefined, done: true}。&lt;/p&gt;
-&lt;h3 id=&#34;函数返回的遍历器对象的方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#函数返回的遍历器对象的方法&#34;&gt;#&lt;/a&gt; 函数返回的遍历器对象的方法&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;next 方法&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;一般情况下，next 方法不传入参数的时候，yield 表达式的返回值是 undefined 。当 next 传入参数的时候，该参数会作为上一步 yield 的返回值。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;function* sendParameter()&amp;#123;
-    console.log(&amp;quot;start&amp;quot;);
-    var x = yield &#39;2&#39;;
-    console.log(&amp;quot;one:&amp;quot; + x);
-    var y = yield &#39;3&#39;;
-    console.log(&amp;quot;two:&amp;quot; + y);
-    console.log(&amp;quot;total:&amp;quot; + (x + y));
-&amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;next 不传参&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;var sendp1 = sendParameter();
-sendp1.next();
-// start
-// &amp;#123;value: &amp;quot;2&amp;quot;, done: false&amp;#125;
-sendp1.next();
-// one:undefined
-// &amp;#123;value: &amp;quot;3&amp;quot;, done: false&amp;#125;
-sendp1.next();
-// two:undefined
-// total:NaN
-// &amp;#123;value: undefined, done: true&amp;#125;
-next传参
-var sendp2 = sendParameter();
-sendp2.next(10);
-// start
-// &amp;#123;value: &amp;quot;2&amp;quot;, done: false&amp;#125;
-sendp2.next(20);
-// one:20
-// &amp;#123;value: &amp;quot;3&amp;quot;, done: false&amp;#125;
-sendp2.next(30);
-// two:30
-// total:50
-// &amp;#123;value: undefined, done: true&amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;除了使用 next ，还可以使用 for... of 循环遍历 Generator 函数生产的 Iterator 对象。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;return 方法&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;return 方法返回给定值，并结束遍历 Generator 函数。&lt;/p&gt;
-&lt;p&gt;return 方法提供参数时，返回该参数；不提供参数时，返回 undefined 。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;function* foo()&amp;#123;
-    yield 1;
-    yield 2;
-    yield 3;
-&amp;#125;
-var f = foo();
-f.next();
-// &amp;#123;value: 1, done: false&amp;#125;
-f.return(&amp;quot;foo&amp;quot;);
-// &amp;#123;value: &amp;quot;foo&amp;quot;, done: true&amp;#125;
-f.next();
-// &amp;#123;value: undefined, done: true&amp;#125;
-throw 方法
-throw 方法可以再 Generator 函数体外面抛出异常，再函数体内部捕获。
-var g = function* () &amp;#123;
-  try &amp;#123;
-    yield;
-  &amp;#125; catch (e) &amp;#123;
-    console.log(&#39;catch inner&#39;, e);
-  &amp;#125;
-&amp;#125;;
- 
-var i = g();
-i.next();
- 
-try &amp;#123;
-  i.throw(&#39;a&#39;);
-  i.throw(&#39;b&#39;);
-&amp;#125; catch (e) &amp;#123;
-  console.log(&#39;catch outside&#39;, e);
-&amp;#125;
-// catch inner a
-// catch outside b
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;遍历器对象抛出了两个错误，第一个被 Generator 函数内部捕获，第二个因为函数体内部的 catch 函数已经执行过了，不会再捕获这个错误，所以这个错误就抛出 Generator 函数体，被函数体外的 catch 捕获。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;yield* 表达式&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;yield* 表达式表示 yield 返回一个遍历器对象，用于在 Generator 函数内部，调用另一个 Generator 函数。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;function* callee() &amp;#123;
-    console.log(&#39;callee: &#39; + (yield));
-&amp;#125;
-function* caller() &amp;#123;
-    while (true) &amp;#123;
-        yield* callee();
-    &amp;#125;
-&amp;#125;
-const callerObj = caller();
-callerObj.next();
-// &amp;#123;value: undefined, done: false&amp;#125;
-callerObj.next(&amp;quot;a&amp;quot;);
-// callee: a
-// &amp;#123;value: undefined, done: false&amp;#125;
-callerObj.next(&amp;quot;b&amp;quot;);
-// callee: b
-// &amp;#123;value: undefined, done: false&amp;#125;
- 
-// 等同于
-function* caller() &amp;#123;
-    while (true) &amp;#123;
-        for (var value of callee) &amp;#123;
-          yield value;
-        &amp;#125;
-    &amp;#125;
-&amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;使用场景&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用场景&#34;&gt;#&lt;/a&gt; 使用场景&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;实现 Iterator&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;为不具备 Iterator 接口的对象提供遍历方法。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;function* objectEntries(obj) &amp;#123;
-    const propKeys = Reflect.ownKeys(obj);
-    for (const propKey of propKeys) &amp;#123;
-        yield [propKey, obj[propKey]];
-    &amp;#125;
-&amp;#125;
- 
-const jane = &amp;#123; first: &#39;Jane&#39;, last: &#39;Doe&#39; &amp;#125;;
-for (const [key,value] of objectEntries(jane)) &amp;#123;
-    console.log(`$&amp;#123;key&amp;#125;: $&amp;#123;value&amp;#125;`);
-&amp;#125;
-// first: Jane
-// last: Doe
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Reflect.ownKeys () 返回对象所有的属性，不管属性是否可枚举，包括 Symbol。&lt;/p&gt;
-&lt;p&gt;jane 原生是不具备 Iterator 接口无法通过 for... of 遍历。这边用了 Generator 函数加上了 Iterator 接口，所以就可以遍历 jane 对象了。&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -2943,6 +2943,43 @@ let &amp;#123;a: aa = 10, b: bb = 5&amp;#125; = &amp;#123;a: 3&amp;#125;; // aa 
  ]]></description>
         </item>
         <item>
+            <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/AJAX/XHR%E5%93%8D%E5%BA%94/</guid>
+            <title>XHR响应</title>
+            <link>https://entropywhite.com/computer-science/web/JavaScript/AJAX/XHR%E5%93%8D%E5%BA%94/</link>
+            <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
+            <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />
+            <category term="JavaScript" scheme="https://entropywhite.com/categories/computer-science/web/JavaScript/" />
+            <category term="AJAX" scheme="https://entropywhite.com/tags/AJAX/" />
+            <pubDate>Thu, 30 Jun 2022 21:36:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;ajax-服务器-响应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ajax-服务器-响应&#34;&gt;#&lt;/a&gt; AJAX - 服务器 响应&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;服务器响应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#服务器响应&#34;&gt;#&lt;/a&gt; 服务器响应&lt;/h2&gt;
+&lt;p&gt;如需获得来自服务器的响应，请使用 XMLHttpRequest 对象的 responseText 或 responseXML 属性。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;属性&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;responseText&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;获得字符串形式的响应数据。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;responseXML&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;获得 XML 形式的响应数据。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;responsetext-属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#responsetext-属性&#34;&gt;#&lt;/a&gt; responseText 属性&lt;/h2&gt;
+&lt;p&gt;如果来自服务器的响应并非 XML，请使用 responseText 属性。&lt;/p&gt;
+&lt;h2 id=&#34;responsexml-属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#responsexml-属性&#34;&gt;#&lt;/a&gt; responseXML 属性&lt;/h2&gt;
+&lt;p&gt;如果来自服务器的响应是 XML，而且需要作为 XML 对象进行解析，请使用 responseXML 属性：&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
             <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/ES6/%E5%87%BD%E6%95%B0/</guid>
             <title>ES6函数</title>
             <link>https://entropywhite.com/computer-science/web/JavaScript/ES6/%E5%87%BD%E6%95%B0/</link>
@@ -3309,43 +3346,6 @@ NaN === NaN  //false
 &lt;h2 id=&#34;es6-的目标与愿景&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#es6-的目标与愿景&#34;&gt;#&lt;/a&gt; ES6 的目标与愿景&lt;/h2&gt;
 &lt;p&gt;成为更好编写的开发语言有以下目标。&lt;/p&gt;
 &lt;p&gt;适应更复杂的应用；实现代码库之间的共享；不断迭代维护新版本。&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://entropywhite.com/computer-science/web/JavaScript/AJAX/XHR%E5%93%8D%E5%BA%94/</guid>
-            <title>XHR响应</title>
-            <link>https://entropywhite.com/computer-science/web/JavaScript/AJAX/XHR%E5%93%8D%E5%BA%94/</link>
-            <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
-            <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />
-            <category term="JavaScript" scheme="https://entropywhite.com/categories/computer-science/web/JavaScript/" />
-            <category term="AJAX" scheme="https://entropywhite.com/tags/AJAX/" />
-            <pubDate>Thu, 30 Jun 2022 21:36:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;ajax-服务器-响应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ajax-服务器-响应&#34;&gt;#&lt;/a&gt; AJAX - 服务器 响应&lt;/h1&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;服务器响应&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#服务器响应&#34;&gt;#&lt;/a&gt; 服务器响应&lt;/h2&gt;
-&lt;p&gt;如需获得来自服务器的响应，请使用 XMLHttpRequest 对象的 responseText 或 responseXML 属性。&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;属性&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;描述&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;responseText&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;获得字符串形式的响应数据。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;responseXML&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;获得 XML 形式的响应数据。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;responsetext-属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#responsetext-属性&#34;&gt;#&lt;/a&gt; responseText 属性&lt;/h2&gt;
-&lt;p&gt;如果来自服务器的响应并非 XML，请使用 responseText 属性。&lt;/p&gt;
-&lt;h2 id=&#34;responsexml-属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#responsexml-属性&#34;&gt;#&lt;/a&gt; responseXML 属性&lt;/h2&gt;
-&lt;p&gt;如果来自服务器的响应是 XML，而且需要作为 XML 对象进行解析，请使用 responseXML 属性：&lt;/p&gt;
  ]]></description>
         </item>
         <item>
