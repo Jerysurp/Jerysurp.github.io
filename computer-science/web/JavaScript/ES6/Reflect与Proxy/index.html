@@ -1,0 +1,457 @@
+<!-- build time:Wed Jul 13 2022 15:46:26 GMT+0800 (中国标准时间) --><!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="baidu-site-verification" content="code-NAUyjdjtWe"><meta name="theme-color" content="#FFF"><link rel="apple-touch-icon" sizes="180x180" href="/undefinedimages/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="32x32" href="/undefinedimages/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="alternate" type="application/rss+xml" title="熵白之痕" href="https://entropywhite.com/rss.xml"><link rel="alternate" type="application/atom+xml" title="熵白之痕" href="https://entropywhite.com/atom.xml"><link rel="alternate" type="application/json" title="熵白之痕" href="https://entropywhite.com/feed.json"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="/undefinedcss/app.css?v=0.2.5"><meta name="keywords" content="ES6"><link rel="canonical" href="https://entropywhite.com/computer-science/web/JavaScript/ES6/Reflect%E4%B8%8EProxy/"><title>Reflect与Proxy - JavaScript - web - 计算机科学 | Entropy White = 熵白之痕 = 以前进为目标吧</title><meta name="generator" content="Hexo 5.4.1"></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">Reflect与Proxy</h1><div class="meta"><span class="item" title="创建时间：2022-06-30 22:22:00"><span class="icon"><i class="ic i-calendar"></i> </span><span class="text">发表于</span> <time itemprop="dateCreated datePublished" datetime="2022-06-30T22:22:00+08:00">2022-06-30</time> </span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i> </span><span class="text">本文字数</span> <span>13k</span> <span class="text">字</span> </span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i> </span><span class="text">阅读时长</span> <span>12 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span> <span class="line"></span> <span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">Entropy White</a></li></ul><ul class="right"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div id="imgs" class="pjax"><ul><li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclil3m4ej20zk0m8tn8.jpg"></li><li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclwuom7cj20zk0m8dvn.jpg"></li><li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li><li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li><li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicljitigmj20zk0m87fp.jpg"></li><li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicmnywqgpj20zk0m8dwx.jpg"></li></ul></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"/><use xlink:href="#gentle-wave" x="48" y="3"/><use xlink:href="#gentle-wave" x="48" y="5"/><use xlink:href="#gentle-wave" x="48" y="7"/></g></svg></div><main><div class="inner"><div id="main" class="pjax"><div class="article wrap"><div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i> <span><a href="/">首页</a></span><i class="ic i-angle-right"></i> <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/" itemprop="item" rel="index" title="分类于 计算机科学"><span itemprop="name">计算机科学</span></a><meta itemprop="position" content="1"></span><i class="ic i-angle-right"></i> <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/web/" itemprop="item" rel="index" title="分类于 web"><span itemprop="name">web</span></a><meta itemprop="position" content="2"></span><i class="ic i-angle-right"></i> <span class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/web/JavaScript/" itemprop="item" rel="index" title="分类于 JavaScript"><span itemprop="name">JavaScript</span></a><meta itemprop="position" content="3"></span></div><article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://entropywhite.com/computer-science/web/JavaScript/ES6/Reflect%E4%B8%8EProxy/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="/undefinedimages/cat.jpg"><meta itemprop="name" content="EntropyWhite"><meta itemprop="description" content="以前进为目标吧, 欢迎来到熵白的博客"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="熵白之痕"></span><div class="body md" itemprop="articleBody"><h2 id="概述"><a class="anchor" href="#概述">#</a> 概述</h2><p>Proxy 与 Reflect 是 ES6 为了操作对象引入的 API 。</p><p>Proxy 可以对目标对象的读取、函数调用等操作进行拦截，然后进行操作处理。它不直接操作对象，而是像代理模式，通过对象的代理对象进行操作，在进行这些操作时，可以添加一些需要的额外操作。</p><p>Reflect 可以用于获取目标对象的行为，它与 Object 类似，但是更易读，为操作对象提供了一种更优雅的方式。它的方法与 Proxy 是对应的。</p><hr><h2 id="基本用法"><a class="anchor" href="#基本用法">#</a> 基本用法</h2><h3 id="proxy"><a class="anchor" href="#proxy">#</a> Proxy</h3><p>一个 Proxy 对象由两个部分组成： target 、 handler 。在通过 Proxy 构造函数生成实例对象时，需要提供这两个参数。 target 即目标对象， handler 是一个对象，声明了代理 target 的指定行为。</p><pre><code>let target = &#123;
+    name: 'Tom',
+    age: 24
+&#125;
+let handler = &#123;
+    get: function(target, key) &#123;
+        console.log('getting '+key);
+        return target[key]; // 不是target.key
+    &#125;,
+    set: function(target, key, value) &#123;
+        console.log('setting '+key);
+        target[key] = value;
+    &#125;
+&#125;
+let proxy = new Proxy(target, handler)
+proxy.name     // 实际执行 handler.get
+proxy.age = 25 // 实际执行 handler.set
+// getting name
+// setting age
+// 25
+ 
+// target 可以为空对象
+let targetEpt = &#123;&#125;
+let proxyEpt = new Proxy(targetEpt, handler)
+// 调用 get 方法，此时目标对象为空，没有 name 属性
+proxyEpt.name // getting name
+// 调用 set 方法，向目标对象中添加了 name 属性
+proxyEpt.name = 'Tom'
+// setting name
+// &quot;Tom&quot;
+// 再次调用 get ，此时已经存在 name 属性
+proxyEpt.name
+// getting name
+// &quot;Tom&quot;
+ 
+// 通过构造函数新建实例时其实是对目标对象进行了浅拷贝，因此目标对象与代理对象会互相
+// 影响
+targetEpt
+// &#123;name: &quot;Tom&quot;&#125;
+ 
+// handler 对象也可以为空，相当于不设置拦截操作，直接访问目标对象
+let targetEmpty = &#123;&#125;
+let proxyEmpty = new Proxy(targetEmpty,&#123;&#125;)
+proxyEmpty.name = &quot;Tom&quot;
+targetEmpty // &#123;name: &quot;Tom&quot;&#125;
+</code></pre><h3 id="实例方法"><a class="anchor" href="#实例方法">#</a> 实例方法</h3><pre><code>get(target, propKey, receiver)
+</code></pre><p>用于 target 对象上 propKey 读取操作</p><pre><code>let exam =&#123;
+    name: &quot;Tom&quot;,
+    age: 24
+&#125;
+let proxy = new Proxy(exam, &#123;
+  get(target, propKey, receiver) &#123;
+    console.log('Getting ' + propKey);
+    return target[propKey];
+  &#125;
+&#125;)
+proxy.name 
+// Getting name
+// &quot;Tom&quot;
+</code></pre><p>get () 方法可以继承</p><pre><code>let proxy = new Proxy(&#123;&#125;, &#123;
+  get(target, propKey, receiver) &#123;
+      // 实现私有属性读取保护
+      if(propKey[0] === '_')&#123;
+          throw new Erro(`Invalid attempt to get private     &quot;$&#123;propKey&#125;&quot;`);
+      &#125;
+      console.log('Getting ' + propKey);
+      return target[propKey];
+  &#125;
+&#125;);
+ 
+let obj = Object.create(proxy);
+obj.name
+// Getting name
+</code></pre><pre><code>set(target,propKey,value,receiver)
+</code></pre><p>用于拦截 target 对象上的 propKey 的赋值操作。如果目标对象自身的某个属性，不可写且不可配置，那么 set 方法不起作用</p><pre><code>let validator = &#123;
+    set: function(obj, prop, value) &#123;
+        if (prop === 'age') &#123;
+            if (!Number.isInteger(value)) &#123;
+                throw new TypeError('The age is not an integer');
+            &#125;
+            if (value &gt; 200) &#123;
+                throw new RangeError('The age seems invalid');
+            &#125;
+        &#125;
+        // 对于满足条件的 age 属性以及其他属性，直接保存
+        obj[prop] = value;
+    &#125;
+&#125;;
+let proxy= new Proxy(&#123;&#125;, validator)
+proxy.age = 100;
+proxy.age           // 100
+proxy.age = 'oppps' // 报错
+proxy.age = 300     // 报错
+</code></pre><p>第四个参数 receiver 表示原始操作行为所在对象，一般是 Proxy 实例本身</p><pre><code>const handler = &#123;
+    set: function(obj, prop, value, receiver) &#123;
+        obj[prop] = receiver;
+    &#125;
+&#125;;
+const proxy = new Proxy(&#123;&#125;, handler);
+proxy.name= 'Tom';
+proxy.name=== proxy // true
+ 
+const exam = &#123;&#125;
+Object.setPrototypeOf(exam, proxy)
+exam.name = &quot;Tom&quot;
+exam.name === exam // true
+</code></pre><p>注意，严格模式下，set 代理如果没有返回 true，就会报错</p><h3 id="applytarget-ctx-args"><a class="anchor" href="#applytarget-ctx-args">#</a> apply(target, ctx, args)</h3><p>用于拦截函数的调用、call 和 reply 操作。target 表示目标对象，ctx 表示目标对象上下文，args 表示目标对象的参数数组</p><pre><code>function sub(a, b)&#123;
+    return a - b;
+&#125;
+let handler = &#123;
+    apply: function(target, ctx, args)&#123;
+        console.log('handle apply');
+        return Reflect.apply(...arguments);
+    &#125;
+&#125;
+let proxy = new Proxy(sub, handler)
+proxy(2, 1) 
+// handle apply
+// 1
+</code></pre><pre><code>has(target, propKey)
+</code></pre><p>用于拦截 HasProperty 操作，即在判断 target 对象是否存在 propKey 属性时，会被这个方法拦截。此方法不判断一个属性是对象自身的属性，还是继承的属性</p><pre><code>let  handler = &#123;
+    has: function(target, propKey)&#123;
+        console.log(&quot;handle has&quot;);
+        return propKey in target;
+    &#125;
+&#125;
+let exam = &#123;name: &quot;Tom&quot;&#125;
+let proxy = new Proxy(exam, handler)
+'name' in proxy
+// handle has
+// true
+</code></pre><p>注意：此方法不拦截 for ... in 循环。</p><pre><code>construct(target, args)
+</code></pre><p>用于拦截 new 命令。返回值必须为对象</p><pre><code>let handler = &#123;
+    construct: function (target, args, newTarget) &#123;
+        console.log('handle construct')
+        return Reflect.construct(target, args, newTarget)  
+    &#125;
+&#125;
+class Exam &#123; 
+    constructor (name) &#123;  
+        this.name = name 
+    &#125;
+&#125;
+let ExamProxy = new Proxy(Exam, handler)
+let proxyObj = new ExamProxy('Tom')
+console.log(proxyObj)
+// handle construct
+// exam &#123;name: &quot;Tom&quot;&#125;
+</code></pre><pre><code>deleteProperty(target, propKey)
+</code></pre><p>用于拦截 delete 操作，如果这个方法抛出错误或者返回 false ，propKey 属性就无法被 delete 命令删除。</p><pre><code>defineProperty(target, propKey, propDesc)
+</code></pre><p>用于拦截 Object.definePro 若目标对象不可扩展，增加目标对象上不存在的属性会报错；若属性不可写或不可配置，则不能改变这些属性。</p><pre><code>let handler = &#123;
+    defineProperty: function(target, propKey, propDesc)&#123;
+        console.log(&quot;handle defineProperty&quot;);
+        return true;
+    &#125;
+&#125;
+let target = &#123;&#125;
+let proxy = new Proxy(target, handler)
+proxy.name = &quot;Tom&quot;
+// handle defineProperty
+target
+// &#123;name: &quot;Tom&quot;&#125;
+ 
+// defineProperty 返回值为false，添加属性操作无效
+let handler1 = &#123;
+    defineProperty: function(target, propKey, propDesc)&#123;
+        console.log(&quot;handle defineProperty&quot;);
+        return false;
+    &#125;
+&#125;
+let target1 = &#123;&#125;
+let proxy1 = new Proxy(target1, handler1)
+proxy1.name = &quot;Jerry&quot;
+target1
+// &#123;&#125;
+</code></pre><p><strong>erty 操作</strong></p><pre><code>getOwnPropertyDescriptor(target, propKey)
+</code></pre><p>用于拦截 Object.getOwnPropertyD () 返回值为属性描述对象或者 undefined</p><pre><code>let handler = &#123;
+    getOwnPropertyDescriptor: function(target, propKey)&#123;
+        return Object.getOwnPropertyDescriptor(target, propKey);
+    &#125;
+&#125;
+let target = &#123;name: &quot;Tom&quot;&#125;
+let proxy = new Proxy(target, handler)
+Object.getOwnPropertyDescriptor(proxy, 'name')
+// &#123;value: &quot;Tom&quot;, writable: true, enumerable: true, configurable: 
+// true&#125;
+</code></pre><p><strong>ptor 属性</strong></p><pre><code>getPrototypeOf(target)
+</code></pre><p>主要用于拦截获取对象原型的操作。包括以下操作：</p><pre><code>- Object.prototype._proto_
+- Object.prototype.isPrototypeOf()
+- Object.getPrototypeOf()
+- Reflect.getPrototypeOf()
+- instanceof
+</code></pre><pre><code>let exam = &#123;&#125;
+let proxy = new Proxy(&#123;&#125;,&#123;
+    getPrototypeOf: function(target)&#123;
+        return exam;
+    &#125;
+&#125;)
+Object.getPrototypeOf(proxy) // &#123;&#125;
+</code></pre><p>注意，返回值必须是对象或者 null ，否则报错。另外，如果目标对象不可扩展（non-extensible），getPrototypeOf 方法必须返回目标对象的原型对象。</p><pre><code>let proxy = new Proxy(&#123;&#125;,&#123;
+    getPrototypeOf: function(target)&#123;
+        return true;
+    &#125;
+&#125;)
+Object.getPrototypeOf(proxy)
+// TypeError: 'getPrototypeOf' on proxy: trap returned neither object // nor null
+</code></pre><pre><code>isExtensible(target)
+</code></pre><p>用于拦截 Object.isExtensible 操作。</p><p>该方法只能返回布尔值，否则返回值会被自动转为布尔值。</p><pre><code>let proxy = new Proxy(&#123;&#125;,&#123;
+    isExtensible:function(target)&#123;
+        return true;
+    &#125;
+&#125;)
+Object.isExtensible(proxy) // true
+</code></pre><p>注意：它的返回值必须与目标对象的 isExtensible 属性保持一致，否则会抛出错误</p><pre><code>let proxy = new Proxy(&#123;&#125;,&#123;
+    isExtensible:function(target)&#123;
+        return false;
+    &#125;
+&#125;)
+Object.isExtensible(proxy)
+// TypeError: 'isExtensible' on proxy: trap result does not reflect 
+// extensibility of proxy target (which is 'true')
+</code></pre><pre><code>ownKeys(target)
+</code></pre><p>用于拦截对象自身属性的读取操作。主要包括以下操作：</p><pre><code>- Object.getOwnPropertyNames()
+- Object.getOwnPropertySymbols()
+- Object.keys()
+- or...in
+</code></pre><p>方法返回的数组成员，只能是字符串或 Symbol 值，否则会报错。</p><p>若目标对象中含有不可配置的属性，则必须将这些属性在结果中返回，否则就会报错。</p><p>若目标对象不可扩展，则必须全部返回且只能返回目标对象包含的所有属性，不能包含不存在的属性，否则也会报错。</p><pre><code>let proxy = new Proxy( &#123;
+  name: &quot;Tom&quot;,
+  age: 24
+&#125;, &#123;
+    ownKeys(target) &#123;
+        return ['name'];
+    &#125;
+&#125;);
+Object.keys(proxy)
+// [ 'name' ]f返回结果中，三类属性会被过滤：
+//          - 目标对象上没有的属性
+//          - 属性名为 Symbol 值的属性
+//          - 不可遍历的属性
+ 
+let target = &#123;
+  name: &quot;Tom&quot;,
+  [Symbol.for('age')]: 24,
+&#125;;
+// 添加不可遍历属性 'gender'
+Object.defineProperty(target, 'gender', &#123;
+  enumerable: false,
+  configurable: true,
+  writable: true,
+  value: 'male'
+&#125;);
+let handler = &#123;
+    ownKeys(target) &#123;
+        return ['name', 'parent', Symbol.for('age'), 'gender'];
+    &#125;
+&#125;;
+let proxy = new Proxy(target, handler);
+Object.keys(proxy)
+// ['name']
+</code></pre><pre><code>preventExtensions(target)
+</code></pre><p>拦截 Object.preventExtensions 操作。</p><p>该方法必须返回一个布尔值，否则会自动转为布尔值。</p><pre><code>// 只有目标对象不可扩展时（即 Object.isExtensible(proxy) 为 false ），
+// proxy.preventExtensions 才能返回 true ，否则会报错
+var proxy = new Proxy(&#123;&#125;, &#123;
+  preventExtensions: function(target) &#123;
+    return true;
+  &#125;
+&#125;);
+// 由于 proxy.preventExtensions 返回 true，此处也会返回 true，因此会报错
+Object.preventExtensions(proxy) 被// TypeError: 'preventExtensions' on proxy: trap returned truish but // the proxy target is extensible
+ 
+// 解决方案
+ var proxy = new Proxy(&#123;&#125;, &#123;
+  preventExtensions: function(target) &#123;
+    // 返回前先调用 Object.preventExtensions
+    Object.preventExtensions(target);
+    return true;
+  &#125;
+&#125;);
+Object.preventExtensions(proxy)
+// Proxy &#123;&#125;
+</code></pre><pre><code>setPrototypeOf
+</code></pre><p>主要用来拦截 Object.setPrototypeOf 方法。</p><p>返回值必须为布尔值，否则会被自动转为布尔值。</p><p>若目标对象不可扩展，setPrototypeOf 方法不得改变目标对象的原型。</p><pre><code>let proto = &#123;&#125;
+let proxy = new Proxy(function () &#123;&#125;, &#123;
+    setPrototypeOf: function(target, proto) &#123;
+        console.log(&quot;setPrototypeOf&quot;);
+        return true;
+    &#125;
+&#125;
+);
+Object.setPrototypeOf(proxy, proto);
+// setPrototypeOf
+</code></pre><pre><code>Proxy.revocable()
+</code></pre><p>用于返回一个可取消的 Proxy 实例</p><pre><code>let &#123;proxy, revoke&#125; = Proxy.revocable(&#123;&#125;, &#123;&#125;);
+proxy.name = &quot;Tom&quot;;
+revoke();
+proxy.name 
+// TypeError: Cannot perform 'get' on a proxy that has been revoked
+</code></pre><h3 id="reflect"><a class="anchor" href="#reflect">#</a> Reflect</h3><p>ES6 中将 Object 的一些明显属于语言内部的方法移植到了 Reflect 对象上（当前某些方法会同时存在于 Object 和 Reflect 对象上），未来的新方法会只部署在 Reflect 对象上。</p><p>Reflect 对象对某些方法的返回结果进行了修改，使其更合理。</p><p>Reflect 对象使用函数的方式实现了 Object 的命令式操作。</p><p><strong>静态方法</strong></p><pre><code>Reflect.get(target, name, receiver)
+</code></pre><p>查找并返回 target 对象的 name 属性。</p><pre><code>let exam = &#123;
+    name: &quot;Tom&quot;,
+    age: 24,
+    get info()&#123;
+        return this.name + this.age;
+    &#125;
+&#125;
+Reflect.get(exam, 'name'); // &quot;Tom&quot;
+ 
+// 当 target 对象中存在 name 属性的 getter 方法， getter 方法的 this 会绑定 // receiver
+let receiver = &#123;
+    name: &quot;Jerry&quot;,
+    age: 20
+&#125;
+Reflect.get(exam, 'info', receiver); // Jerry20
+ 
+// 当 name 为不存在于 target 对象的属性时，返回 undefined
+Reflect.get(exam, 'birth'); // undefined
+ 
+// 当 target 不是对象时，会报错
+Reflect.get(1, 'name'); // TypeError
+</code></pre><pre><code>Reflect.set(target, name, value, receiver)
+</code></pre><p>将 target 的 name 属性设置为 value。返回值为 boolean ，true 表示修改成功，false 表示失败。当 target 为不存在的对象时，会报错</p><pre><code>let exam = &#123;
+    name: &quot;Tom&quot;,
+    age: 24,
+    set info(value)&#123;
+        return this.age = value;
+    &#125;
+&#125;
+exam.age; // 24
+Reflect.set(exam, 'age', 25); // true
+exam.age; // 25
+ 
+// value 为空时会将 name 属性清除
+Reflect.set(exam, 'age', ); // true
+exam.age; // undefined
+ 
+// 当 target 对象中存在 name 属性 setter 方法时，setter 方法中的 this 会绑定 // receiver , 所以修改的实际上是 receiver 的属性,
+let receiver = &#123;
+    age: 18
+&#125;
+Reflect.set(exam, 'info', 1, receiver); // true
+receiver.age; // 1
+ 
+let receiver1 = &#123;
+    name: 'oppps'
+&#125;
+Reflect.set(exam, 'info', 1, receiver1);
+receiver1.age; // 1
+</code></pre><pre><code>Reflect.has(obj, name)
+</code></pre><p>是 name in obj 指令的函数化，用于查找 name 属性在 obj 对象中是否存在。返回值为 boolean。如果 obj 不是对象则会报错 TypeError</p><pre><code>let exam = &#123;
+    name: &quot;Tom&quot;,
+    age: 24
+&#125;
+Reflect.has(exam, 'name'); // true
+</code></pre><pre><code>Reflect.deleteProperty(obj, property)
+</code></pre><p>是 delete obj [property] 的函数化，用于删除 obj 对象的 property 属性，返回值为 boolean。如果 obj 不是对象则会报错 TypeError</p><pre><code>let exam = &#123;
+    name: &quot;Tom&quot;,
+    age: 24
+&#125;
+Reflect.deleteProperty(exam , 'name'); // true
+exam // &#123;age: 24&#125; 
+// property 不存在时，也会返回 true
+Reflect.deleteProperty(exam , 'name'); // true
+</code></pre><pre><code>Reflect.construct(obj, args)
+</code></pre><p>等同于 new target (...args)</p><pre><code>function exam(name)&#123;
+    this.name = name;
+&#125;
+Reflect.construct(exam, ['Tom']); // exam &#123;name: &quot;Tom&quot;&#125;
+</code></pre><pre><code>Reflect.getPrototypeOf(obj)
+</code></pre><p>用于读取 obj 的 <em>proto</em> 属性。在 obj 不是对象时不会像 Object 一样把 obj 转为对象，而是会报错</p><pre><code>class Exam&#123;&#125;
+let obj = new Exam()
+Reflect.getPrototypeOf(obj) === Exam.prototype // true
+</code></pre><pre><code>Reflect.setPrototypeOf(obj, newProto)
+</code></pre><p>用于设置目标对象的 prototype。</p><pre><code>let obj =&#123;&#125;
+Reflect.setPrototypeOf(obj, Array.prototype); // true
+</code></pre><pre><code>Reflect.apply(func, thisArg, args)
+</code></pre><p>等同于 Function.prototype.apply.call (func, thisArg, args) 。func 表示目标函数；thisArg 表示目标函数绑定的 this 对象；args 表示目标函数调用时传入的参数列表，可以是数组或类似数组的对象。若目标函数无法调用，会抛出 TypeError</p><pre><code>Reflect.apply(Math.max, Math, [1, 3, 5, 3, 1]); // 5
+</code></pre><pre><code>Reflect.defineProperty(target, propertyKey, attributes)
+</code></pre><p>用于为目标对象定义属性。如果 target 不是对象，会抛出错误</p><pre><code>let myDate= &#123;&#125;
+Reflect.defineProperty(MyDate, 'now', &#123;
+  value: () =&gt; Date.now()
+&#125;); // true
+ 
+const student = &#123;&#125;;
+Reflect.defineProperty(student, &quot;name&quot;, &#123;value: &quot;Mike&quot;&#125;); // true
+student.name; // &quot;Mike&quot;
+</code></pre><pre><code>Reflect.getOwnPropertyDescriptor(target, propertyKey)
+</code></pre><p>用于得到 target 对象的 propertyKey 属性的描述对象。在 target 不是对象时，会抛出错误表示参数非法，不会将非对象转换为对象</p><pre><code>var exam = &#123;&#125;
+Reflect.defineProperty(exam, 'name', &#123;
+  value: true,
+  enumerable: false,
+&#125;)
+Reflect.getOwnPropertyDescriptor(exam, 'name')
+// &#123; configurable: false, enumerable: false, value: true, writable:
+// false&#125;
+ 
+ 
+// propertyKey 属性在 target 对象中不存在时，返回 undefined
+Reflect.getOwnPropertyDescriptor(exam, 'age') // undefined
+</code></pre><pre><code>Reflect.isExtensible(target)
+</code></pre><p>用于判断 target 对象是否可扩展。返回值为 boolean 。如果 target 参数不是对象，会抛出错误</p><pre><code>let exam = &#123;&#125;
+Reflect.isExtensible(exam) // true
+</code></pre><pre><code>Reflect.preventExtensions(target)
+</code></pre><p>用于让 target 对象变为不可扩展。如果 target 参数不是对象，会抛出错</p><pre><code>let exam = &#123;&#125;
+Reflect.preventExtensions(exam) // true
+</code></pre><pre><code>Reflect.ownKeys(target)
+</code></pre><p>用于返回 target 对象的所有属性，等同于 Object.getOwnPropertyNames 与 Object.getOwnPropertySymbols 之和</p><pre><code>var exam = &#123;
+  name: 1,
+  [Symbol.for('age')]: 4
+&#125;
+Reflect.ownKeys(exam) // [&quot;name&quot;, Symbol(age)]
+</code></pre><h2 id="组合使用"><a class="anchor" href="#组合使用">#</a> 组合使用</h2><p>Reflect 对象的方法与 Proxy 对象的方法是一一对应的。所以 Proxy 对象的方法可以通过调用 Reflect 对象的方法获取默认行为，然后进行额外操作</p><pre><code>let exam = &#123;
+    name: &quot;Tom&quot;,
+    age: 24
+&#125;
+let handler = &#123;
+    get: function(target, key)&#123;
+        console.log(&quot;getting &quot;+key);
+        return Reflect.get(target,key);
+    &#125;,
+    set: function(target, key, value)&#123;
+        console.log(&quot;setting &quot;+key+&quot; to &quot;+value)
+        Reflect.set(target, key, value);
+    &#125;
+&#125;
+let proxy = new Proxy(exam, handler)
+proxy.name = &quot;Jerry&quot;
+proxy.name
+// setting name to Jerry
+// getting name
+// &quot;Jerry&quot;
+</code></pre><h3 id="使用场景拓展"><a class="anchor" href="#使用场景拓展">#</a> 使用场景拓展</h3><p><strong>实现观察者模式</strong></p><pre><code>// 定义 Set 集合
+const queuedObservers = new Set();
+// 把观察者函数都放入 Set 集合中
+const observe = fn =&gt; queuedObservers.add(fn);
+// observable 返回原始对象的代理，拦截赋值操作
+const observable = obj =&gt; new Proxy(obj, &#123;set&#125;);
+function set(target, key, value, receiver) &#123;
+  // 获取对象的赋值操作
+  const result = Reflect.set(target, key, value, receiver);
+  // 执行所有观察者
+  queuedObservers.forEach(observer =&gt; observer());
+  // 执行赋值操作
+  return result;
+&#125;
+</code></pre><pre><code>fn =&gt; queuedObservers.add(fn)
+</code></pre><p>等于：</p><pre><code>function(fn)&#123; 
+    return queuedObservers.add(fn) ;
+&#125;;
+obj =&gt; new Proxy(obj, &#123;set&#125;)
+</code></pre><p>等于：</p><pre><code>function(obj)&#123;
+    return new Proxy(obj, &#123;set&#125;);
+&#125;
+observer =&gt; observer()
+</code></pre><p>等于：</p><pre><code>function(observer )&#123;
+    return observer()
+&#125;
+</code></pre><div class="tags"><a href="/tags/ES6/" rel="tag"><i class="ic i-tag"></i> ES6</a></div></div><footer><div class="meta"><span class="item"><span class="icon"><i class="ic i-calendar-check"></i> </span><span class="text">更新于</span> <time title="修改时间：2022-06-30 22:22:26" itemprop="dateModified" datetime="2022-06-30T22:22:26+08:00">2022-06-30</time> </span><span id="computer-science/web/JavaScript/ES6/Reflect与Proxy/" class="item leancloud_visitors" data-flag-title="Reflect与Proxy" title="阅读次数"><span class="icon"><i class="ic i-eye"></i> </span><span class="text">阅读次数</span> <span class="leancloud-visitors-count"></span> <span class="text">次</span></span></div><div id="copyright"><ul><li class="author"><strong>本文作者： </strong>EntropyWhite <i class="ic i-at"><em>@</em></i>熵白之痕</li><li class="link"><strong>本文链接：</strong> <a href="https://entropywhite.com/computer-science/web/JavaScript/ES6/Reflect%E4%B8%8EProxy/" title="Reflect与Proxy">https://entropywhite.com/computer-science/web/JavaScript/ES6/Reflect与Proxy/</a></li><li class="license"><strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/computer-science/web/JavaScript/ES6/JS-Promise%E5%AF%B9%E8%B1%A1/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipew28b65j20zk0m8hdt.jpg" title="JS-Promise对象"><span class="type">上一篇</span> <span class="category"><i class="ic i-flag"></i> JavaScript</span><h3>JS-Promise对象</h3></a></div><div class="item right"><a href="/computer-science/web/JavaScript/ES6/Symbol/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclxp31goj20zk0m8qv5.jpg" title="Symbol"><span class="type">下一篇</span> <span class="category"><i class="ic i-flag"></i> JavaScript</span><h3>Symbol</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">基本用法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#proxy"><span class="toc-number">2.1.</span> <span class="toc-text">Proxy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95"><span class="toc-number">2.2.</span> <span class="toc-text">实例方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#applytarget-ctx-args"><span class="toc-number">2.3.</span> <span class="toc-text">apply(target, ctx, args)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reflect"><span class="toc-number">2.4.</span> <span class="toc-text">Reflect</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">组合使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E6%8B%93%E5%B1%95"><span class="toc-number">3.1.</span> <span class="toc-text">使用场景拓展</span></a></li></ol></li></ol></div><div class="related panel pjax" data-title="系列文章"><ul><li><a href="/computer-science/web/JavaScript/JSON/JSON/" rel="bookmark" title="JSON">JSON</a></li><li><a href="/computer-science/web/JavaScript/JS%E8%A7%84%E8%8C%83/JS%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/" rel="bookmark" title="JavaScript代码规范">JavaScript代码规范</a></li><li><a href="/computer-science/web/JavaScript/JS%E8%A7%84%E8%8C%83/JS%E8%AF%AD%E8%A8%80%E8%A7%84%E8%8C%83/" rel="bookmark" title="JavaScript语言规范">JavaScript语言规范</a></li><li><a href="/computer-science/web/JavaScript/js%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E5%92%8C%E7%9F%A5%E8%AF%86/js%E5%9F%BA%E7%A1%80/" rel="bookmark" title="JavaScript基础">JavaScript基础</a></li><li><a href="/computer-science/web/JavaScript/js%E6%93%8D%E4%BD%9Cdom/DOM/" rel="bookmark" title="JavaScript DOM">JavaScript DOM</a></li><li><a href="/computer-science/web/JavaScript/jQuery/%E4%BA%8B%E4%BB%B6/" rel="bookmark" title="jQuery事件">jQuery事件</a></li><li><a href="/computer-science/web/JavaScript/jQuery/%E5%AE%89%E8%A3%85/" rel="bookmark" title="jQueryan安装">jQueryan安装</a></li><li><a href="/computer-science/web/JavaScript/jQuery/%E8%AF%AD%E6%B3%95/" rel="bookmark" title="jQuery语法">jQuery语法</a></li><li><a href="/computer-science/web/JavaScript/jQuery/%E9%80%89%E6%8B%A9%E5%99%A8/" rel="bookmark" title="jQuery选择器">jQuery选择器</a></li><li><a href="/computer-science/web/JavaScript/AJAX/AJAX%E7%AE%80%E4%BB%8B/" rel="bookmark" title="AJAX简介">AJAX简介</a></li><li><a href="/computer-science/web/JavaScript/AJAX/XHR-readyState/" rel="bookmark" title="onreadystatechange事件">onreadystatechange事件</a></li><li><a href="/computer-science/web/JavaScript/AJAX/XHR%E8%AF%B7%E6%B1%82/" rel="bookmark" title="XHR请求">XHR请求</a></li><li><a href="/computer-science/web/JavaScript/jQuery/jQuery%E7%AE%80%E4%BB%8B/" rel="bookmark" title="什么是jQuery">什么是jQuery</a></li><li><a href="/computer-science/web/JavaScript/AJAX/AJAX%E5%BC%82%E6%AD%A5/" rel="bookmark" title="AJAX异步">AJAX异步</a></li><li><a href="/computer-science/web/JavaScript/AJAX/XHR%E5%AF%B9%E8%B1%A1/" rel="bookmark" title="XHR对象">XHR对象</a></li><li><a href="/computer-science/web/JavaScript/AJAX/XHR%E5%93%8D%E5%BA%94/" rel="bookmark" title="XHR响应">XHR响应</a></li><li><a href="/computer-science/web/JavaScript/ES6/%E5%87%BD%E6%95%B0/" rel="bookmark" title="ES6函数">ES6函数</a></li><li><a href="/computer-science/web/JavaScript/ES6/%E5%AF%B9%E8%B1%A1/" rel="bookmark" title="ES6对象">ES6对象</a></li><li><a href="/computer-science/web/JavaScript/ES6/%E7%AE%80%E4%BB%8B/" rel="bookmark" title="ES6简介">ES6简介</a></li><li><a href="/computer-science/web/JavaScript/ES6/%E6%95%B0%E5%80%BC/" rel="bookmark" title="ES6数值">ES6数值</a></li><li><a href="/computer-science/web/JavaScript/ES6/%E6%95%B0%E7%BB%84/" rel="bookmark" title="ES6数组">ES6数组</a></li><li><a href="/computer-science/web/JavaScript/ES6/%E6%A8%A1%E5%9D%97/" rel="bookmark" title="ES6模块">ES6模块</a></li><li><a href="/computer-science/web/JavaScript/ES6/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/" rel="bookmark" title="ES6解构赋值">ES6解构赋值</a></li><li><a href="/computer-science/web/JavaScript/ES6/Generator%E5%87%BD%E6%95%B0/" rel="bookmark" title="Generator函数">Generator函数</a></li><li><a href="/computer-science/web/JavaScript/ES6/Class%E7%B1%BB/" rel="bookmark" title="Class类">Class类</a></li><li><a href="/computer-science/web/JavaScript/ES6/async%E5%87%BD%E6%95%B0/" rel="bookmark" title="async函数">async函数</a></li><li><a href="/computer-science/web/JavaScript/ES6/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="bookmark" title="ES6字符串">ES6字符串</a></li><li><a href="/computer-science/web/JavaScript/ES6/JS-Promise%E5%AF%B9%E8%B1%A1/" rel="bookmark" title="JS-Promise对象">JS-Promise对象</a></li><li><a href="/computer-science/web/JavaScript/ES6/let%E5%92%8Cconst/" rel="bookmark" title="let和const">let和const</a></li><li><a href="/computer-science/web/JavaScript/ES6/Promise%E5%AF%B9%E8%B1%A1/" rel="bookmark" title="Promise对象">Promise对象</a></li><li><a href="/computer-science/web/JavaScript/ES6/Map%E4%B8%8ESet/" rel="bookmark" title="Map与Set">Map与Set</a></li><li class="active"><a href="/computer-science/web/JavaScript/ES6/Reflect%E4%B8%8EProxy/" rel="bookmark" title="Reflect与Proxy">Reflect与Proxy</a></li><li><a href="/computer-science/web/JavaScript/ES6/Symbol/" rel="bookmark" title="Symbol">Symbol</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="image" itemprop="image" alt="EntropyWhite" data-src="/undefinedimages/cat.jpg"><p class="name" itemprop="name">EntropyWhite</p><div class="description" itemprop="description">欢迎来到熵白的博客</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">128</span> <span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">8</span> <span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">11</span> <span class="name">标签</span></a></div></nav><div class="social"><span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0plcnlzdXJw" title="https:&#x2F;&#x2F;github.com&#x2F;Jerysurp"><i class="ic i-github"></i></span> <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span> <span class="exturl item bilibili" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTEzMTAwNDY/c3BtX2lkX2Zyb209MzMzLjEwMDcuMC4w" title="https:&#x2F;&#x2F;space.bilibili.com&#x2F;51310046?spm_id_from&#x3D;333.1007.0.0"><i class="ic i-bilibili"></i></span></div><ul class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item"><a href="/about/" rel="section"><i class="ic i-user"></i>关于</a></li><li class="item dropdown"><a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li><li class="item"><a href="/friends/" rel="section"><i class="ic i-heart"></i>友達</a></li><li class="item"><a href="/links/" rel="section"><i class="ic i-magic"></i>链接</a></li></ul></div></div></div><ul id="quick"><li class="prev pjax"><a href="/computer-science/web/JavaScript/ES6/JS-Promise%E5%AF%B9%E8%B1%A1/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/computer-science/web/JavaScript/ES6/Symbol/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/" title="分类于 web">web</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/css/" title="分类于 css">css</a></div><span><a href="/computer-science/web/css/CSS%E8%A7%84%E8%8C%83/CSS%E6%B3%A8%E9%87%8A/" title="CSS注释规范">CSS注释规范</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/computer-science/web/SVN/SVN%E6%A0%87%E7%AD%BE/" title="未命名">未命名</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/" title="分类于 web">web</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/JavaScript/" title="分类于 JavaScript">JavaScript</a></div><span><a href="/computer-science/web/JavaScript/JS%E8%A7%84%E8%8C%83/JS%E8%AF%AD%E8%A8%80%E8%A7%84%E8%8C%83/" title="JavaScript语言规范">JavaScript语言规范</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/" title="分类于 web">web</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/css/" title="分类于 css">css</a></div><span><a href="/computer-science/web/css/CSS%E8%A7%84%E8%8C%83/CSS%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2/" title="CSSmei">CSSmei</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/blog/" title="分类于 hexo博客">hexo博客</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/blog/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a></div><span><a href="/computer-science/blog/Create%20Blog/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Coding/" title="博客部署到Coding">博客部署到Coding</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/" title="分类于 web">web</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/JavaScript/" title="分类于 JavaScript">JavaScript</a></div><span><a href="/computer-science/web/JavaScript/ES6/%E6%95%B0%E5%80%BC/" title="ES6数值">ES6数值</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/" title="分类于 web">web</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/JavaScript/" title="分类于 JavaScript">JavaScript</a></div><span><a href="/computer-science/web/JavaScript/AJAX/AJAX%E5%BC%82%E6%AD%A5/" title="AJAX异步">AJAX异步</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/" title="分类于 web">web</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/JavaScript/" title="分类于 JavaScript">JavaScript</a></div><span><a href="/computer-science/web/JavaScript/ES6/%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="ES6字符串">ES6字符串</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/" title="分类于 web">web</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/JavaScript/" title="分类于 JavaScript">JavaScript</a></div><span><a href="/computer-science/web/JavaScript/ES6/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/" title="ES6解构赋值">ES6解构赋值</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/computer-science/web/%E6%B5%8F%E8%A7%88%E5%99%A8/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E5%8F%8A%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/" title="未命名">未命名</a></span></li></ul></div><div><h2>最新评论</h2><ul class="leancloud-recent-comment"></ul></div></div><div class="status"><div class="copyright">&copy; <span itemprop="copyrightYear">2022</span> <span class="with-love"><i class="ic i-sakura rotate"></i> </span><span class="author" itemprop="copyrightHolder">EntropyWhite @ Entropy White</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i> </span><span title="站点总字数">305k 字</span> <span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="ic i-coffee"></i> </span><span title="站点阅读时长">4:37</span></div><div class="powered-by">基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></div></div></div></footer></div><script data-config type="text/javascript">var LOCAL={path:"computer-science/web/JavaScript/ES6/Reflect与Proxy/",favicon:{show:"（●´3｀●）やれやれだぜ",hide:"(´Д｀)大変だ！"},search:{placeholder:"文章搜索",empty:"关于 「 ${query} 」，什么也没搜到",stats:"${time} ms 内找到 ${hits} 条结果"},valine:{placeholder:"1. 提问前请先仔细阅读本文档⚡\n2. 页面显示问题💥，请提供控制台截图📸或者您的测试网址\n3. 其他任何报错💣，请提供详细描述和截图📸，祝食用愉快💪"},fancybox:!0,copyright:'复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',ignores:[function(e){return e.includes("#")},function(e){return new RegExp(LOCAL.path+"$").test(e)}]}</script><script src="https://cdn.polyfill.io/v2/polyfill.js"></script><script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script><script src="/undefinedjs/app.js?v=0.2.5"></script></body></html><!-- rebuild by hrmmi -->
