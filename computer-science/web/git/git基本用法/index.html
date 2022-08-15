@@ -1,0 +1,271 @@
+<!-- build time:Mon Aug 15 2022 12:02:51 GMT+0800 (中国标准时间) --><!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="baidu-site-verification" content="code-NAUyjdjtWe"><meta name="theme-color" content="#FFF"><link rel="apple-touch-icon" sizes="180x180" href="//cdn.jsdelivr.net/gh/Jerysurp/Jerysurp.github.io@latest/images/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="32x32" href="//cdn.jsdelivr.net/gh/Jerysurp/Jerysurp.github.io@latest/images/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="alternate" type="application/rss+xml" title="熵白之痕" href="https://entropywhite.com/rss.xml"><link rel="alternate" type="application/atom+xml" title="熵白之痕" href="https://entropywhite.com/atom.xml"><link rel="alternate" type="application/json" title="熵白之痕" href="https://entropywhite.com/feed.json"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/Jerysurp/Jerysurp.github.io@latest/css/app.css?v=0.2.5"><meta name="keywords" content="git"><link rel="canonical" href="https://entropywhite.com/computer-science/web/git/git%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/"><title>git基本用法 - git - web - 计算机科学 | Entropy White = 熵白之痕 = 以前进为目标吧</title><meta name="generator" content="Hexo 5.4.1"></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">git基本用法</h1><div class="meta"><span class="item" title="创建时间：2022-08-15 11:42:00"><span class="icon"><i class="ic i-calendar"></i> </span><span class="text">发表于</span> <time itemprop="dateCreated datePublished" datetime="2022-08-15T11:42:00+08:00">2022-08-15</time> </span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i> </span><span class="text">本文字数</span> <span>10k</span> <span class="text">字</span> </span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i> </span><span class="text">阅读时长</span> <span>10 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span> <span class="line"></span> <span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">Entropy White</a></li></ul><ul class="right"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div id="imgs" class="pjax"><ul><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipesng5oej20zk0m87d4.jpg"></li><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipewr8iypj20zk0m8b29.jpg"></li><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipevuctzzj20zk0m84qp.jpg"></li><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li><li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipevgoki5j20zk0m84qp.jpg"></li></ul></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"/><use xlink:href="#gentle-wave" x="48" y="3"/><use xlink:href="#gentle-wave" x="48" y="5"/><use xlink:href="#gentle-wave" x="48" y="7"/></g></svg></div><main><div class="inner"><div id="main" class="pjax"><div class="article wrap"><div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i> <span><a href="/">首页</a></span><i class="ic i-angle-right"></i> <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/" itemprop="item" rel="index" title="分类于 计算机科学"><span itemprop="name">计算机科学</span></a><meta itemprop="position" content="1"></span><i class="ic i-angle-right"></i> <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/web/" itemprop="item" rel="index" title="分类于 web"><span itemprop="name">web</span></a><meta itemprop="position" content="2"></span><i class="ic i-angle-right"></i> <span class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/web/git/" itemprop="item" rel="index" title="分类于 git"><span itemprop="name">git</span></a><meta itemprop="position" content="3"></span></div><article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://entropywhite.com/computer-science/web/git/git%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="//cdn.jsdelivr.net/gh/Jerysurp/Jerysurp.github.io@latest/images/cat.jpg"><meta itemprop="name" content="EntropyWhite"><meta itemprop="description" content="以前进为目标吧, 欢迎来到熵白的博客"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="熵白之痕"></span><div class="body md" itemprop="articleBody"><h2 id="git工作流程"><a class="anchor" href="#git工作流程">#</a> Git 工作流程</h2><p>克隆 git 资源作为工作目录</p><p>在克隆资源上添加或修改文件</p><p>其他人修改了，你可以更新资源</p><p>在提交前查看修改</p><p>提交修改</p><p>修改完成后，如果发现错误，可以撤回提交并再次修改并提交</p><p><img data-src="%E5%9B%BE/git-process.png" alt></p><p>Git 工作区、暂存区和版本库</p><p>工作区：电脑看到的目录</p><p>暂存区：叫 stage 或 index。一般存放在.git 目录下 index 文件 (.git/index) 中，所以我们把暂存区有时也叫作索引 (index)</p><p>版本库：工作区有一个隐藏目录，是 git 版本库</p><p><img data-src="%E5%9B%BE/2.jpg" alt></p><p>图中左侧为工作区，右侧为版本库。在版本库中标记为 &quot;index&quot; 的区域是暂存区（stage/index），标记为 &quot;master&quot; 的是 master 分支所代表的目录树。</p><p>图中我们可以看出此时 &quot;HEAD&quot; 实际是指向 master 分支的一个 &quot;游标&quot;。所以图示的命令中出现 HEAD 的地方可以用 master 来替换。</p><p>图中的 objects 标识的区域为 Git 的对象库，实际位于 &quot;.git/objects&quot; 目录下，里面包含了创建的各种对象及内容。</p><p>对工作区修改（或新增）的文件执行 <strong>git add</strong> 命令时，暂存区的目录树被更新，同时工作区修改（或新增）的文件内容被写入到对象库中的一个新的对象中，而该对象的 ID 被记录在暂存区的文件索引中。</p><p>执行提交操作（git commit）时，暂存区的目录树写到版本库（对象库）中，master 分支会做相应的更新。即 master 指向的目录树就是提交时暂存区的目录树。</p><p>执行 <strong>git reset HEAD</strong> 命令时，暂存区的目录树会被重写，被 master 分支指向的目录树所替换，但是工作区不受影响。</p><p>执行 <strong>git rm --cached &lt;file&gt;</strong> 命令时，会直接从暂存区删除文件，工作区则不做出改变。</p><p>执行 <strong>git checkout .</strong> 或者 <strong>git checkout -- &lt;file&gt;</strong> 命令时，会用暂存区全部或指定的文件替换工作区的文件。这个操作很危险，会清除工作区中未添加到暂存区中的改动。</p><p>执行 <strong>git checkout HEAD .</strong> 或者 <strong>git checkout HEAD &lt;file&gt;</strong> 命令时，会用 HEAD 指向的 master 分支中的全部或者部分文件替换暂存区和以及工作区中的文件。这个命令也是极具危险性的，因为不但会清除工作区中未提交的改动，也会清除暂存区中未提交的改动。</p><h2 id="git创建仓库"><a class="anchor" href="#git创建仓库">#</a> Git 创建仓库</h2><p>Git 使用 <strong>git init</strong> 命令来初始化一个 Git 仓库，Git 的很多命令都需要在 Git 的仓库中运行，在执行完成 <strong>git init</strong> 命令后，Git 仓库会生成一个 .git 目录，该目录包含了资源的所有元数据，其他的项目目录保持不变。</p><h3 id="使用方法"><a class="anchor" href="#使用方法">#</a> 使用方法</h3><p>使用当前目录作为 Git 仓库，我们只需使它初始化。</p><pre><code>git init
+</code></pre><p>该命令执行完后会在当前目录生成一个 .git 目录。</p><p>使用我们指定目录作为 Git 仓库。</p><pre><code>git init newrepo
+</code></pre><p>初始化后，会在 newrepo 目录下会出现一个名为 .git 的目录，所有 Git 需要的数据和资源都存放在这个目录中。</p><p>如果当前目录下有几个文件想要纳入版本控制，需要先用 git add 命令告诉 Git 开始对这些文件进行跟踪，然后提交：</p><pre><code>$ git add *.c
+$ git add README
+$ git commit -m '内容文字'
+</code></pre><p>以上命令将目录下以 .c 结尾及 README 文件提交到仓库中。</p><blockquote><p><strong>注：</strong> 在 Linux 系统中，commit 信息使用单引号 <strong>'</strong>，Windows 系统，commit 信息使用双引号 <strong>&quot;</strong>。</p><p>所以在 git bash 中 <strong>git commit -m ' 提交说明'</strong> 这样是可以的，在 Windows 命令行中就要使用双引号 <strong>git commit -m &quot;提交说明&quot;</strong>。</p></blockquote><hr><h2 id="git-clone"><a class="anchor" href="#git-clone">#</a> git clone</h2><p>我们使用 <strong>git clone</strong> 从现有 Git 仓库中拷贝项目（类似 <strong>svn checkout</strong>）。</p><p>克隆仓库的命令格式为：</p><pre><code>git clone &lt;repo&gt;
+</code></pre><p>如果我们需要克隆到指定的目录，可以使用以下命令格式：</p><pre><code>git clone &lt;repo&gt; &lt;directory&gt;
+</code></pre><p><strong>参数说明：</strong></p><ul><li>**repo:**Git 仓库。</li><li>**directory:** 本地目录。</li></ul><p>比如，要克隆 Ruby 语言的 Git 代码仓库 Grit，可以用下面的命令：</p><pre><code>$ git clone git://github.com/schacon/grit.git
+</code></pre><p>执行该命令后，会在当前目录下创建一个名为 grit 的目录，其中包含一个 .git 的目录，用于保存下载下来的所有版本记录。</p><p>如果要自己定义要新建的项目目录名称，可以在上面的命令末尾指定新的名字：</p><pre><code>$ git clone git://github.com/schacon/grit.git mygrit
+</code></pre><h2 id="配置"><a class="anchor" href="#配置">#</a> 配置</h2><p>git 的设置使用 <strong>git config</strong> 命令。</p><p>显示当前的 git 配置信息：</p><pre><code>$ git config --list
+credential.helper=osxkeychain
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+</code></pre><p>编辑 git 配置文件:</p><pre><code>$ git config -e    # 针对当前仓库 
+</code></pre><p>或者：</p><pre><code>$ git config -e --global   # 针对系统上所有仓库
+</code></pre><p>设置提交代码时的用户信息：</p><pre><code>$ git config --global user.name &quot;runoob&quot;
+$ git config --global user.email test@runoob.com
+</code></pre><p>如果去掉 <strong>--global</strong> 参数只对当前仓库有效。</p><h2 id="git基本操作"><a class="anchor" href="#git基本操作">#</a> Git 基本操作</h2><p>Git 的工作就是创建和保存你项目的快照及与之后的快照进行对比。</p><p>Git 常用的是以下 6 个命令：<strong>git clone</strong>、<strong>git push</strong>、<strong>git add</strong> 、<strong>git commit</strong>、<strong>git checkout</strong>、<strong>git pull</strong>，后面我们会详细介绍。</p><p><img data-src="%E5%9B%BE/3.jpg" alt></p><p><strong>说明：</strong></p><ul><li>workspace：工作区</li><li>staging area：暂存区 / 缓存区</li><li>local repository：版本库或本地仓库</li><li>remote repository：远程仓库</li></ul><h3 id="创建仓库"><a class="anchor" href="#创建仓库">#</a> 创建仓库</h3><p>下表列出了 git 创建仓库的命令：</p><table><thead><tr><th style="text-align:left">命令</th><th style="text-align:left">说明</th></tr></thead><tbody><tr><td style="text-align:left"><code>git init</code></td><td style="text-align:left">初始化仓库</td></tr><tr><td style="text-align:left"><code>git clone</code></td><td style="text-align:left">拷贝一份远程仓库，也就是下载一个项目。</td></tr></tbody></table><hr><h2 id="提交与修改"><a class="anchor" href="#提交与修改">#</a> 提交与修改</h2><p>Git 的工作就是创建和保存你的项目的快照及与之后的快照进行对比。</p><p>下表列出了有关创建与提交你的项目的快照的命令：</p><table><thead><tr><th style="text-align:left">命令</th><th style="text-align:left">说明</th></tr></thead><tbody><tr><td style="text-align:left"><code>git add</code></td><td style="text-align:left">添加文件到暂存区</td></tr><tr><td style="text-align:left"><code>git status</code></td><td style="text-align:left">查看仓库当前的状态，显示有变更的文件</td></tr><tr><td style="text-align:left"><code>git diff</code></td><td style="text-align:left">比较文件的不同，即暂存区和工作区的差异</td></tr><tr><td style="text-align:left"><code>git commit</code></td><td style="text-align:left">提交暂存区到本地仓库</td></tr><tr><td style="text-align:left"><code>git reset --hard</code></td><td style="text-align:left">回退版本</td></tr><tr><td style="text-align:left"><code>git rm</code></td><td style="text-align:left">删除工作区文件</td></tr><tr><td style="text-align:left"><code>git mv</code></td><td style="text-align:left">移动或重命名工作区文件</td></tr></tbody></table><h3 id="提交日志"><a class="anchor" href="#提交日志">#</a> 提交日志</h3><table><thead><tr><th style="text-align:left">命令</th><th style="text-align:left">说明</th></tr></thead><tbody><tr><td style="text-align:left"><code>git log</code></td><td style="text-align:left">查看历史提交记录</td></tr><tr><td style="text-align:left"><code>git reflog</code></td><td style="text-align:left">查看历史操作版本号</td></tr><tr><td style="text-align:left"><code>git blame &lt;file&gt;</code></td><td style="text-align:left">以列表形式查看指定文件的历史修改记录</td></tr></tbody></table><h3 id="远程操作"><a class="anchor" href="#远程操作">#</a> 远程操作</h3><table><thead><tr><th style="text-align:left">命令</th><th style="text-align:left">说明</th></tr></thead><tbody><tr><td style="text-align:left"><code>git remote</code></td><td style="text-align:left">远程仓库操作</td></tr><tr><td style="text-align:left"><code>git fetch</code></td><td style="text-align:left">从远程获取代码库</td></tr><tr><td style="text-align:left"><code>git pull</code></td><td style="text-align:left">下载远程代码并合并</td></tr><tr><td style="text-align:left"><code>git push</code></td><td style="text-align:left">上传远程代码并合并</td></tr></tbody></table><h2 id="git分支管理"><a class="anchor" href="#git分支管理">#</a> Git 分支管理</h2><p>几乎每一种版本控制系统都以某种形式支持分支。使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。</p><p>创建分支命令：</p><pre><code>git branch (branchname)
+</code></pre><p>切换分支命令:</p><pre><code>git checkout (branchname)
+</code></pre><p>当你切换分支的时候，Git 会用该分支的最后提交的快照替换你的工作目录的内容， 所以多个分支不需要多个目录。</p><p>合并分支命令:</p><pre><code>git merge 
+</code></pre><p>你可以多次合并到统一分支， 也可以选择在合并之后直接删除被并入的分支。</p><p>开始前我们先创建一个测试目录：</p><pre><code>$ mkdir gitdemo
+$ cd gitdemo/
+$ git init
+Initialized empty Git repository...
+$ touch README
+$ git add README
+$ git commit -m '第一次版本提交'
+[master (root-commit) 3b58100] 第一次版本提交
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README
+</code></pre><h3 id="列出分支"><a class="anchor" href="#列出分支">#</a> 列出分支</h3><p>列出分支基本命令：</p><pre><code>git branch
+</code></pre><p>没有参数时，<strong>git branch</strong> 会列出你在本地的分支。</p><pre><code>$ git branch
+* master
+</code></pre><p>此例的意思就是，我们有一个叫做 <strong>master</strong> 的分支，并且该分支是当前分支。</p><p>当你执行 <strong>git init</strong> 的时候，默认情况下 Git 就会为你创建 <strong>master</strong> 分支。</p><p>如果我们要手动创建一个分支。执行 <strong>git branch (branchname)</strong> 即可。</p><pre><code>$ git branch testing
+$ git branch
+* master
+  testing
+</code></pre><p>现在我们可以看到，有了一个新分支 <strong>testing</strong>。</p><p>当你以此方式在上次提交更新之后创建了新分支，如果后来又有更新提交， 然后又切换到了 <strong>testing</strong> 分支，Git 将还原你的工作目录到你创建分支时候的样子。</p><p>接下来我们将演示如何切换分支，我们用 git checkout (branch) 切换到我们要修改的分支。</p><pre><code>$ ls
+README
+$ echo 'runoob.com' &gt; test.txt
+$ git add .
+$ git commit -m 'add test.txt'
+[master 3e92c19] add test.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+$ ls
+README        test.txt
+$ git checkout testing
+Switched to branch 'testing'
+$ ls
+README
+</code></pre><p>当我们切换到 <strong>testing</strong> 分支的时候，我们添加的新文件 test.txt 被移除了。切换回 <strong>master</strong> 分支的时候，它们又重新出现了。</p><pre><code>$ git checkout master
+Switched to branch 'master'
+$ ls
+README        test.txt
+</code></pre><p>我们也可以使用 git checkout -b (branchname) 命令来创建新分支并立即切换到该分支下，从而在该分支中操作。</p><pre><code>$ git checkout -b newtest
+Switched to a new branch 'newtest'
+$ git rm test.txt 
+rm 'test.txt'
+$ ls
+README
+$ touch runoob.php
+$ git add .
+$ git commit -am 'removed test.txt、add runoob.php'
+[newtest c1501a2] removed test.txt、add runoob.php
+ 2 files changed, 1 deletion(-)
+ create mode 100644 runoob.php
+ delete mode 100644 test.txt
+$ ls
+README        runoob.php
+$ git checkout master
+Switched to branch 'master'
+$ ls
+README        test.txt
+</code></pre><p>如你所见，我们创建了一个分支，在该分支上移除了一些文件 test.txt，并添加了 runoob.php 文件，然后切换回我们的主分支，删除的 test.txt 文件又回来了，且新增加的 runoob.php 不存在主分支中。</p><p>使用分支将工作切分开来，从而让我们能够在不同开发环境中做事，并来回切换。</p><h3 id="删除分支"><a class="anchor" href="#删除分支">#</a> 删除分支</h3><p>删除分支命令：</p><pre><code>git branch -d (branchname)
+</code></pre><p>例如我们要删除 testing 分支：</p><pre><code>$ git branch
+* master
+  testing
+$ git branch -d testing
+Deleted branch testing (was 85fc7e7).
+$ git branch
+* master
+</code></pre><h3 id="分支合并"><a class="anchor" href="#分支合并">#</a> 分支合并</h3><p>一旦某分支有了独立内容，你终究会希望将它合并回到你的主分支。 你可以使用以下命令将任何分支合并到当前分支中去：</p><pre><code>$ git branch
+* master
+  newtest
+$ ls
+README        test.txt
+$ git merge newtest
+Updating 3e92c19..c1501a2
+Fast-forward
+ runoob.php | 0
+ test.txt   | 1 -
+ 2 files changed, 1 deletion(-)
+ create mode 100644 runoob.php
+ delete mode 100644 test.txt
+$ ls
+README        runoob.php
+</code></pre><p>以上实例中我们将 newtest 分支合并到主分支去，test.txt 文件被删除。</p><p>合并完后就可以删除分支:</p><pre><code>$ git branch -d newtest
+Deleted branch newtest (was c1501a2).
+</code></pre><p>删除后， 就只剩下 master 分支了：</p><pre><code>$ git branch
+* master
+</code></pre><h3 id="合并冲突"><a class="anchor" href="#合并冲突">#</a> 合并冲突</h3><p>合并并不仅仅是简单的文件添加、移除的操作，Git 也会合并修改。</p><pre><code>$ git branch
+* master
+$ cat runoob.php
+</code></pre><p>首先，我们创建一个叫做 change_site 的分支，切换过去，我们将 runoob.php 内容改为:</p><pre><code>&lt;?php
+echo 'runoob';
+?&gt;
+</code></pre><p>创建 change_site 分支：</p><pre><code>$ git checkout -b change_site
+Switched to a new branch 'change_site'
+$ vim runoob.php
+$ head -3 runoob.php
+&lt;?php
+echo 'runoob';
+?&gt;
+$ git commit -am 'changed the runoob.php'
+[change_site 7774248] changed the runoob.php
+ 1 file changed, 3 insertions(+)
+ 
+</code></pre><p>将修改的内容提交到 change_site 分支中。 现在，假如切换回 master 分支我们可以看内容恢复到我们修改前的 (空文件，没有代码)，我们再次修改 runoob.php 文件。</p><pre><code>$ git checkout master
+Switched to branch 'master'
+$ cat runoob.php
+$ vim runoob.php    # 修改内容如下
+$ cat runoob.php
+&lt;?php
+echo 1;
+?&gt;
+$ git diff
+diff --git a/runoob.php b/runoob.php
+index e69de29..ac60739 100644
+--- a/runoob.php
++++ b/runoob.php
+@@ -0,0 +1,3 @@
++&lt;?php
++echo 1;
++?&gt;
+$ git commit -am '修改代码'
+[master c68142b] 修改代码
+ 1 file changed, 3 insertions(+)
+</code></pre><p>现在这些改变已经记录到我的 &quot;master&quot; 分支了。接下来我们将 &quot;change_site&quot; 分支合并过来。</p><pre><code>$ git merge change_site
+Auto-merging runoob.php
+CONFLICT (content): Merge conflict in runoob.php
+Automatic merge failed; fix conflicts and then commit the result.
+
+$ cat runoob.php     # 打开文件，看到冲突内容
+&lt;?php
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+echo 1;
+=======
+echo 'runoob';
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; change_site
+?&gt;
+</code></pre><p>我们将前一个分支合并到 master 分支，一个合并冲突就出现了，接下来我们需要手动去修改它。</p><pre><code>$ vim runoob.php 
+$ cat runoob.php
+&lt;?php
+echo 1;
+echo 'runoob';
+?&gt;
+$ git diff
+diff --cc runoob.php
+index ac60739,b63d7d7..0000000
+--- a/runoob.php
++++ b/runoob.php
+@@@ -1,3 -1,3 +1,4 @@@
+  &lt;?php
+ +echo 1;
++ echo 'runoob';
+  ?&gt;
+</code></pre><p>在 Git 中，我们可以用 git add 要告诉 Git 文件冲突已经解决</p><pre><code>$ git status -s
+UU runoob.php
+$ git add runoob.php
+$ git status -s
+M  runoob.php
+$ git commit
+[master 88afe0e] Merge branch 'change_site'
+</code></pre><p>现在我们成功解决了合并中的冲突，并提交了结果。</p><h2 id="git查看提交历史"><a class="anchor" href="#git查看提交历史">#</a> Git 查看提交历史</h2><p>Git 提交历史一般常用两个命令：</p><ul><li><p><strong>git log</strong> - 查看历史提交记录。</p></li><li><p><strong>git blame &lt;file&gt;</strong> - 以列表形式查看指定文件的历史修改记录。</p></li><li><h3 id="git-log"><a class="anchor" href="#git-log">#</a> git log</h3></li><li><p>在使用 Git 提交了若干更新之后，又或者克隆了某个项目，想回顾下提交历史，我们可以使用 <strong>git log</strong> 命令查看。</p></li><li><p>针对我们前一章节的操作，使用 <strong>git log</strong> 命令列出历史提交记录如下：</p></li><li><pre><code> $ git log
+ commit d5e9fc2c811e0ca2b2d28506ef7dc14171a207d9 (HEAD -&gt; master)
+ Merge: c68142b 7774248
+ Author: runoob &lt;test@runoob.com&gt;
+ Date:   Fri May 3 15:55:58 2019 +0800
+ 
+     Merge branch 'change_site'
+ 
+ commit c68142b562c260c3071754623b08e2657b4c6d5b
+ Author: runoob &lt;test@runoob.com&gt;
+ Date:   Fri May 3 15:52:12 2019 +0800
+ 
+     修改代码
+ 
+ commit 777424832e714cf65d3be79b50a4717aea51ab69 (change_site)
+ Author: runoob &lt;test@runoob.com&gt;
+ Date:   Fri May 3 15:49:26 2019 +0800
+ 
+     changed the runoob.php
+ 
+ commit c1501a244676ff55e7cccac1ecac0e18cbf6cb00
+ Author: runoob &lt;test@runoob.com&gt;
+ Date:   Fri May 3 15:35:32 2019 +0800
+</code></pre></li><li><p>我们可以用 --oneline 选项来查看历史记录的简洁的版本。</p></li><li><pre><code> $ git log --oneline
+ $ git log --oneline
+ d5e9fc2 (HEAD -&gt; master) Merge branch 'change_site'
+ c68142b 修改代码
+ 7774248 (change_site) changed the runoob.php
+ c1501a2 removed test.txt、add runoob.php
+ 3e92c19 add test.txt
+ 3b58100 第一次版本提交
+</code></pre></li><li><p>这告诉我们的是，此项目的开发历史。</p></li><li><p>我们还可以用 --graph 选项，查看历史中什么时候出现了分支、合并。以下为相同的命令，开启了拓扑图选项：</p></li><li><pre><code> *   d5e9fc2 (HEAD -&gt; master) Merge branch 'change_site'
+ |\  
+ | * 7774248 (change_site) changed the runoob.php
+ * | c68142b 修改代码
+ |/  
+ * c1501a2 removed test.txt、add runoob.php
+ * 3e92c19 add test.txt
+ * 3b58100 第一次版本提交
+</code></pre></li><li><p>现在我们可以更清楚明了地看到何时工作分叉、又何时归并。</p></li><li><p>你也可以用 <strong>--reverse</strong> 参数来逆向显示所有日志。</p></li><li><pre><code> $ git log --reverse --oneline
+ 3b58100 第一次版本提交
+ 3e92c19 add test.txt
+ c1501a2 removed test.txt、add runoob.php
+ 7774248 (change_site) changed the runoob.php
+ c68142b 修改代码
+ d5e9fc2 (HEAD -&gt; master) Merge branch 'change_site'
+</code></pre></li><li><p>如果只想查找指定用户的提交日志可以使用命令：git log --author , 例如，比方说我们要找 Git 源码中 Linus 提交的部分：</p></li><li><pre><code> $ git log --author=Linus --oneline -5
+ 81b50f3 Move 'builtin-*' into a 'builtin/' subdirectory
+ 3bb7256 make &quot;index-pack&quot; a built-in
+ 377d027 make &quot;git pack-redundant&quot; a built-in
+ b532581 make &quot;git unpack-file&quot; a built-in
+ 112dd51 make &quot;mktag&quot; a built-in
+</code></pre></li><li><p>如果你要指定日期，可以执行几个选项：--since 和 --before，但是你也可以用 --until 和 --after。</p></li><li><p>例如，如果我要看 Git 项目中三周前且在四月十八日之后的所有提交，我可以执行这个（我还用了 --no-merges 选项以隐藏合并提交）：</p></li><li><pre><code> $ git log --oneline --before=&#123;3.weeks.ago&#125; --after=&#123;2010-04-18&#125; --no-merges
+ 5469e2d Git 1.7.1-rc2
+ d43427d Documentation/remote-helpers: Fix typos and improve language
+ 272a36b Fixup: Second argument may be any arbitrary string
+ b6c8d2d Documentation/remote-helpers: Add invocation section
+ 5ce4f4e Documentation/urls: Rewrite to accomodate transport::address
+ 00b84e9 Documentation/remote-helpers: Rewrite description
+ 03aa87e Documentation: Describe other situations where -z affects git diff
+ 77bc694 rebase-interactive: silence warning when no commits rewritten
+ 636db2c t3301: add tests to use --format=&quot;%N&quot;
+</code></pre></li><li><p>更多 git log 命令可查看：<span class="exturl" data-url="aHR0cDovL2dpdC1zY20uY29tL2RvY3MvZ2l0LWxvZw==">http://git-scm.com/docs/git-log</span></p></li><li><h3 id="git-blame"><a class="anchor" href="#git-blame">#</a> git blame</h3></li><li><p>如果要查看指定文件的修改记录可以使用 git blame 命令，格式如下：</p></li><li><pre><code> git blame &lt;file&gt;
+</code></pre></li><li><p>git blame 命令是以列表形式显示修改记录，如下实例：</p></li><li><pre><code> $ git blame README 
+ ^d2097aa (tianqixin 2020-08-25 14:59:25 +0800 1) # Runoob Git 测试
+ db9315b0 (runoob    2020-08-25 16:00:23 +0800 2) # 菜鸟教程 
+</code></pre></li></ul><h2 id="git标签"><a class="anchor" href="#git标签">#</a> Git 标签</h2><p>如果你达到一个重要的阶段，并希望永远记住那个特别的提交快照，你可以使用 git tag 给它打上标签。</p><p>比如说，我们想为我们的 runoob 项目发布一个 &quot;1.0&quot; 版本。 我们可以用 git tag -a v1.0 命令给最新一次提交打上（HEAD）&quot;v1.0&quot; 的标签。</p><p>-a 选项意为 &quot;创建一个带注解的标签&quot;。 不用 -a 选项也可以执行的，但它不会记录这标签是啥时候打的，谁打的，也不会让你添加个标签的注解。 我推荐一直创建带注解的标签。</p><pre><code>$ git tag -a v1.0 
+</code></pre><p>当你执行 git tag -a 命令时，Git 会打开你的编辑器，让你写一句标签注解，就像你给提交写注解一样。</p><p>现在，注意当我们执行 git log --decorate 时，我们可以看到我们的标签了：</p><pre><code>*   d5e9fc2 (HEAD -&gt; master) Merge branch 'change_site'
+|\  
+| * 7774248 (change_site) changed the runoob.php
+* | c68142b 修改代码
+|/  
+* c1501a2 removed test.txt、add runoob.php
+* 3e92c19 add test.txt
+* 3b58100 第一次版本提交
+</code></pre><p>如果我们忘了给某个提交打标签，又将它发布了，我们可以给它追加标签。</p><p>例如，假设我们发布了提交 85fc7e7 (上面实例最后一行)，但是那时候忘了给它打标签。 我们现在也可以：</p><pre><code>$ git tag -a v0.9 85fc7e7
+$ git log --oneline --decorate --graph
+*   d5e9fc2 (HEAD -&gt; master) Merge branch 'change_site'
+|\  
+| * 7774248 (change_site) changed the runoob.php
+* | c68142b 修改代码
+|/  
+* c1501a2 removed test.txt、add runoob.php
+* 3e92c19 add test.txt
+* 3b58100 (tag: v0.9) 第一次版本提交
+</code></pre><p>如果我们要查看所有标签可以使用以下命令：</p><pre><code>$ git tag
+v0.9
+v1.0
+</code></pre><p>指定标签信息命令：</p><pre><code>git tag -a &lt;tagname&gt; -m &quot;runoob.com标签&quot;
+</code></pre><p>PGP 签名标签命令：</p><pre><code>git tag -s &lt;tagname&gt; -m &quot;runoob.com标签&quot;
+</code></pre><p>删除标签:</p><pre><code>git tag -d v1.0
+</code></pre><p>查看此版本所修改的内容:</p><pre><code>git show v1.0
+</code></pre><div class="tags"><a href="/tags/git/" rel="tag"><i class="ic i-tag"></i> git</a></div></div><footer><div class="meta"><span class="item"><span class="icon"><i class="ic i-calendar-check"></i> </span><span class="text">更新于</span> <time title="修改时间：2022-08-15 11:42:57" itemprop="dateModified" datetime="2022-08-15T11:42:57+08:00">2022-08-15</time> </span><span id="computer-science/web/git/git基本用法/" class="item leancloud_visitors" data-flag-title="git基本用法" title="阅读次数"><span class="icon"><i class="ic i-eye"></i> </span><span class="text">阅读次数</span> <span class="leancloud-visitors-count"></span> <span class="text">次</span></span></div><div id="copyright"><ul><li class="author"><strong>本文作者： </strong>EntropyWhite <i class="ic i-at"><em>@</em></i>熵白之痕</li><li class="link"><strong>本文链接：</strong> <a href="https://entropywhite.com/computer-science/web/git/git%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" title="git基本用法">https://entropywhite.com/computer-science/web/git/git基本用法/</a></li><li class="license"><strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/computer-science/web/css/CSS%E9%9D%A2%E8%AF%95/CSS%E7%B3%BB%E5%88%97/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclwuom7cj20zk0m8dvn.jpg" title="CSS面试"><span class="type">上一篇</span> <span class="category"><i class="ic i-flag"></i> css</span><h3>CSS面试</h3></a></div><div class="item right"><a href="/computer-science/web/%E5%89%8D%E7%AB%AF%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/%E5%89%8D%E7%AB%AF%E7%9B%AE%E5%BD%95%E5%91%BD%E5%90%8D/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclj61ylzj20zk0m8b29.jpg" title="前端命名规范"><span class="type">下一篇</span> <span class="category"><i class="ic i-flag"></i> 前端命名规范</span><h3>前端命名规范</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#git%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">Git 工作流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="toc-number">2.</span> <span class="toc-text">Git 创建仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">2.1.</span> <span class="toc-text">使用方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-clone"><span class="toc-number">3.</span> <span class="toc-text">git clone</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">4.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">5.</span> <span class="toc-text">Git 基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="toc-number">5.1.</span> <span class="toc-text">创建仓库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4%E4%B8%8E%E4%BF%AE%E6%94%B9"><span class="toc-number">6.</span> <span class="toc-text">提交与修改</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4%E6%97%A5%E5%BF%97"><span class="toc-number">6.1.</span> <span class="toc-text">提交日志</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C"><span class="toc-number">6.2.</span> <span class="toc-text">远程操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86"><span class="toc-number">7.</span> <span class="toc-text">Git 分支管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E5%87%BA%E5%88%86%E6%94%AF"><span class="toc-number">7.1.</span> <span class="toc-text">列出分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF"><span class="toc-number">7.2.</span> <span class="toc-text">删除分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E5%90%88%E5%B9%B6"><span class="toc-number">7.3.</span> <span class="toc-text">分支合并</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%88%E5%B9%B6%E5%86%B2%E7%AA%81"><span class="toc-number">7.4.</span> <span class="toc-text">合并冲突</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2"><span class="toc-number">8.</span> <span class="toc-text">Git 查看提交历史</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git-log"><span class="toc-number">8.1.</span> <span class="toc-text">git log</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-blame"><span class="toc-number">8.2.</span> <span class="toc-text">git blame</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git%E6%A0%87%E7%AD%BE"><span class="toc-number">9.</span> <span class="toc-text">Git 标签</span></a></li></ol></div><div class="related panel pjax" data-title="系列文章"><ul><li class="active"><a href="/computer-science/web/git/git%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" rel="bookmark" title="git基本用法">git基本用法</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="image" itemprop="image" alt="EntropyWhite" data-src="//cdn.jsdelivr.net/gh/Jerysurp/Jerysurp.github.io@latest/images/cat.jpg"><p class="name" itemprop="name">EntropyWhite</p><div class="description" itemprop="description">欢迎来到熵白的博客</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">113</span> <span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">14</span> <span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">16</span> <span class="name">标签</span></a></div></nav><div class="social"><span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0plcnlzdXJw" title="https:&#x2F;&#x2F;github.com&#x2F;Jerysurp"><i class="ic i-github"></i></span> <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span> <span class="exturl item bilibili" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNTEzMTAwNDY/c3BtX2lkX2Zyb209MzMzLjEwMDcuMC4w" title="https:&#x2F;&#x2F;space.bilibili.com&#x2F;51310046?spm_id_from&#x3D;333.1007.0.0"><i class="ic i-bilibili"></i></span></div><ul class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item"><a href="/about/" rel="section"><i class="ic i-user"></i>关于</a></li><li class="item dropdown"><a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li><li class="item"><a href="/friends/" rel="section"><i class="ic i-heart"></i>友達</a></li><li class="item"><a href="/links/" rel="section"><i class="ic i-magic"></i>链接</a></li></ul></div></div></div><ul id="quick"><li class="prev pjax"><a href="/computer-science/web/css/CSS%E9%9D%A2%E8%AF%95/CSS%E7%B3%BB%E5%88%97/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/computer-science/web/%E5%89%8D%E7%AB%AF%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/%E5%89%8D%E7%AB%AF%E7%9B%AE%E5%BD%95%E5%91%BD%E5%90%8D/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/" title="分类于 web">web</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/JavaScript/" title="分类于 JavaScript">JavaScript</a></div><span><a href="/computer-science/web/JavaScript/ES6/%E7%AE%80%E4%BB%8B/" title="ES6简介">ES6简介</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/" title="分类于 web">web</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/css/" title="分类于 css">css</a></div><span><a href="/computer-science/web/css/CSS%E9%9D%A2%E8%AF%95/CSS%E7%B3%BB%E5%88%97/" title="CSS面试">CSS面试</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/blog/" title="分类于 hexo博客">hexo博客</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/blog/Theme-Shoka-Documentation/" title="分类于 Theme Shoka Documentation">Theme Shoka Documentation</a></div><span><a href="/computer-science/blog/Create%20Blog/%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2/" title="安装hexo和部署到github">安装hexo和部署到github</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/" title="分类于 web">web</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/JavaScript/" title="分类于 JavaScript">JavaScript</a></div><span><a href="/computer-science/web/JavaScript/ES6/%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/" title="ES6解构赋值">ES6解构赋值</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/computer-science/web/SVN/SVN%E6%A3%80%E5%87%BA%E6%93%8D%E4%BD%9C/" title="未命名">未命名</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/" title="分类于 web">web</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/%E5%89%8D%E7%AB%AF%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/" title="分类于 前端命名规范">前端命名规范</a></div><span><a href="/computer-science/web/%E5%89%8D%E7%AB%AF%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/HTMLCSS%E6%96%87%E4%BB%B6%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/" title="文件命名规范">文件命名规范</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/" title="分类于 web">web</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/JavaScript/" title="分类于 JavaScript">JavaScript</a></div><span><a href="/computer-science/web/JavaScript/ES6/%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="ES6字符串">ES6字符串</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/" title="分类于 web">web</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86/" title="分类于 网络知识">网络知识</a></div><span><a href="/computer-science/web/%E4%BA%92%E8%81%94%E7%BD%91/QUIC%E5%8D%8F%E8%AE%AE/" title="QUIC协议">QUIC协议</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/computer-science/" title="分类于 计算机科学">计算机科学</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/" title="分类于 web">web</a> <i class="ic i-angle-right"></i> <a href="/categories/computer-science/web/JavaScript/" title="分类于 JavaScript">JavaScript</a></div><span><a href="/computer-science/web/JavaScript/ES6/Class%E7%B1%BB/" title="Class类">Class类</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/computer-science/web/node/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/" title="未命名">未命名</a></span></li></ul></div><div><h2>最新评论</h2><ul class="leancloud-recent-comment"></ul></div></div><div class="status"><div class="copyright">&copy; <span itemprop="copyrightYear">2022</span> <span class="with-love"><i class="ic i-sakura rotate"></i> </span><span class="author" itemprop="copyrightHolder">EntropyWhite @ Entropy White</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i> </span><span title="站点总字数">366k 字</span> <span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="ic i-coffee"></i> </span><span title="站点阅读时长">5:32</span></div><div class="powered-by">基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></div></div></div></footer></div><script data-config type="text/javascript">var LOCAL={path:"computer-science/web/git/git基本用法/",favicon:{show:"（●´3｀●）やれやれだぜ",hide:"(´Д｀)大変だ！"},search:{placeholder:"文章搜索",empty:"关于 「 ${query} 」，什么也没搜到",stats:"${time} ms 内找到 ${hits} 条结果"},valine:{placeholder:"1. 提问前请先仔细阅读本文档⚡\n2. 页面显示问题💥，请提供控制台截图📸或者您的测试网址\n3. 其他任何报错💣，请提供详细描述和截图📸，祝食用愉快💪"},fancybox:!0,copyright:'复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',ignores:[function(e){return e.includes("#")},function(e){return new RegExp(LOCAL.path+"$").test(e)}]}</script><script src="https://cdn.polyfill.io/v2/polyfill.js"></script><script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script><script src="//cdn.jsdelivr.net/gh/Jerysurp/Jerysurp.github.io@latest/js/app.js?v=0.2.5"></script></body></html><!-- rebuild by hrmmi -->
