@@ -1065,14 +1065,14 @@
   </url>
   
   <url>
-    <loc>https://entropywhite.com/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://entropywhite.com/tags/Internet/</loc>
     <lastmod>2022-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://entropywhite.com/tags/Internet/</loc>
+    <loc>https://entropywhite.com/tags/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2022-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1186,7 +1186,7 @@
   </url>
   
   <url>
-    <loc>https://entropywhite.com/categories/computer-science/web/git/</loc>
+    <loc>https://entropywhite.com/categories/computer-science/web/%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2022-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1194,13 +1194,6 @@
   
   <url>
     <loc>https://entropywhite.com/categories/computer-science/web/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/</loc>
-    <lastmod>2022-11-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://entropywhite.com/categories/computer-science/web/%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2022-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1222,6 +1215,13 @@
   
   <url>
     <loc>https://entropywhite.com/categories/computer-science/web/%E6%B5%8F%E8%A7%88%E5%99%A8/</loc>
+    <lastmod>2022-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://entropywhite.com/categories/computer-science/web/git/</loc>
     <lastmod>2022-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
