@@ -1811,7 +1811,54 @@ v1.0
 &lt;/ul&gt;
 &lt;h1 id=&#34;9说说flexbox弹性盒布局模型以及适用场景&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#9说说flexbox弹性盒布局模型以及适用场景&#34;&gt;#&lt;/a&gt; 9. 说说 flexbox（弹性盒布局模型）, 以及适用场景？&lt;/h1&gt;
 &lt;p&gt;在 css 基础下的 css 有讲&lt;/p&gt;
-&lt;h1 id=&#34;10&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#10&#34;&gt;#&lt;/a&gt; 10.&lt;/h1&gt;
+&lt;h1 id=&#34;10介绍一下grid网格布局&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#10介绍一下grid网格布局&#34;&gt;#&lt;/a&gt; 10. 介绍一下 grid 网格布局&lt;/h1&gt;
+&lt;p&gt;在 css 基础下的 css 有讲&lt;/p&gt;
+&lt;h1 id=&#34;11什么是响应式设计响应式设计的基本原理是什么如何做&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#11什么是响应式设计响应式设计的基本原理是什么如何做&#34;&gt;#&lt;/a&gt; 11. 什么是响应式设计？响应式设计的基本原理是什么？如何做？&lt;/h1&gt;
+&lt;p&gt;响应式网站设计（Responsive Web design）是一种网络页面设计布局，页面的设计与开发应当根据用户行为以及设备环境 (系统平台、屏幕尺寸、屏幕定向等) 进行相应的响应和调整&lt;/p&gt;
+&lt;p&gt;描述响应式界面最著名的一句话就是 “Content is like water”&lt;/p&gt;
+&lt;p&gt;大白话便是 “如果将屏幕看作容器，那么内容就像水一样”&lt;/p&gt;
+&lt;p&gt;响应式网站常见特点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;同时适配 PC + 平板 + 手机等&lt;/li&gt;
+&lt;li&gt;标签导航在接近手持终端设备时改变为经典的抽屉式导航&lt;/li&gt;
+&lt;li&gt;网站的布局会根据视口来调整模块的大小和位置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;响应式设计的基本原理是通过媒体查询检测不同的设备屏幕尺寸做处理，为了处理移动端，页面头部必须有 &lt;code&gt;meta&lt;/code&gt;  声明 &lt;code&gt;viewport&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no”&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;属性对应如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;width=device-width: 是自适应手机屏幕的尺寸宽度&lt;/li&gt;
+&lt;li&gt;maximum-scale: 是缩放比例的最大值&lt;/li&gt;
+&lt;li&gt;inital-scale: 是缩放的初始化&lt;/li&gt;
+&lt;li&gt;user-scalable: 是用户的可以缩放的操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;实现响应式布局的方式有如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;媒体查询&lt;/li&gt;
+&lt;li&gt;百分比&lt;/li&gt;
+&lt;li&gt;vw/vh&lt;/li&gt;
+&lt;li&gt;rem&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;响应式设计实现通常会从以下几方面思考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;弹性盒子（包括图片、表格、视频）和媒体查询等技术&lt;/li&gt;
+&lt;li&gt;使用百分比布局创建流式布局的弹性 UI，同时使用媒体查询限制元素的尺寸和内容变更范围&lt;/li&gt;
+&lt;li&gt;使用相对单位使得内容自适应调节&lt;/li&gt;
+&lt;li&gt;选择断点，针对不同断点实现不同布局和内容展示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;总结-4&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结-4&#34;&gt;#&lt;/a&gt; 总结&lt;/h2&gt;
+&lt;p&gt;响应式布局优点可以看到&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;面对不同分辨率设备灵活性强&lt;/li&gt;
+&lt;li&gt;能够快捷解决多设备显示适应问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;缺点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;仅适用布局、信息、框架并不复杂的部门类型网站&lt;/li&gt;
+&lt;li&gt;兼容各种设备工作量大，效率低下&lt;/li&gt;
+&lt;li&gt;代码累赘，会出现隐藏无用的元素，加载时间加长&lt;/li&gt;
+&lt;li&gt;其实这是一种折中性质的设计解决方案，多方面因素影响而达不到最佳效果&lt;/li&gt;
+&lt;li&gt;一定程度上改变了网站原有的布局结构，会出现用户混淆的情况&lt;/li&gt;
+&lt;/ul&gt;
 </content>
         <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
         <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />
@@ -2631,7 +2678,10 @@ v1.0
 &lt;p&gt;父元素设置了 flex 属性并且设置了 &lt;code&gt;flex-direction:row&lt;/code&gt;  和 &lt;code&gt;flex-wrap:wrap&lt;/code&gt; ，此属性才生效&lt;/p&gt;
 &lt;figure class=&#34;highlight css&#34;&gt;&lt;figcaption data-lang=&#34;CSS&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;align-content&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; stretch		 &lt;span class=&#34;token comment&#34;&gt;/* 默认值，元素拉伸适应屏幕 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;align-content&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; center		 &lt;span class=&#34;token comment&#34;&gt;/* 垂直居中 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;align-content&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; flex-start	 &lt;span class=&#34;token comment&#34;&gt;/* 位于容器最上方 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;align-content&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; flex-end		 &lt;span class=&#34;token comment&#34;&gt;/* 位于容器最下方 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;align-content&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; space-between &lt;span class=&#34;token comment&#34;&gt;/* 均匀排列每个元素，首个元素放置于起点，末尾元素放置于终点 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;align-content&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; space-around	 &lt;span class=&#34;token comment&#34;&gt;/* 均匀排列每个元素，每个元素周围分配相同的空间 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;-webkit-align-content&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; center&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* Safari 7.0+ */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;align-self设置侧轴上的某个子元素排列方式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#align-self设置侧轴上的某个子元素排列方式&#34;&gt;#&lt;/a&gt; align-self: 设置侧轴上的某个子元素排列方式&lt;/h4&gt;
 &lt;figure class=&#34;highlight css&#34;&gt;&lt;figcaption data-lang=&#34;CSS&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;align-self&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; auto		&lt;span class=&#34;token comment&#34;&gt;/* 默认值，继承父容器 align-items，没有父容器则 stretch */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;align-self&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; stretch		&lt;span class=&#34;token comment&#34;&gt;/* 元素拉伸适应屏幕 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;align-self&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; center		&lt;span class=&#34;token comment&#34;&gt;/* 垂直居中 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;align-self&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; flex-start	&lt;span class=&#34;token comment&#34;&gt;/* 位于容器最上方 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;align-self&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; flex-end	&lt;span class=&#34;token comment&#34;&gt;/* 位于容器最下方 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;align-self&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; baseline	&lt;span class=&#34;token comment&#34;&gt;/* 位于容器的基线上 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;-webkit-align-items&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; flex-start&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* Safari 7.0+ */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;order子元素排列顺序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#order子元素排列顺序&#34;&gt;#&lt;/a&gt; order: 子元素排列顺序&lt;/h4&gt;
-&lt;figure class=&#34;highlight css&#34;&gt;&lt;figcaption data-lang=&#34;CSS&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;order&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 1 &lt;span class=&#34;token comment&#34;&gt;/* 值越大则该元素越往后，可以为负值 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;-webkit-order&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 1&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;grid布局&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#grid布局&#34;&gt;#&lt;/a&gt; Grid 布局&lt;/h2&gt;
+&lt;figure class=&#34;highlight css&#34;&gt;&lt;figcaption data-lang=&#34;CSS&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;order&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 1 &lt;span class=&#34;token comment&#34;&gt;/* 值越大则该元素越往后，可以为负值 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;-webkit-order&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 1&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;应用场景&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应用场景&#34;&gt;#&lt;/a&gt; 应用场景&lt;/h3&gt;
+&lt;p&gt;我们能够通过 &lt;code&gt;flex&lt;/code&gt;  简单粗暴的实现元素水平垂直方向的居中，以及在两栏三栏自适应布局中通过 &lt;code&gt;flex&lt;/code&gt;  完成&lt;/p&gt;
+&lt;p&gt;包括现在在移动端、小程序这边的开发，都建议使用 &lt;code&gt;flex&lt;/code&gt;  进行布局&lt;/p&gt;
+&lt;h2 id=&#34;grid布局&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#grid布局&#34;&gt;#&lt;/a&gt; Grid 布局&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;flex&lt;/code&gt;  布局是轴线布局，只能指定项目针对轴线的位置，可以看作是一维布局&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;grid&lt;/code&gt;  布局则是讲容器划分成行或列，产生单元格，指定项目所在单元格，可以看作是二维布局&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;fr&lt;/code&gt;  属性是此布局的专属单位，代表布局的剩余空间&lt;/p&gt;
@@ -2640,7 +2690,7 @@ v1.0
 &lt;p&gt;命名过后的网格元素可以被第一个属性阴用，每行由单引号 &lt;code&gt;&#39;&#39;&lt;/code&gt;  定义，空格分隔， &lt;code&gt;.&lt;/code&gt;  号为没有名称的网格项&lt;/p&gt;
 &lt;p&gt;下方一个实例&lt;/p&gt;
 &lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;style&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token style&#34;&gt;&lt;span class=&#34;token language-css&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token selector&#34;&gt;.item1&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token property&#34;&gt;grid-area&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; myArea&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token selector&#34;&gt;.grid-container&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token property&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; grid&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token property&#34;&gt;grid-template-areas&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;myArea myArea . . .&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token property&#34;&gt;grid-gap&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 10px&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token property&#34;&gt;background-color&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; #2196F3&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token property&#34;&gt;padding&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 10px&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token selector&#34;&gt;.grid-container &gt; div&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token property&#34;&gt;background-color&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;rgba&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;255&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; 255&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; 255&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; 0.8&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token property&#34;&gt;text-align&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; center&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token property&#34;&gt;padding&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 20px 0&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token property&#34;&gt;font-size&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 30px&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;style&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;body&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;grid-area 属性&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;你可以使用 &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;em&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;grid-area&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;em&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt; 属性来命名网格元素。&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;命名的网格元素可以通过容器的 grid-template-areas 属性来引用。&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;以下实例 item1 命名为 &#34;myArea&#34;, 并跨越 2 列：&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;grid-container&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;item1&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;1&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;item2&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;2&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;item3&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;3&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;item4&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;4&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;item5&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;5&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;item6&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;6&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;item7&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;7&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;item8&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;8&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;item9&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;9&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;35&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;body&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;grid-template-columns&lt;/code&gt;  属性用于设置网格容器中的列数和宽度&lt;/p&gt;
-&lt;figure class=&#34;highlight css&#34;&gt;&lt;figcaption data-lang=&#34;CSS&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;grid-template-columns&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 20px 30px auto 40px &lt;span class=&#34;token comment&#34;&gt;/* 一个 4 列的网格容器，并每列设置尺寸 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;grid-auto-columns&lt;/code&gt;  属性用于设置网格容器中的默认列宽度&lt;/p&gt;
+&lt;figure class=&#34;highlight css&#34;&gt;&lt;figcaption data-lang=&#34;CSS&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;grid-template-columns&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 20px 30px auto 40px &lt;span class=&#34;token comment&#34;&gt;/* 一个 4 列的网格容器，并每列设置尺寸 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;grid-template-columns&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;repeat&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;4&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;200px&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;	&lt;span class=&#34;token comment&#34;&gt;/* 重复写法，第一个值为重复次数，第二个值为重复的值 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;/* 除了 repeat 之外，还有其他关键字&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;auto-fill 自动填充，让一行（或者一列）中尽可能的容纳更多的单元格&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;*/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;grid-template-columns&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;repeat&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;auto-fill&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; 200px&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;/* 表示列宽是 200 px，但列的数量是不固定的，只要浏览器能够容纳得下，就可以放置元素 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;/* fr 比例关系 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;grid-template-columns&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 200px 1fr 2fr &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;/* 表示第一个列宽设置为 200px，后面剩余的宽度分为两部分，宽度分别为剩余宽度的 1/3 和 2/3*/&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;/* minmax 长度范围 */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;minmax&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;100px&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; 1fr&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* 表示列宽不小于 100px，不大于 1fr*/&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;grid-auto-columns&lt;/code&gt;  属性用于设置网格容器中的默认列宽度&lt;/p&gt;
 &lt;p&gt;会被上面属性覆盖&lt;/p&gt;
 &lt;figure class=&#34;highlight css&#34;&gt;&lt;figcaption data-lang=&#34;CSS&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;grid-auto-columns&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 50px &lt;span class=&#34;token comment&#34;&gt;/* 每个网格容器列宽 50px */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;grid-template-rows&lt;/code&gt;  属性用于设置网格容器中的每行高度&lt;/p&gt;
 &lt;figure class=&#34;highlight css&#34;&gt;&lt;figcaption data-lang=&#34;CSS&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;grid-template-rows&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 50px 50px 50px &lt;span class=&#34;token comment&#34;&gt;/* 每个值对应一行，每行 50px */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;grid-auto-rows&lt;/code&gt;  属性用于设置网格容器中的默认行高度&lt;/p&gt;
@@ -2650,6 +2700,17 @@ v1.0
 &lt;figure class=&#34;highlight css&#34;&gt;&lt;figcaption data-lang=&#34;CSS&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;row-gap&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 50px&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;column-gap&lt;/code&gt;  属性用于设置网格列间距&lt;/p&gt;
 &lt;figure class=&#34;highlight css&#34;&gt;&lt;figcaption data-lang=&#34;CSS&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;column-gap&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 20px&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;gap&lt;/code&gt;  属性用于设置网格行与列间距&lt;/p&gt;
 &lt;figure class=&#34;highlight css&#34;&gt;&lt;figcaption data-lang=&#34;CSS&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token property&#34;&gt;gap&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 20px&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;grid&lt;/code&gt;  属性的布局对齐方式与 &lt;code&gt;flex&lt;/code&gt;  类似，使用 &lt;code&gt;flex&lt;/code&gt;  的对齐属性&lt;/p&gt;
+&lt;h3 id=&#34;grid-column-start-属性-grid-column-end-属性-grid-row-start-属性以及grid-row-end-属性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#grid-column-start-属性-grid-column-end-属性-grid-row-start-属性以及grid-row-end-属性&#34;&gt;#&lt;/a&gt; grid-column-start 属性、grid-column-end 属性、grid-row-start 属性以及 grid-row-end 属性&lt;/h3&gt;
+&lt;p&gt;指定网格项目所在的四个边框，分别定位在哪根网格线，从而指定项目的位置&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;grid-column-start 属性：左边框所在的垂直网格线&lt;/li&gt;
+&lt;li&gt;grid-column-end 属性：右边框所在的垂直网格线&lt;/li&gt;
+&lt;li&gt;grid-row-start 属性：上边框所在的水平网格线&lt;/li&gt;
+&lt;li&gt;grid-row-end 属性：下边框所在的水平网格线 \&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;应用场景-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应用场景-2&#34;&gt;#&lt;/a&gt; 应用场景&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Grid&lt;/code&gt;  是一个强大的布局，如一些常见的 CSS 布局，如居中，两列布局，三列布局等等是很容易实现的&lt;/p&gt;
+&lt;p&gt;目前总体兼容性还可以，但在移动端支持就不算友好&lt;/p&gt;
 &lt;h1 id=&#34;css3多媒体查询&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#css3多媒体查询&#34;&gt;#&lt;/a&gt; CSS3 多媒体查询&lt;/h1&gt;
 &lt;p&gt;多媒体查询在 CSS2 就有，是针对不同的媒体类型 (包括显示器、便携设备、电视机，等等) 设置不同的样式规则，但对于很多设备上支持不友好&lt;/p&gt;
 &lt;p&gt;CSS3 的多媒体查询继承了 CSS2 的多媒体类型，取代了查找设备类型，CSS3 根据设置自适应设备显示&lt;/p&gt;
@@ -3513,6 +3574,96 @@ p.then(null, function (s)&amp;#123;
         <updated>2022-06-30T14:21:00.000Z</updated>
     </entry>
     <entry>
+        <id>https://entropywhite.com/computer-science/web/JavaScript/ES6/Promise%E5%AF%B9%E8%B1%A1/</id>
+        <title>Promise对象</title>
+        <link rel="alternate" href="https://entropywhite.com/computer-science/web/JavaScript/ES6/Promise%E5%AF%B9%E8%B1%A1/"/>
+        <content type="html">&lt;h2 id=&#34;概述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#概述&#34;&gt;#&lt;/a&gt; 概述&lt;/h2&gt;
+&lt;p&gt;是异步编程的一种解决方案。&lt;/p&gt;
+&lt;p&gt;从语法上说，Promise 是一个对象，从它可以获取异步操作的消息。&lt;/p&gt;
+&lt;h2 id=&#34;promise-状态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#promise-状态&#34;&gt;#&lt;/a&gt; Promise 状态&lt;/h2&gt;
+&lt;h3 id=&#34;状态的特点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#状态的特点&#34;&gt;#&lt;/a&gt; 状态的特点&lt;/h3&gt;
+&lt;p&gt;Promise 异步操作有三种状态：pending（进行中）、fulfilled（已成功）和 rejected（已失败）。除了异步操作的结果，任何其他操作都无法改变这个状态。&lt;/p&gt;
+&lt;p&gt;Promise 对象只有：从 pending 变为 fulfilled 和从 pending 变为 rejected 的状态改变。只要处于 fulfilled 和 rejected ，状态就不会再变了即 resolved（已定型）。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const p1 = new Promise(function(resolve,reject)&amp;#123;
+    resolve(&#39;success1&#39;);
+    resolve(&#39;success2&#39;);
+&amp;#125;); 
+const p2 = new Promise(function(resolve,reject)&amp;#123;  
+    resolve(&#39;success3&#39;); 
+    reject(&#39;reject&#39;);
+&amp;#125;);
+p1.then(function(value)&amp;#123;  
+    console.log(value); // success1
+&amp;#125;);
+p2.then(function(value)&amp;#123; 
+    console.log(value); // success3
+&amp;#125;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;状态的缺点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#状态的缺点&#34;&gt;#&lt;/a&gt; 状态的缺点&lt;/h3&gt;
+&lt;p&gt;无法取消 Promise ，一旦新建它就会立即执行，无法中途取消。&lt;/p&gt;
+&lt;p&gt;如果不设置回调函数，Promise 内部抛出的错误，不会反应到外部。&lt;/p&gt;
+&lt;p&gt;当处于 pending 状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。&lt;/p&gt;
+&lt;h2 id=&#34;then-方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#then-方法&#34;&gt;#&lt;/a&gt; then 方法&lt;/h2&gt;
+&lt;p&gt;then 方法接收两个函数作为参数，第一个参数是 Promise 执行成功时的回调，第二个参数是 Promise 执行失败时的回调，两个函数只会有一个被调用。&lt;/p&gt;
+&lt;h3 id=&#34;then-方法的特点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#then-方法的特点&#34;&gt;#&lt;/a&gt; then 方法的特点&lt;/h3&gt;
+&lt;p&gt;在 JavaScript 事件队列的当前运行完成之前，回调函数永远不会被调用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const p = new Promise(function(resolve,reject)&amp;#123;
+  resolve(&#39;success&#39;);
+&amp;#125;);
+ 
+p.then(function(value)&amp;#123;
+  console.log(value);
+&amp;#125;);
+ 
+console.log(&#39;first&#39;);
+// first
+// success
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;通过 &lt;strong&gt;.then&lt;/strong&gt; 形式添加的回调函数，不论什么时候，都会被调用。&lt;/p&gt;
+&lt;p&gt;通过多次调用&lt;/p&gt;
+&lt;p&gt;.then&lt;/p&gt;
+&lt;p&gt;，可以添加多个回调函数，它们会按照插入顺序并且独立运行。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const p = new Promise(function(resolve,reject)&amp;#123;
+  resolve(1);
+&amp;#125;).then(function(value)&amp;#123; // 第一个then // 1
+  console.log(value);
+  return value * 2;
+&amp;#125;).then(function(value)&amp;#123; // 第二个then // 2
+  console.log(value);
+&amp;#125;).then(function(value)&amp;#123; // 第三个then // undefined
+  console.log(value);
+  return Promise.resolve(&#39;resolve&#39;); 
+&amp;#125;).then(function(value)&amp;#123; // 第四个then // resolve
+  console.log(value);
+  return Promise.reject(&#39;reject&#39;); 
+&amp;#125;).then(function(value)&amp;#123; // 第五个then //reject:reject
+  console.log(&#39;resolve:&#39; + value);
+&amp;#125;, function(err) &amp;#123;
+  console.log(&#39;reject:&#39; + err);
+&amp;#125;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;then 方法将返回一个 resolved 或 rejected 状态的 Promise 对象用于链式调用，且 Promise 对象的值就是这个返回值。&lt;/p&gt;
+&lt;h3 id=&#34;then-方法注意点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#then-方法注意点&#34;&gt;#&lt;/a&gt; then 方法注意点&lt;/h3&gt;
+&lt;p&gt;简便的 Promise 链式编程最好保持扁平化，不要嵌套 Promise。&lt;/p&gt;
+&lt;p&gt;注意总是返回或终止 Promise 链。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const p1 = new Promise(function(resolve,reject)&amp;#123;
+  resolve(1);
+&amp;#125;).then(function(result) &amp;#123;
+  p2(result).then(newResult =&amp;gt; p3(newResult));
+&amp;#125;).then(() =&amp;gt; p4());
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;创建新 Promise 但忘记返回它时，对应链条被打破，导致 p4 会与 p2 和 p3 同时进行。&lt;/p&gt;
+&lt;p&gt;大多数浏览器中不能终止的 Promise 链里的 rejection，建议后面都跟上 &lt;strong&gt;.catch(error =&amp;gt; console.log(error));&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;更多文章&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#更多文章&#34;&gt;#&lt;/a&gt; 更多文章&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;JS-Promise%E5%AF%B9%E8%B1%A1&#34;&gt;JS-Promise 对象&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
+        <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />
+        <category term="JavaScript" scheme="https://entropywhite.com/categories/computer-science/web/JavaScript/" />
+        <category term="ES6" scheme="https://entropywhite.com/tags/ES6/" />
+        <updated>2022-06-30T14:21:00.000Z</updated>
+    </entry>
+    <entry>
         <id>https://entropywhite.com/computer-science/web/JavaScript/ES6/Map%E4%B8%8ESet/</id>
         <title>Map与Set</title>
         <link rel="alternate" href="https://entropywhite.com/computer-science/web/JavaScript/ES6/Map%E4%B8%8ESet/"/>
@@ -3705,96 +3856,6 @@ var fArr = arr.filter(function(x)&amp;#123;    //使用filter过滤数组，并�
 var intersect = new Set(fArr);          //将fArr转换成set
 console.log(fArr);
 &lt;/code&gt;&lt;/pre&gt;
-</content>
-        <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
-        <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />
-        <category term="JavaScript" scheme="https://entropywhite.com/categories/computer-science/web/JavaScript/" />
-        <category term="ES6" scheme="https://entropywhite.com/tags/ES6/" />
-        <updated>2022-06-30T14:21:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://entropywhite.com/computer-science/web/JavaScript/ES6/Promise%E5%AF%B9%E8%B1%A1/</id>
-        <title>Promise对象</title>
-        <link rel="alternate" href="https://entropywhite.com/computer-science/web/JavaScript/ES6/Promise%E5%AF%B9%E8%B1%A1/"/>
-        <content type="html">&lt;h2 id=&#34;概述&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#概述&#34;&gt;#&lt;/a&gt; 概述&lt;/h2&gt;
-&lt;p&gt;是异步编程的一种解决方案。&lt;/p&gt;
-&lt;p&gt;从语法上说，Promise 是一个对象，从它可以获取异步操作的消息。&lt;/p&gt;
-&lt;h2 id=&#34;promise-状态&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#promise-状态&#34;&gt;#&lt;/a&gt; Promise 状态&lt;/h2&gt;
-&lt;h3 id=&#34;状态的特点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#状态的特点&#34;&gt;#&lt;/a&gt; 状态的特点&lt;/h3&gt;
-&lt;p&gt;Promise 异步操作有三种状态：pending（进行中）、fulfilled（已成功）和 rejected（已失败）。除了异步操作的结果，任何其他操作都无法改变这个状态。&lt;/p&gt;
-&lt;p&gt;Promise 对象只有：从 pending 变为 fulfilled 和从 pending 变为 rejected 的状态改变。只要处于 fulfilled 和 rejected ，状态就不会再变了即 resolved（已定型）。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;const p1 = new Promise(function(resolve,reject)&amp;#123;
-    resolve(&#39;success1&#39;);
-    resolve(&#39;success2&#39;);
-&amp;#125;); 
-const p2 = new Promise(function(resolve,reject)&amp;#123;  
-    resolve(&#39;success3&#39;); 
-    reject(&#39;reject&#39;);
-&amp;#125;);
-p1.then(function(value)&amp;#123;  
-    console.log(value); // success1
-&amp;#125;);
-p2.then(function(value)&amp;#123; 
-    console.log(value); // success3
-&amp;#125;);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;状态的缺点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#状态的缺点&#34;&gt;#&lt;/a&gt; 状态的缺点&lt;/h3&gt;
-&lt;p&gt;无法取消 Promise ，一旦新建它就会立即执行，无法中途取消。&lt;/p&gt;
-&lt;p&gt;如果不设置回调函数，Promise 内部抛出的错误，不会反应到外部。&lt;/p&gt;
-&lt;p&gt;当处于 pending 状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。&lt;/p&gt;
-&lt;h2 id=&#34;then-方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#then-方法&#34;&gt;#&lt;/a&gt; then 方法&lt;/h2&gt;
-&lt;p&gt;then 方法接收两个函数作为参数，第一个参数是 Promise 执行成功时的回调，第二个参数是 Promise 执行失败时的回调，两个函数只会有一个被调用。&lt;/p&gt;
-&lt;h3 id=&#34;then-方法的特点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#then-方法的特点&#34;&gt;#&lt;/a&gt; then 方法的特点&lt;/h3&gt;
-&lt;p&gt;在 JavaScript 事件队列的当前运行完成之前，回调函数永远不会被调用&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;const p = new Promise(function(resolve,reject)&amp;#123;
-  resolve(&#39;success&#39;);
-&amp;#125;);
- 
-p.then(function(value)&amp;#123;
-  console.log(value);
-&amp;#125;);
- 
-console.log(&#39;first&#39;);
-// first
-// success
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;通过 &lt;strong&gt;.then&lt;/strong&gt; 形式添加的回调函数，不论什么时候，都会被调用。&lt;/p&gt;
-&lt;p&gt;通过多次调用&lt;/p&gt;
-&lt;p&gt;.then&lt;/p&gt;
-&lt;p&gt;，可以添加多个回调函数，它们会按照插入顺序并且独立运行。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;const p = new Promise(function(resolve,reject)&amp;#123;
-  resolve(1);
-&amp;#125;).then(function(value)&amp;#123; // 第一个then // 1
-  console.log(value);
-  return value * 2;
-&amp;#125;).then(function(value)&amp;#123; // 第二个then // 2
-  console.log(value);
-&amp;#125;).then(function(value)&amp;#123; // 第三个then // undefined
-  console.log(value);
-  return Promise.resolve(&#39;resolve&#39;); 
-&amp;#125;).then(function(value)&amp;#123; // 第四个then // resolve
-  console.log(value);
-  return Promise.reject(&#39;reject&#39;); 
-&amp;#125;).then(function(value)&amp;#123; // 第五个then //reject:reject
-  console.log(&#39;resolve:&#39; + value);
-&amp;#125;, function(err) &amp;#123;
-  console.log(&#39;reject:&#39; + err);
-&amp;#125;);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;then 方法将返回一个 resolved 或 rejected 状态的 Promise 对象用于链式调用，且 Promise 对象的值就是这个返回值。&lt;/p&gt;
-&lt;h3 id=&#34;then-方法注意点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#then-方法注意点&#34;&gt;#&lt;/a&gt; then 方法注意点&lt;/h3&gt;
-&lt;p&gt;简便的 Promise 链式编程最好保持扁平化，不要嵌套 Promise。&lt;/p&gt;
-&lt;p&gt;注意总是返回或终止 Promise 链。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;const p1 = new Promise(function(resolve,reject)&amp;#123;
-  resolve(1);
-&amp;#125;).then(function(result) &amp;#123;
-  p2(result).then(newResult =&amp;gt; p3(newResult));
-&amp;#125;).then(() =&amp;gt; p4());
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;创建新 Promise 但忘记返回它时，对应链条被打破，导致 p4 会与 p2 和 p3 同时进行。&lt;/p&gt;
-&lt;p&gt;大多数浏览器中不能终止的 Promise 链里的 rejection，建议后面都跟上 &lt;strong&gt;.catch(error =&amp;gt; console.log(error));&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;更多文章&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#更多文章&#34;&gt;#&lt;/a&gt; 更多文章&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;JS-Promise%E5%AF%B9%E8%B1%A1&#34;&gt;JS-Promise 对象&lt;/a&gt;&lt;/p&gt;
 </content>
         <category term="计算机科学" scheme="https://entropywhite.com/categories/computer-science/" />
         <category term="web" scheme="https://entropywhite.com/categories/computer-science/web/" />
